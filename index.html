@@ -131,7 +131,7 @@
 </head>
 <body>
 
-<div class="masthead bg-dark pt-5">
+<div class="masthead bg-dark py-3">
     <div class="container py-3">
         <div class="row text-white rounded"> <!-- style="padding: 1rem 1rem; margin-bottom: 32px; margin-left:0px; margin-right:0px;"-->
             <div class="col-12 col-lg-4 pt-3">
@@ -175,7 +175,7 @@
     </div>
 </div>
 
-<div class="container py-3">
+<div class="container pt-4 pb-3">
     <div class="row text-center">
         <div class="col-lg-12 py-2">
             <h3 class="font-weight-bold">研究项目与软件</h3>
@@ -266,7 +266,7 @@
     </div>
 </div>
 
-<div class="masthead bg-light">
+<div class="masthead bg-light pt-4 pb-3">
     <div class="container pb-3">
         <div class="row text-center">
             <div class="col-lg-12 py-4">
@@ -281,20 +281,30 @@
             <div class="card-header text-center">
                 <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark" id="featured-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="true">代表作 <span class="text-muted">(Featured)</span></a>
+                        <a class="nav-link active text-dark" id="featured-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="true">
+                            代表作 <span class="text-muted">(Featured)</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" id="paper-tab" data-toggle="tab" href="#paper" role="tab" aria-controls="paper" aria-selected="false">论文 <span class="text-muted">(Papers)</span></a>
+                        <a class="nav-link text-dark" id="paper-tab" data-toggle="tab" href="#paper" role="tab" aria-controls="paper" aria-selected="false">
+                            论文 <span class="text-muted">(Papers)</span> <span class="badge badge-secondary" id="paper-count">4</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" id="conference-tab" data-toggle="tab" href="#conference" role="tab" aria-controls="conference" aria-selected="false">会议 <span class="text-muted">(Conferences)</span></a>
+                        <a class="nav-link text-dark" id="conference-tab" data-toggle="tab" href="#conference" role="tab" aria-controls="conference" aria-selected="false">
+                            会议 <span class="text-muted">(Conferences)</span> <span class="badge badge-secondary" id="conf-count">14</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" id="patent-tab" data-toggle="tab" href="#patent" role="tab" aria-controls="patent" aria-selected="false">专利 <span class="text-muted">(Patents)</span></a>
+                        <a class="nav-link text-dark" id="others-tab" data-toggle="tab" href="#others" role="tab" aria-controls="others" aria-selected="false">
+                            其他 <span class="text-muted">(Others)</span> <span class="badge badge-secondary" id="others-count">4</span>
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" id="patent-tab" data-toggle="tab" href="#datasets" role="tab" aria-controls="patent" aria-selected="false">数据 <span class="text-muted">(Datasets)</span></a>
-                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link text-dark" id="patent-tab" data-toggle="tab" href="#datasets" role="tab" aria-controls="patent" aria-selected="false">
+                            数据 <span class="text-muted">(Datasets)</span><span class="badge badge-secondary">1</span>
+                        </a>
+                    </li> -->
                 </ul>
             </div>
             <div class="card-body">
@@ -319,6 +329,21 @@
                     <!-- Paper Tab -->
                     <div class="tab-pane fade" id="paper" role="tabpanel" aria-labelledby="profile-tab">
                         <!-- style = zotero elsviser-harvard(with titles) 1区 text-danger, 2区 text-info 3区 text-secondary -->
+                        
+                        <h3 class="pt-4">2023</span></h3>
+                        <hr />
+
+                        <div class="csl-bib-body">
+                            <div class="csl-entry">
+                                Drofova, I., Guo, W., <b>Wang, H.</b>, Adamek, M., <b><span class="text-success">2023</span></b>. Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality. <b>Bulletin EEI</b> 12, 868–881. 
+                            </div>
+                        </div>
+                        <div class="btn-group csl-bib-btn pt-2">
+                            <a class="btn btn-sm btn-outline-dark" href="https://doi.org/10.11591/eei.v12i2.4584" target="_blank">DOI</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/23_beei.pdf" target="_blank">PDF</a>
+                        </div>
+                        <hr/>
+
                         <div class="csl-bib-body">
                             <div class="csl-entry">Zhang, W., Peng, X., Cui, G., <b>Wang, H.</b>, Takata, D., Guo, W.,<b><span class="text-success">2023</span></b>. Tree Branch Skeleton Extraction from Drone-Based Photogrammetric Point Cloud. <b>Drones</b> 7, 65.<br/><span class="common-text mb-2 text-info"><b>工程技术2区、遥感3区, SCI, IF=5.532(2023)</b></span>
                             </div>
@@ -328,7 +353,9 @@
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/23_drones.pdf" target="_blank">PDF</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://www.a.u-tokyo.ac.jp/topics/topics_20210601-1.html" target="_blank">News</a>
                         </div>
-                        <hr/>
+
+                        <h3 class="pt-4">2021</span></h3>
+                        <hr />
 
                         <div class="csl-bib-body">
                             <div class="csl-entry">Zhao, L., Guo, W., Wang, J., <b>Wang, H.</b>, Duan, Y., Wang, C., Wu, W., Shi, Y.,<b><span class="text-success">2021</span></b>. An Efficient Method for Estimating Wheat Heading Dates Using UAV Images. <b>Remote Sensing</b> 13(16), 3067.<br/><span class="common-text mb-2 text-info"><b>工程技术2区 Top、遥感2区, SCI, IF=4.848(2021)</b></span>
@@ -387,7 +414,9 @@
                         <div class="btn-group csl-bib-btn pt-2">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/21_mcfns.pdf" target="_blank">PDF</a>
                         </div>
-                        <hr/>
+
+                        <h3 class="pt-4">2020</span></h3>
+                        <hr />
 
                         <div class="csl-bib-body">
                             <div class="csl-entry"><b>Wang, H.</b>, Kershaw, J.A., Yang, T.-R., Hsu, Y.-H., Ma, X., Chen, Y., <b><span class="text-success">2020</span></b>. An Integrated System for Estimating Forest Basal Area from Spherical Images. <b>Mathematical and Computational Forestry & Natural-Resource Sciences</b> 12(0), 0–14.</div>
@@ -395,6 +424,8 @@
                         <div class="btn-group csl-bib-btn pt-2">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/20_mcfns.pdf" target="_blank">PDF</a>
                         </div>
+
+                        <h3 class="pt-4">Before 2020</span></h3>
                         <hr/>
 
                         <div class="csl-bib-body">
@@ -439,6 +470,10 @@
 
                     <!-- Conference Tab -->
                     <div class="tab-pane fade" id="conference" role="tabpanel" aria-labelledby="contact-tab">
+
+                        <h3 class="pt-4">2022</span></h3>
+                        <hr />
+
                         <div class="csl-bib-body">
                             <div class="csl-entry"><b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W. <b><span class="text-success">Sept 27-30, 2022</span></b>. Estimate Optimal Harvest Time by Cross-scale Assimilated Digital Broccoli Farmland (<b><span class="text-info">Poster</span></b>), <b>7th International Plant Phenotyping Symposium: "Plant Phenotyping for a Sustainable Future"</b>, Wageningen, Netherlands.
                             </div>
@@ -458,6 +493,8 @@
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/22_jsai_abstract.pdf" target="_blank">Abstract</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/22_jsai_ppt.pdf" target="_blank">PPT</a>
                         </div>
+
+                        <h3 class="pt-4">2021</span></h3>
                         <hr/>
 
                         <div class="csl-bib-body">
@@ -487,6 +524,8 @@
                         <div class="btn-group csl-bib-btn pt-2">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/22_jsai_poster.jpg" target="_blank">Poster</a>
                         </div>
+
+                        <h3 class="pt-4">2020</span></h3>
                         <hr/>
 
                         <div class="csl-bib-body">
@@ -495,6 +534,8 @@
                         <div class="btn-group csl-bib-btn pt-2">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/20_phenome_poster.pdf" target="_blank">Poster</a>
                         </div>
+
+                        <h3 class="pt-4">Before 2020</span></h3>
                         <hr/>
 
                         <div class="csl-bib-body">
@@ -544,7 +585,10 @@
                     </div>
 
                     <!-- Patent Tab -->
-                    <div class="tab-pane fade" id="patent" role="tabpanel" aria-labelledby="patent-tab">
+                    <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="others-tab">
+                        <h3>专利 <span class="text-muted">(Patents)</span></h3>
+                        <hr />
+                        
                         <div class="csl-bib-body">
                             <div class="csl-entry">王锋，韩东，<b>王浩舟</b>，卢琦，潘绪斌，一种基于无人机的景观尺度植被覆盖度的计算方法及系统：<b><span class="text-success">2019</span></b>. CN 201610913357</div>
                         </div>
@@ -590,19 +634,18 @@
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/16_yaira.pdf" target="_blank">Manual</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/Yaira/releases/tag/v1.0" target="_blank">EXE</a>
                         </div>
-                    </div>
 
+                        <h3 class="pt-4">数据 <span class="text-muted">(Datasets)</span></h3>
+                        <hr />
 
-                    <!-- Datasets Tab -->
-                    <div class="tab-pane fade" id="datasets" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="csl-bib-body">
                             <div class="csl-entry">David, E., Serouart, M., Smith, D., Madec, S., Velumani, K., Liu, S., Wang, X., Espinosa, F.P., Shafiee, S., Tahir, I.S.A., Tsujimoto, H., Nasuda, S., Zheng, B., Kichgessner, N., Aasen, H., Hund, A., Sadhegi-Tehran, P., Nagasawa, K., Ishikawa, G., Dandrifosse, S., Carlier, A., Mercatoris, B., Kuroki, K., <b>Wang, H.</b>, Ishii, M., Badhon, M.A., Pozniak, C., LeBauer, D.S., Lilimo, M., Poland, J., Chapman, S., de Solan, B., Baret, F., Stavness, I., Guo, W., <b><span class="text-success">2021</span></b>. Global Wheat Head Dataset 2021: more diversity to improve the benchmarking of wheat head localization methods.
                             </div>
                         </div>
                         <div class="btn-group csl-bib-btn pt-2">
+                            <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/abs/2105.07660v2" target="_blank">URL</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/abs/2105.07660v2" target="_blank">arXiv</a>
                         </div>
-                        <hr/>
                     </div>
                 </div>
             </div>
@@ -610,8 +653,8 @@
     </div>
 </div>
 
-<div class="masthead bg-white">
-    <div class="container">
+<div class="masthead bg-white pt-4 pb-3">
+    <div class="container pb-3">
         <div class="row text-center">
             <div class="col-lg-12 py-4">
                 <h3 class="font-weight-bold">履历时间线</h3>
@@ -686,7 +729,7 @@
     </div>
 </div>
 
-<div class="masthead bg-light">
+<div class="masthead bg-light pt-4 pb-3">
     <div class="container pb-3">
         <div class="row text-center">
             <div class="col-lg-12 py-4">
@@ -764,12 +807,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
+    // update the current day
     n =  new Date();
     y = n.getFullYear();
     m = n.getMonth() + 1;
     d = n.getDate();
     document.getElementById("date1").innerHTML = y + "." + ('0' + m).slice(-2);
     document.getElementById("date2").innerHTML = y + "." + ('0' + m).slice(-2);
+
+    // update the item counts
+    var paper_item = document.getElementById("paper")
+    var paper_count = paper_item.getElementsByClassName("csl-bib-body").length
+    document.getElementById("paper-count").innerHTML = paper_count
+
+    var conf_item = document.getElementById("conference")
+    var conf_count = conf_item.getElementsByClassName("csl-bib-body").length
+    document.getElementById("conf-count").innerHTML = conf_count
+
+    var others_item = document.getElementById("others")
+    var others_count = others_item.getElementsByClassName("csl-bib-body").length
+    document.getElementById("others-count").innerHTML = others_count
+
 </script>
 
 </body>
