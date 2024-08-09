@@ -150,7 +150,7 @@
 
                 <div class="text-center">
                     <ul class="network-icon" aria-hidden="true">
-                        <li><a href="mailto:haozhou_wang@outlook.com"><i class="fa fa-envelope fa-lg" style="color:white"></i></a></li>
+                        <li style="cursor: pointer;" onclick="$('#messageModal').modal('show');"><i class="fa fa-envelope fa-lg" style="color:white"></i></li>
                         <li><a href="https://github.com/HowcanoeWang" target="_blank" rel="noopener"><i class="fa fa-github fa-lg" style="color:white"></i></a></li>
                         <li><a href="https://www.researchgate.net/profile/Haozhou_Wang" target="_blank" rel="noopener"><i class="ai ai-researchgate ai-lg" style="color:white"></i></a></li>
                         <li><a href="https://scholar.google.com/citations?user=CnTTa3EAAAAJ" target="_blank" rel="noopener"><i class="ai ai-google-scholar ai-lg" style="color:white"></i></a></li>
@@ -158,6 +158,22 @@
                     </ul>
                 </div>
 
+                <!-- mailto messagebox -->
+                <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-body" id="messageModalLabel">替换(Replace) [at] 为(to) @</h5>
+                            </div>
+                            <div class="modal-body text-body">
+                                haozhou-wang [at] outlook.com
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭 (Close)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-12 col-lg-8 pt-3">
