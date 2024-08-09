@@ -131,6 +131,63 @@
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="d-flex flex-grow-1">
+        <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+        <a class="navbar-brand d-none d-lg-inline-block fa-github" href="#">
+            Haozhou Wang Academic
+        </a>
+        <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+            <img src="//via.placeholder.com/40?text=LOGO" alt="logo">
+        </a>
+        <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNnavbar">
+        <ul class="navbar-nav mr-auto flex-nowrap">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Publications
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Featured</a>
+                <a class="dropdown-item" href="#">Papers</a>
+                <a class="dropdown-item" href="#">Conferences</a>
+                <a class="dropdown-item" href="#">Datasets</a>
+                <a class="dropdown-item" href="#">Patents</a>
+                <a class="dropdown-item" href="#">Thesis</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Timeline</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Awards</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" onclick="switchLanguage('cn')">中文</a>
+                <a class="dropdown-item" onclick="switchLanguage('en')">English</a>
+                <a class="dropdown-item" onclick="switchLanguage('jp')">日本語</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <div class="masthead bg-dark py-3">
     <div class="container py-3">
         <div class="row text-white rounded"> <!-- style="padding: 1rem 1rem; margin-bottom: 32px; margin-left:0px; margin-right:0px;"-->
