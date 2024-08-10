@@ -1,4 +1,3 @@
-// js/switch-lang.js
 i18next
     .use(i18nextHttpBackend)
     .use(i18nextBrowserLanguageDetector)
@@ -11,8 +10,9 @@ i18next
         }
     }, function(err, t) {
     // init set content to the default language
-    // updateContent();
+    console.log('Detected browser language:', i18next.language);
     jqueryI18next.init(i18next, $);
+    updateContent();
 });
 
 function updateContent() {
