@@ -21,7 +21,9 @@
     <!-- i18n support -->
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.12.2/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend@1.4.5/i18nextHttpBackend.min.js"></script>
-    <script src="locales/switch_lang.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/jquery-i18next@1.2.1/dist/umd/jquery-i18next.min.js"></script>
+    <script src="locales/switch_lang.js?rnd=001"></script>
 
     <style>
         @font-face {
@@ -267,7 +269,7 @@
         </div>
     </div>
 
-    <h1 id="welcome-text">Welcome to the site!</h1>
+    <h1 data-i18n="welcome">Welcome to the site!</h1>
 
     <!-- remember to copy the card deck to repeat -->
     <div class="card-deck" style="font-size:1rem;">
