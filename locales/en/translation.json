@@ -1,3 +1,61 @@
 {
-    "welcome": "Welcome to the site!"
+    "nav": {
+        "profile": "Profile",
+        "project": "Projects",
+        "publication": "Publications",
+        "timeline": "Experience Timeline",
+        "award":"Awards"
+    },
+
+    "prof": {
+        "t": "Profile",
+        "name": "Haozhou Wang",
+        "position": "Postdoctoral Fellowship,<br/>The University of Tokyo",
+        "labname": "International Field Phenomics Research Laboratory",
+        "cite": "Citations",
+        "hidx": "H-index",
+        "mailto": "Replace [at] to @",
+        "close": "Close",
+
+        "intro": "A post-doc at the Laboratory of Field Phenomics, UTokyo. Has a cross-disciplinary background in computer science, ecology, forestry, and agriculture. Research focuses on crop 3D reconstruction, 3D data processing, and digital twin crop models.",
+        "int": {
+            "t": "Research Interest",
+            "l1": "High-throughput plant phenotyping by 3D reconstruction",
+            "l2": "In-field traits optimization based on backward projection",
+            "l3": "Digital twin virtual plant model",
+            "l4": "Agriculture phenotyping software and tool development"
+        },
+        "edu": {
+            "t": "Education",
+            "l1": "Doctor in Agricultural science, The University of Tokyo",
+            "l2": "MSc in Forestry, The University of New Brunswick",
+            "l3": "BSc in Ecology, Nanjing Forestry University"
+        }
+    },
+
+    "inst": {
+        "ut": "The University of Tokyo",
+        "caf": "Chinese Academy of Forestry",
+        "unb": "The University of New Brunswick"
+    },
+
+    "proj": {
+        "t": "Projects and Software",
+        "p1": "Easy Intermediate Data Processor (EasyIDP): A Python Package for intermediate preprocessing data between photogrammetry outputs and plant pheenotyping traits calculation.",
+        "p2": "Easy Dense Cloud Phenotyping (EasyDCP): A python package for agricultural phenotypic trait extraction from 2D image sets via 3D reconstruction and analysis of 3D point clouds.",
+        "p3": "A Python Program to measure tree attributes (Basal Area, DBH, Height, Gap Fraction) from two Ricoh Theta spherical image  pair taken at different height.",
+        "p4": "Unmanned Aerial Vehicles - High Resolution imagery Analysis Platform (UAV-HiRAP), is an open-source, web-based platform which provides service for image classification (maintenance suspended)."
+    },
+
+    "pub": {
+        "t": "Publications"
+    },
+
+    "time": {
+        "t": "Experience Timeline"
+    },
+
+    "awd": {
+        "t": "Awards"
+    }
 }

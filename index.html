@@ -156,19 +156,19 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item active">
-                    <a class="nav-link nav-js-scroll" href="#profile-section">Profile</a>
+                    <a class="nav-link nav-js-scroll" href="#profile-section" data-i18n="nav.profile">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-js-scroll" href="#project-section">Projects</a>
+                    <a class="nav-link nav-js-scroll" href="#project-section" data-i18n="nav.project">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-js-scroll" href="#publication-section">Publications</a>
+                    <a class="nav-link nav-js-scroll" href="#publication-section" data-i18n="nav.publication">Publications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-js-scroll" href="#timeline-section">Timeline</a>
+                    <a class="nav-link nav-js-scroll" href="#timeline-section" data-i18n="nav.timeline">Timeline</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-js-scroll" href="#award-section">Awards</a>
+                    <a class="nav-link nav-js-scroll" href="#award-section" data-i18n="nav.award">Awards</a>
                 </li>
             </ul>
 
@@ -195,13 +195,13 @@
                      src="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/header.png"
                      alt="Haozhou Wang (王浩舟)">
                 <div class="text-center">
-                    <p class="lead mt-4 font-weight-bold">王浩舟</br>(Haozhou Wang)</p>
-                    <p class="lead my-1">东京大学特任研究员</br>(Postdoctoral Fellowship, The University of Tokyo)</p>
-                    <p class="lead mt-2 md-0 font-italic" style="font-size: 16px;" role="button" onclick="javascript:window.open('https://lab.fieldphenomics.com/', '_blank');">国际田间表型组学研究室</br>(International Field Phenomics Research Laboratory)</p>
+                    <p class="lead mt-4 font-weight-bold" data-i18n="prof.name">王浩舟</p>
+                    <p class="lead my-1" data-i18n="[html]prof.position">东京大学 特任研究员</p>
+                    <p class="lead mt-2 md-0 font-italic" style="font-size: 16px;" role="button" onclick="javascript:window.open('https://lab.fieldphenomics.com/', '_blank');" data-i18n="prof.labname">国际田间表型组学研究室</p>
                 </div>
 
                 <div class="text-center">
-                    <p class="lead mt-1" style="font-size: 14px;" role="button" onclick="javascript:window.open('https://scholar.google.com/citations?user=CnTTa3EAAAAJ', '_blank');">被引数(Citations) <span class="badge badge-light">200</span><br/>H-index <span class="badge badge-light">6</span></p>
+                    <p class="lead mt-1" style="font-size: 14px;" role="button" onclick="javascript:window.open('https://scholar.google.com/citations?user=CnTTa3EAAAAJ', '_blank');"><span data-i18n="prof.cite">被引数</span> <span class="badge badge-light">200</span><br/><span data-i18n="prof.hidx">H指数</span> <span class="badge badge-light">6</span></p>
                 </div>
 
                 <div class="text-center">
@@ -219,13 +219,13 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-body" id="messageModalLabel">替换(Replace) [at] 为(to) @</h5>
+                                <h5 class="modal-title text-body" id="messageModalLabel" data-i18n="prof.mailto">替换 [at] 为 @</h5>
                             </div>
                             <div class="modal-body text-body">
                                 haozhou-wang [at] outlook.com
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭 (Close)</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" data-i18n="prof.close">关闭</button>
                             </div>
                         </div>
                     </div>
@@ -233,20 +233,21 @@
             </div>
 
             <div class="col-12 col-lg-8 pt-3">
-                <h2 class="display-6 font-weight-bold">遥感植物表型</h2>
-                <h2 class="lead my-0 font-weight-bold underlined">Remote Sensing Plant Phenotyping</h2>
-                <p class="lead mt-3 mb-0">东京大学田间表型实验室的博士后研究员。拥有计算机科学、生态学、林业和农业的跨学科背景。研究重点是作物三维重建、三维数据处理和数字孪生作物模型。</br>(A post-doc at the Laboratory of Field Phenomics, UTokyo. Has a cross-disciplinary background in computer science, ecology, forestry, and agriculture. Research focuses on crop 3D reconstruction, 3D data processing, and digital twin crop models.)</p>
-                <p class="lead mt-3 mb-0 text-white font-weight-bold">研究方向 (Research Interest)</p>
+                <!-- <h2 class="display-6 font-weight-bold">遥感植物表型</h2>
+                <h2 class="lead my-0 font-weight-bold underlined">Remote Sensing Plant Phenotyping</h2> -->
+                <p class="lead mb-0" data-i18n="prof.intro">...个人简介...</p>
+                <p class="lead mt-3 mb-0 text-white font-weight-bold" data-i18n="prof.int.t">研究方向</p>
                 <ul class="mt-2 mb-0" style="font-weight: 200;">
-                    <li>高通量三维植物重建表型<br/>(High-throughput plant phenotyping by 3D reconstruction)</li>
-                    <li>依托逆运算的大田表型测量参数优化<br/>(In-field traits optimization based on backward projection)</li>
-                    <li>数字孪生虚拟作物模型<br/>(Digital twin virtual plant model)</li>
+                    <li data-i18n="prof.int.l1">...</li>
+                    <li data-i18n="prof.int.l2">...</li>
+                    <li data-i18n="prof.int.l3">...</li>
+                    <li data-i18n="prof.int.l4">...</li>
                 </ul>
-                <p class="lead mt-3 mb-0 text-white font-weight-bold">教育背景 (Education)</p>
+                <p class="lead mt-3 mb-0 text-white font-weight-bold" data-i18n="prof.edu.t"></p>
                 <ul class="mt-2 mb-0" style="font-weight: 200;">
-                    <li>东京大学 农学博士学位, <span class="badge badge-light">2023.09</span></br>(Doctor in Agricultural science, The University of Tokyo)</li>
-                    <li>新不伦瑞克大学 林学研究型硕士学位, <span class="badge badge-light">2019.12</span></br>(MSc in Forestry, The University of New Brunswick)</li>
-                    <li>南京林业大学 生态学学士学位, <span class="badge badge-light">2017.06</span></br>(BSc in Ecology, The Nanjing Forestry University)</li>
+                    <li><span data-i18n="prof.edu.l1">东京大学 农学博士学位</span> <span class="badge badge-light">2023.09</span></li>
+                    <li><span data-i18n="prof.edu.l2">新不伦瑞克大学 林学研究型硕士学位</span> <span class="badge badge-light">2019.12</span></li>
+                    <li><span data-i18n="prof.edu.l3">南京林业大学 生态学学士学位</span> <span class="badge badge-light">2017.06</span></li>
                 </ul>
             </div>
         </div>
@@ -256,22 +257,18 @@
 <div class="container pt-4 pb-3" id="project-section">
     <div class="row text-center">
         <div class="col-lg-12 py-2">
-            <h3 class="font-weight-bold">研究项目与软件</h3>
-            <p class="lead my-1 text-muted">Projects</p>
+            <h3 class="font-weight-bold" data-i18n="proj.t">研究项目与软件</h3>
         </div>
     </div>
-
-    <h1 data-i18n="welcome">Welcome to the site!</h1>
 
     <!-- remember to copy the card deck to repeat -->
     <div class="card-deck" style="font-size:1rem;">
         <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
             <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./files/imgs/Github_Header_v2.0.png"/>
             <div class="card-body">
-                <strong class="d-inline-block mb-2 text-primary">东京大学 (The University of Tokyo)</strong>
+                <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.ut">东京大学</strong>
                 <h3 class="mb-0">EasyIDP</h3>
-                <p class="card-text mb-auto my-1">一个用来对接(中间处理)三维重建的输出结果与植物表型参数计算的python包</p>
-                <p class="card-text mb-auto my-1 text-muted">Easy Intermediate Data Processor (EasyIDP): A Python Package for intermediate preprocessing data between photogrammetry outputs and plant pheenotyping traits calculation.</p>
+                <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p1">...</p>
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-between align-items-center pt-2">
@@ -288,10 +285,9 @@
         <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
             <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./files/imgs/21_easydcp.png"/>
             <div class="card-body">
-                <strong class="d-inline-block mb-2 text-primary">东京大学 (The University of Tokyo)</strong>
+                <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.ut">东京大学</strong>
                 <h3 class="mb-0">EasyDCP</h3>
-                <p class="card-text mb-auto my-1">从三维重建的点云提取农业表型参数的python包</p>
-                <p class="card-text mb-auto my-1 text-muted">Easy Dense Cloud Phenotyping (EasyDCP): A python package for agricultural phenotypic trait extraction from 2D image sets via 3D reconstruction and analysis of 3D point clouds.</p>
+                <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p2">...</p>
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-between align-items-center pt-2">
@@ -310,10 +306,9 @@
         <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
             <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://cdn.jsdelivr.net/gh/HowcanoeWang/Spherical2TreeAttributes/img/4SoftwareScreen.jpg"/>
             <div class="card-body">
-                <strong class="d-inline-block mb-2 text-primary">新不伦瑞克大学 (The University of New Brunswick)</strong>
+                <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.unb">新不伦瑞克大学</strong>
                 <h3 class="mb-0">Spherical2TreeAttributes</h3>
-                <p class="card-text mb-auto my-1">通过不同高度的全景图像(Ricoh theta)像对，测量胸高断面积、胸径、树高、郁闭度等参数</p>
-                <p class="card-text mb-auto my-1 text-muted">A Python Program to measure tree attributes (Basal Area, DBH, Height, Gap Fraction) from two Ricoh Theta spherical image  pair taken at different height.</p>
+                <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p3">...</p>
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-between align-items-center pt-2">
@@ -327,10 +322,9 @@
         <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
             <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./files/imgs/uav-hirap_web.png"/>
             <div class="card-body">
-                <strong class="d-inline-block mb-2 text-success">中国林业科学研究院 (Chinese Academy of Forestry)</strong>
+                <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.caf">中国林业科学研究院</strong>
                 <h3 class="mb-0">UAV-HiRAP</h3>
-                <p class="card-text mb-auto my-1">高精度无人机影像分析平台(UAV-HiRAP)是一个开源的无人机影响分类计算的在线平台(现已暂停维护).</p>
-                <p class="card-text mb-auto my-1 text-muted">Unmanned Aerial Vehicles - High Resolution imagery Analysis Platform (UAV-HiRAP), is an open-source, web-based platform which provides service for image classification (maintenance suspended).</p>
+                <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p4">...</p>
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-between align-items-center pt-2">
