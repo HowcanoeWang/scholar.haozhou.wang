@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="./css/blog.css">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.css">
 
-    <!--script src="https://use.fontawesome.com/14775b57f5.js"></script-->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- icon support -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- i18n support -->
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.12.2/i18next.min.js"></script>
@@ -138,64 +138,48 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="d-flex flex-grow-1">
-        <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-        <a class="navbar-brand d-none d-lg-inline-block fa-github" href="#">
-            Haozhou Wang Academic
-        </a>
-        <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-            <img src="//via.placeholder.com/40?text=LOGO" alt="logo">
-        </a>
-        <div class="w-100 text-right">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand nav-js-scroll" href="#profile-section">haozhou.wang</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNnavbar">
-        <ul class="navbar-nav mr-auto flex-nowrap">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Publications
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Featured</a>
-                <a class="dropdown-item" href="#">Papers</a>
-                <a class="dropdown-item" href="#">Conferences</a>
-                <a class="dropdown-item" href="#">Datasets</a>
-                <a class="dropdown-item" href="#">Patents</a>
-                <a class="dropdown-item" href="#">Thesis</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Timeline</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Awards</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Languages
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link nav-js-scroll" href="#profile-section">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-js-scroll" href="#project-section">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-js-scroll" href="#publication-section">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-js-scroll" href="#timeline-section">Timeline</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-js-scroll" href="#award-section">Awards</a>
+                </li>
+            </ul>
+
+            <span class="dropdown navbar-text ml-auto">
+                <a class="" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-language fa-large"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" onclick="switchLanguage('cn')">中文</a>
                 <a class="dropdown-item" onclick="switchLanguage('en')">English</a>
                 <a class="dropdown-item" onclick="switchLanguage('jp')">日本語</a>
                 </div>
-            </li>
-        </ul>
+            </span>
+            
+        </div>
     </div>
 </nav>
 
-<div class="masthead bg-dark py-3">
+<div class="masthead bg-dark py-3" id="profile-section">
     <div class="container py-3">
         <div class="row text-white rounded"> <!-- style="padding: 1rem 1rem; margin-bottom: 32px; margin-left:0px; margin-right:0px;"-->
             <div class="col-12 col-lg-4 pt-3">
@@ -209,13 +193,13 @@
                 </div>
 
                 <div class="text-center">
-                    <p class="lead mt-1" style="font-size: 14px;" role="button" onclick="javascript:window.open('https://lab.fieldphenomics.com/', '_blank');">被引数(Citations) <span class="badge badge-light">170</span><br/>H-index <span class="badge badge-light">6</span></p>
+                    <p class="lead mt-1" style="font-size: 14px;" role="button" onclick="javascript:window.open('https://scholar.google.com/citations?user=CnTTa3EAAAAJ', '_blank');">被引数(Citations) <span class="badge badge-light">200</span><br/>H-index <span class="badge badge-light">6</span></p>
                 </div>
 
                 <div class="text-center">
                     <ul class="network-icon" aria-hidden="true">
                         <li style="cursor: pointer;" onclick="$('#messageModal').modal('show');"><i class="fa fa-envelope fa-lg" style="color:white"></i></li>
-                        <li><a href="https://github.com/HowcanoeWang" target="_blank" rel="noopener"><i class="fa fa-github fa-lg" style="color:white"></i></a></li>
+                        <li><a href="https://github.com/HowcanoeWang" target="_blank" rel="noopener"><i class="fa-brands fa-github fa-lg" style="color:white"></i></a></li>
                         <li><a href="https://www.researchgate.net/profile/Haozhou_Wang" target="_blank" rel="noopener"><i class="ai ai-researchgate ai-lg" style="color:white"></i></a></li>
                         <li><a href="https://scholar.google.com/citations?user=CnTTa3EAAAAJ" target="_blank" rel="noopener"><i class="ai ai-google-scholar ai-lg" style="color:white"></i></a></li>
                         <li><a href="https://orcid.org/0000-0001-6135-402X" target="_blank" rel="noopener"><i class="ai ai-orcid ai-lg" style="color:white"></i></a></li>
@@ -261,7 +245,7 @@
     </div>
 </div>
 
-<div class="container pt-4 pb-3">
+<div class="container pt-4 pb-3" id="project-section">
     <div class="row text-center">
         <div class="col-lg-12 py-2">
             <h3 class="font-weight-bold">研究项目与软件</h3>
@@ -354,7 +338,7 @@
     </div>
 </div>
 
-<div class="masthead bg-light pt-4 pb-3">
+<div class="masthead bg-light pt-4 pb-3" id="publication-section">
     <div class="container pb-3">
         <div class="row text-center">
             <div class="col-lg-12 py-4">
@@ -861,7 +845,7 @@
     </div>
 </div>
 
-<div class="masthead bg-white pt-4 pb-3">
+<div class="masthead bg-white pt-4 pb-3" id="timeline-section">
     <div class="container pb-3">
         <div class="row text-center">
             <div class="col-lg-12 py-4">
@@ -961,7 +945,7 @@
     </div>
 </div>
 
-<div class="masthead bg-light pt-4 pb-3">
+<div class="masthead bg-light pt-4 pb-3" id="award-section">
     <div class="container pb-3">
         <div class="row text-center">
             <div class="col-lg-12 py-4">
@@ -1059,6 +1043,23 @@
     var others_item = document.getElementById("others")
     var others_count = others_item.getElementsByClassName("csl-bib-body").length
     document.getElementById("others-count").innerHTML = others_count
+
+    // fluent scrool
+    document.querySelectorAll('a.nav-js-scroll').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - navbarHeight;
+
+            window.scrollBy({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
 
 </script>
 
