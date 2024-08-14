@@ -142,11 +142,19 @@
             margin: 0px;
         }
 
+        .nav-pills .nav-link {
+            border-radius: 0rem;
+        }
+        .nav-pills .nav-link.active {
+            background-color: transparent !important;
+            border-bottom: 2px solid #ada5ad !important;
+        }
+
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom shadow-lg">
     <div class="container">
         <a class="navbar-brand nav-js-scroll" href="#profile-section">haozhou.wang</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -155,7 +163,7 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link nav-js-scroll" href="#profile-section" data-i18n="nav.profile">Profile</a>
                 </li>
                 <li class="nav-item">
@@ -174,7 +182,7 @@
 
             <span class="dropdown navbar-text ml-auto">
                 <a class="" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-language fa-large"></i>
+                    <i class="fas fa-globe fa-large" style="font-size: 24px; color: gray;"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" onclick="switchLanguage('cn')">中文</a>
@@ -254,124 +262,88 @@
     </div>
 </div>
 
-<div class="container pt-4 pb-3" id="project-section">
-    <div class="row text-center">
-        <div class="col-lg-12 py-2">
-            <h3 class="font-weight-bold" data-i18n="proj.t">研究项目与软件</h3>
-        </div>
-    </div>
-
-    <!-- remember to copy the card deck to repeat -->
-    <div class="card-deck" style="font-size:1rem;">
-        <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./files/imgs/Github_Header_v2.0.png"/>
-            <div class="card-body">
-                <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.ut">东京大学</strong>
-                <h3 class="mb-0">EasyIDP</h3>
-                <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p1">...</p>
-            </div>
-            <div class="card-footer">
-                <div class="d-flex justify-content-between align-items-center pt-2">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP/wiki', '_blank');">Wiki</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP', '_blank');">Code</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://doi.org/10.3390/rs13132622', '_black');">DOI</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://easyidp.readthedocs.io/en/latest/', '_black');">Manual</button>
-                    </div>
-                    <small class="text-muted">2021.06</small>
-                </div>
-            </div>
-        </div>
-        <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./files/imgs/21_easydcp.png"/>
-            <div class="card-body">
-                <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.ut">东京大学</strong>
-                <h3 class="mb-0">EasyDCP</h3>
-                <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p2">...</p>
-            </div>
-            <div class="card-footer">
-                <div class="d-flex justify-content-between align-items-center pt-2">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UTokyo-FieldPhenomics-Lab/EasyDCP', '_black');">Code</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://www.youtube.com/watch?v=CbQEzUEybTo&ab_channel=U.TokyoInternationalFieldPhenomicsResearchLab', '_black');">Video</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('http://dx.doi.org/10.1111/2041-210X.13645', '_black');">DOI</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://www.a.u-tokyo.ac.jp/topics/topics_20210615-1.html', '_black');">News</button>
-                    </div>
-                    <small class="text-muted">2021.04</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-deck" style="font-size:1rem;">
-        <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://cdn.jsdelivr.net/gh/HowcanoeWang/Spherical2TreeAttributes/img/4SoftwareScreen.jpg"/>
-            <div class="card-body">
-                <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.unb">新不伦瑞克大学</strong>
-                <h3 class="mb-0">Spherical2TreeAttributes</h3>
-                <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p3">...</p>
-            </div>
-            <div class="card-footer">
-                <div class="d-flex justify-content-between align-items-center pt-2">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/HowcanoeWang/Spherical2TreeAttributes', '_black');">Code</button>
-                    </div>
-                    <small class="text-muted">2019.06</small>
-                </div>
-            </div>
-        </div>
-        <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./files/imgs/uav-hirap_web.png"/>
-            <div class="card-body">
-                <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.caf">中国林业科学研究院</strong>
-                <h3 class="mb-0">UAV-HiRAP</h3>
-                <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p4">...</p>
-            </div>
-            <div class="card-footer">
-                <div class="d-flex justify-content-between align-items-center pt-2">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://www.uav-hirap.org', '_black');">Web</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UAV-HiRAP/UAV-HiRAP', '_black');">Code</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://doi.org/10.1016/j.agrformet.2019.107665', '_black');">DOI</button>
-                    </div>
-                    <small class="text-muted">2018.10</small>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="masthead bg-light pt-4 pb-3" id="publication-section">
+<div class="masthead pt-4 pb-3" id="publication-section">
     <div class="container pb-3">
-        <div class="row text-center">
+        <div class="row">
             <div class="col-lg-12 py-4">
-                <h3 class="font-weight-bold">学术成果</h3>
-                <p class="lead my-1 text-muted">Publications</p>
+                <h3 class="font-weight-bold text-center" data-i18n="pub.t">学术成果</h3>
             </div>
         </div>
 
-        <div class="text-center d-sm-none pb-3">请点击下面的按钮来切换项目<br>(Please click the button below to see more)</div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="lead text-muted font-weight-bold text-center" data-i18n="pub.subt1">代表作</h3>
 
-        <div class="card border-dark">
-            <div class="card-header text-center">
-                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                <div class="card my-4 shadow">
+                    <img class="card-img-top bd-placeholder-img border-bottom" src="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/cover_broccoli.png" alt="Card image">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Drone-Based Harvest Data Prediction Can Reduce On-Farm Food Loss and Improve Farmer Income <span type="button" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">0</span></h5>
+                        <p class="card-text common-text mb-2">Plant Phenomics<br/><b class="text-info">农林科学1区Top, SCI, IF=12.0(2023)</b></p>
+                        <div class="mt-auto">
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-outline-dark" href="https://doi.org/10.34133/plantphenomics.0086" target="_blank">DOI</a>
+                                <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/23_pp.pdf" target="_blank">PDF</a>
+                                <a class="btn btn-sm btn-outline-dark" href="https://www.bjnews.com.cn/detail/1698978347129712.html" target="_blank">新京报</a>
+                                <a class="btn btn-sm btn-outline-dark" href="https://www.eurekalert.org/news-releases/1003639" target="_blank">EurekAlert!</a>
+                                <a class="btn btn-sm btn-outline-dark" href="https://www.nikkei.com/article/DGXZRSP661800_Y3A900C2000000/" target="_blank">日本日経新聞</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my-4 shadow">
+                    <img class="card-img-top bd-placeholder-img border-bottom" src="https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP/raw/v2.0/docs/_static/images/header_v2.0.png" alt="Card image">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">EasyIDP: a Python package for intermediate data processing in UAV-based plant phenotyping <span type="button" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">22</span></h5>
+                        <p class="card-text common-text mb-2">Remote Sensing<br/><b class="text-info">工程技术2区 Top、遥感2区, SCI, IF=5.349(2023)</b></p>
+                        <div class="mt-auto">
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-outline-dark" href="https://doi.org/10.3390/rs13132622" target="_blank">DOI</a>
+                                <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/19_afm.pdf" target="_blank">PDF</a>
+                                <a class="btn btn-sm btn-outline-dark" href="https://mp.weixin.qq.com/s/7icns8uY78pEonHESMmuTg" target="_blank">News</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my-4 shadow">
+                    <img class="card-img-top bd-placeholder-img border-bottom" src="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/19_afm_graph.svg" alt="Card image">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform <span type="button" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">30</span></h5>
+                        <p class="card-text common-text mb-2">Agricultural and Forest Meteorology<br/><b class="text-danger">农林科学1区 Top、农艺学1区、林学1区, SCI, IF=6.424(2023)</b></p>
+                        <div class="mt-auto">
+                            <div class="btn-group">
+                                <a class="btn btn-sm my-1 mr-1 btn-outline-dark" href="https://doi.org/10.1016/j.agrformet.2019.107665" target="_blank">DOI</a>
+                                <a class="btn btn-sm my-1 mr-1 btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/19_afm.pdf" target="_blank">PDF</a>
+                                <a class="btn btn-sm my-1 mr-1 btn-outline-dark" href="https://mp.weixin.qq.com/s/7icns8uY78pEonHESMmuTg" target="_blank">News</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="lead my-1 font-weight-bold text-muted py-3" data-i18n="pub.subt2">所有贡献</h3>
+                <p class="d-sm-none pb-3 text-muted" data-i18n="pub.note">手机端点击提示</p>
+            </div>
+
+            <div class="col-lg-12">
+
+                <ul class="nav nav-pills justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark" id="featured-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="true">
-                            代表作 <span class="text-muted">(Featured)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" id="paper-tab" data-toggle="tab" href="#paper" role="tab" aria-controls="paper" aria-selected="false">
-                            论文 <span class="text-muted">(Papers)</span> <span class="badge badge-secondary" id="paper-count">4</span>
+                        <a class="nav-link active text-dark" id="paper-tab" data-toggle="tab" href="#paper" role="tab" aria-controls="paper" aria-selected="false">
+                            <span data-i18n="pub.tabs.p">论文</span> <span class="badge badge-secondary" id="paper-count">4</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" id="conference-tab" data-toggle="tab" href="#conference" role="tab" aria-controls="conference" aria-selected="false">
-                            会议 <span class="text-muted">(Conferences)</span> <span class="badge badge-secondary" id="conf-count">14</span>
+                            <span data-i18n="pub.tabs.c">会议</span> <span class="badge badge-secondary" id="conf-count">14</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" id="others-tab" data-toggle="tab" href="#others" role="tab" aria-controls="others" aria-selected="false">
-                            其他 <span class="text-muted">(Others)</span> <span class="badge badge-secondary" id="others-count">4</span>
+                            <span data-i18n="pub.tabs.o">其他</span> <span class="badge badge-secondary" id="others-count">4</span>
                         </a>
                     </li>
                     <!-- <li class="nav-item">
@@ -380,58 +352,10 @@
                         </a>
                     </li> -->
                 </ul>
-            </div>
-            <div class="card-body">
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="featured" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="card m-3">
-                            <img class="card-img-top bd-placeholder-img border-bottom" src="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/cover_broccoli.png" alt="Card image">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Drone-Based Harvest Data Prediction Can Reduce On-Farm Food Loss and Improve Farmer Income <span type="button" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">0</span></h5>
-                                <p class="card-text common-text mb-2">Plant Phenomics<br/><b class="text-info">农林科学1区Top, SCI, IF=12.0(2023)</b></p>
-                                <div class="mt-auto">
-                                    <div class="btn-group">
-                                        <a class="btn btn-sm btn-outline-dark" href="https://doi.org/10.34133/plantphenomics.0086" target="_blank">DOI</a>
-                                        <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/23_pp.pdf" target="_blank">PDF</a>
-                                        <a class="btn btn-sm btn-outline-dark" href="https://www.bjnews.com.cn/detail/1698978347129712.html" target="_blank">新京报</a>
-                                        <a class="btn btn-sm btn-outline-dark" href="https://www.eurekalert.org/news-releases/1003639" target="_blank">EurekAlert!</a>
-                                        <a class="btn btn-sm btn-outline-dark" href="https://www.nikkei.com/article/DGXZRSP661800_Y3A900C2000000/" target="_blank">日本日経新聞</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card m-3">
-                            <img class="card-img-top bd-placeholder-img border-bottom" src="https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP/raw/v2.0/docs/_static/images/header_v2.0.png" alt="Card image">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">EasyIDP: a Python package for intermediate data processing in UAV-based plant phenotyping <span type="button" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">22</span></h5>
-                                <p class="card-text common-text mb-2">Remote Sensing<br/><b class="text-info">工程技术2区 Top、遥感2区, SCI, IF=5.349(2023)</b></p>
-                                <div class="mt-auto">
-                                    <div class="btn-group">
-                                        <a class="btn btn-sm btn-outline-dark" href="https://doi.org/10.3390/rs13132622" target="_blank">DOI</a>
-                                        <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/19_afm.pdf" target="_blank">PDF</a>
-                                        <a class="btn btn-sm btn-outline-dark" href="https://mp.weixin.qq.com/s/7icns8uY78pEonHESMmuTg" target="_blank">News</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card m-3">
-                            <img class="card-img-top bd-placeholder-img border-bottom" src="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/19_afm_graph.svg" alt="Card image">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform <span type="button" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">30</span></h5>
-                                <p class="card-text common-text mb-2">Agricultural and Forest Meteorology<br/><b class="text-danger">农林科学1区 Top、农艺学1区、林学1区, SCI, IF=6.424(2023)</b></p>
-                                <div class="mt-auto">
-                                    <div class="btn-group">
-                                        <a class="btn btn-sm btn-outline-dark" href="https://doi.org/10.1016/j.agrformet.2019.107665" target="_blank">DOI</a>
-                                        <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/19_afm.pdf" target="_blank">PDF</a>
-                                        <a class="btn btn-sm btn-outline-dark" href="https://mp.weixin.qq.com/s/7icns8uY78pEonHESMmuTg" target="_blank">News</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Paper Tab -->
-                    <div class="tab-pane fade" id="paper" role="tabpanel" aria-labelledby="paper-tab">
+                    <div class="tab-pane fade show active" id="paper" role="tabpanel" aria-labelledby="paper-tab">
                         <!-- style = zotero elsviser-harvard(with titles) 1区 text-danger, 2区 text-info 3区 text-secondary -->
                         
                         <h3 class="pt-4">2024</h3>
@@ -603,8 +527,6 @@
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/24_cigr_abstract.pdf" target="_blank">Abstract</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/24_cigr_ppt.pdf" target="_blank">Poster</a>
                         </div>
-
-                        <!-- <hr /> -->
 
                         <h3 class="pt-4">2023</h3>
                         <hr />
@@ -844,10 +766,104 @@
                         
                     </div>
                 </div>
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="masthead bg-light pt-4 pb-3" id="project-section">
+
+    <div class="container">
+    
+        <div class="row text-center">
+            <div class="col-lg-12 py-2">
+                <h3 class="font-weight-bold" data-i18n="proj.t">研究项目与软件</h3>
+            </div>
+        </div>
+
+        <!-- remember to copy the card deck to repeat -->
+        <div class="card-deck" style="font-size:1rem;">
+            <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./files/imgs/Github_Header_v2.0.png"/>
+                <div class="card-body">
+                    <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.ut">东京大学</strong>
+                    <h3 class="mb-0">EasyIDP</h3>
+                    <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p1">...</p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center pt-2">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP/wiki', '_blank');">Wiki</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP', '_blank');">Code</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://doi.org/10.3390/rs13132622', '_black');">DOI</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://easyidp.readthedocs.io/en/latest/', '_black');">Manual</button>
+                        </div>
+                        <small class="text-muted">2021.06</small>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./files/imgs/21_easydcp.png"/>
+                <div class="card-body">
+                    <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.ut">东京大学</strong>
+                    <h3 class="mb-0">EasyDCP</h3>
+                    <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p2">...</p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center pt-2">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UTokyo-FieldPhenomics-Lab/EasyDCP', '_black');">Code</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://www.youtube.com/watch?v=CbQEzUEybTo&ab_channel=U.TokyoInternationalFieldPhenomicsResearchLab', '_black');">Video</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('http://dx.doi.org/10.1111/2041-210X.13645', '_black');">DOI</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://www.a.u-tokyo.ac.jp/topics/topics_20210615-1.html', '_black');">News</button>
+                        </div>
+                        <small class="text-muted">2021.04</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck" style="font-size:1rem;">
+            <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://cdn.jsdelivr.net/gh/HowcanoeWang/Spherical2TreeAttributes/img/4SoftwareScreen.jpg"/>
+                <div class="card-body">
+                    <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.unb">新不伦瑞克大学</strong>
+                    <h3 class="mb-0">Spherical2TreeAttributes</h3>
+                    <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p3">...</p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center pt-2">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/HowcanoeWang/Spherical2TreeAttributes', '_black');">Code</button>
+                        </div>
+                        <small class="text-muted">2019.06</small>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm" style="min-width: 20rem; margin-top: 15px; margin-bottom: 15px;">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./files/imgs/uav-hirap_web.png"/>
+                <div class="card-body">
+                    <strong class="d-inline-block mb-2 text-muted" data-i18n="inst.caf">中国林业科学研究院</strong>
+                    <h3 class="mb-0">UAV-HiRAP</h3>
+                    <p class="card-text mb-auto my-3 text-muted" data-i18n="proj.p4">...</p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center pt-2">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://www.uav-hirap.org', '_black');">Web</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UAV-HiRAP/UAV-HiRAP', '_black');">Code</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://doi.org/10.1016/j.agrformet.2019.107665', '_black');">DOI</button>
+                        </div>
+                        <small class="text-muted">2018.10</small>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="masthead bg-white pt-4 pb-3" id="timeline-section">
     <div class="container pb-3">
