@@ -530,7 +530,7 @@
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/24_cigr_abstract.pdf" target="_blank">Abstract</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/24_cigr_ppt.pdf" target="_blank">Poster</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/scholar.haozhou.wang/tree/master/files/conf/24_cigr_ppt.pdf" target="_blank">Poster</a>
                         </div>
 
                         <h3 class="pt-4">2023</h3>
@@ -1093,25 +1093,18 @@
             const elementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = elementPosition - navbarHeight;
 
+            // Trigger the collapse of the navbar
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            });
+            bsCollapse.hide();
+
             window.scrollBy({
                 top: offsetPosition,
                 behavior: 'smooth'
             });
         });
-    });
-
-    // 卡片瀑布流
-    $(document).ready(function() {
-        var $container = $('#post-area');
-
-        setTimeout(function() {    
-
-            $container.masonry({
-                itemSelector : '.col',
-                percentPosition: true
-            });    
-
-        }, 1000); // 延迟1秒
     });
 </script>
 

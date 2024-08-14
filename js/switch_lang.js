@@ -53,6 +53,20 @@ function convertLangCode(language) {
 function updateContent() {
     // document.getElementById('welcome-text').innerHTML = i18next.t('welcome');
     $('body').localize();
+
+    // 卡片瀑布流
+    $(document).ready(function() {
+        var $container = $('#post-area');
+
+        setTimeout(function() {    
+
+            $container.masonry({
+                itemSelector : '.col',
+                percentPosition: true
+            });    
+
+        }, 1000); // 延迟1秒
+    });
 }
 
 function switchLanguage(lang) {
