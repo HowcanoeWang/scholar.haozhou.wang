@@ -25,7 +25,7 @@ i18next
         fallbackLng: 'en',
         debug: true,
         backend: {
-            loadPath: '/locales/{{lng}}/translation.json'
+            loadPath: '/locales/{{lng}}.json'
         }
     }, function(err, t) {
     // init set content to the default language
@@ -54,6 +54,12 @@ function updateContent() {
     // document.getElementById('welcome-text').innerHTML = i18next.t('welcome');
     $('body').localize();
 
+    // cite-badge
+    const citeByBadges = document.querySelectorAll('.badge-cite');
+    citeByBadges.forEach(badge => {
+        badge.setAttribute('title', i18next.t('prof.cite'));
+    });
+
     // 卡片瀑布流
     $(document).ready(function() {
         var $container = $('#post-area');
@@ -65,8 +71,15 @@ function updateContent() {
                 percentPosition: true
             });    
 
-        }, 1000); // 延迟1秒
+        }, 500); // 延迟0.5秒
     });
+
+    // Trigger the collapse of the navbar
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+    });
+    bsCollapse.hide();
 }
 
 function switchLanguage(lang) {

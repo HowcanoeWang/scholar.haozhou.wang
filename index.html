@@ -22,7 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.12.2/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend@1.4.5/i18nextHttpBackend.min.js"></script>
     <script src="https://unpkg.com/jquery-i18next@1.2.1/dist/umd/jquery-i18next.min.js"></script>
-    <script src="js/switch_lang.js?rnd=002"></script>
+    <script src="js/switch_lang.js?rnd=003"></script>
 
     <style>
         @font-face {
@@ -285,8 +285,8 @@
                 <div class="card my-4 shadow">
                     <img class="card-img-top bd-placeholder-img border-bottom" src="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/cover_broccoli.png" alt="Card image">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Drone-Based Harvest Data Prediction Can Reduce On-Farm Food Loss and Improve Farmer Income <span type="button" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">0</span></h5>
-                        <p class="card-text common-text mb-2">Plant Phenomics<br/><b class="text-danger">农林科学1区Top, SCI, IF=12.0(2023)</b></p>
+                        <h5 class="card-title">Drone-Based Harvest Data Prediction Can Reduce On-Farm Food Loss and Improve Farmer Income <span type="button" class="badge badge-secondary badge-cite" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">0</span></h5>
+                        <p class="card-text common-text mb-2">Plant Phenomics<br/><b class="text-muted" data-i18n="pub.if.pp">sci</b></p>
                         <div class="my-link-btn">
                             <a class="btn btn-sm btn-outline-dark" href="https://doi.org/10.34133/plantphenomics.0086" target="_blank">DOI</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/23_pp.pdf" target="_blank">PDF</a>
@@ -299,8 +299,8 @@
                 <div class="card my-4 shadow">
                     <img class="card-img-top bd-placeholder-img border-bottom" src="https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP/raw/v2.0/docs/_static/images/header_v2.0.png" alt="Card image">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">EasyIDP: a Python package for intermediate data processing in UAV-based plant phenotyping <span type="button" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">22</span></h5>
-                        <p class="card-text common-text mb-2">Remote Sensing<br/><b class="text-info">工程技术2区 Top、遥感2区, SCI, IF=5.349(2023)</b></p>
+                        <h5 class="card-title">EasyIDP: a Python package for intermediate data processing in UAV-based plant phenotyping <span type="button" class="badge badge-secondary badge-cite" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">22</span></h5>
+                        <p class="card-text common-text mb-2">Remote Sensing<br/><b class="text-muted" data-i18n="pub.if.rs">sci</b></p>
                         <div class="my-link-btn">
                             <a class="btn btn-sm btn-outline-dark" href="https://doi.org/10.3390/rs13132622" target="_blank">DOI</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/19_afm.pdf" target="_blank">PDF</a>
@@ -311,8 +311,8 @@
                 <div class="card my-4 shadow">
                     <img class="card-img-top bd-placeholder-img border-bottom" src="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/19_afm_graph.svg" alt="Card image">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform <span type="button" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">30</span></h5>
-                        <p class="card-text common-text mb-2">Agricultural and Forest Meteorology<br/><b class="text-danger">农林科学1区 Top、农艺学1区、林学1区, SCI, IF=6.424(2023)</b></p>
+                        <h5 class="card-title">Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform <span type="button" class="badge badge-secondary badge-cite" data-toggle="tooltip" data-placement="top" title="被引数(Cite by)">30</span></h5>
+                        <p class="card-text common-text mb-2">Agricultural and Forest Meteorology<br/><b class="text-muted" data-i18n="pub.if.afm">sci</b></p>
                         <div class="my-link-btn">
                             <a class="btn btn-sm btn-outline-dark" href="https://doi.org/10.1016/j.agrformet.2019.107665" target="_blank">DOI</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/19_afm.pdf" target="_blank">PDF</a>
@@ -344,6 +344,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-dark" id="thesis-tab" data-toggle="tab" href="#thesis" role="tab" aria-controls="thesis" aria-selected="false">
+                            <span data-i18n="pub.tabs.t">毕业论文</span> <span class="badge badge-secondary">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-dark" id="others-tab" data-toggle="tab" href="#others" role="tab" aria-controls="others" aria-selected="false">
                             <span data-i18n="pub.tabs.o">其他</span> <span class="badge badge-secondary" id="others-count">4</span>
                         </a>
@@ -365,7 +370,7 @@
 
                         <div class="csl-bib-body">
                             <div class="csl-entry">
-                                Zhang, W., Peng, X., Bai, T., <b>Wang, H.</b>, Takata, D., Guo, W., <b><span class="text-success">2024</span></b>. A UAV-Based Single-Lens Stereoscopic Photography Method for Phenotyping the Architecture Traits of Orchard Trees. <b>Remote Sensing</b> 16, 1570.<br/>
+                                Zhang, W., Peng, X., Bai, T., <b>Wang, H.</b>, Takata, D., Guo, W., <b><span class="text-muted">2024</span></b>. A UAV-Based Single-Lens Stereoscopic Photography Method for Phenotyping the Architecture Traits of Orchard Trees. <b>Remote Sensing</b> 16, 1570.<br/>
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -378,7 +383,7 @@
 
                         <div class="csl-bib-body">
                             <div class="csl-entry">
-                                <b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W., <b><span class="text-success">2023</span></b>. Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income. <b>Plant Phenomics</b> 2023:5, 0086.<br/>
+                                <b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W., <b><span class="text-muted">2023</span></b>. Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income. <b>Plant Phenomics</b> 2023:5, 0086.<br/>
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -392,7 +397,7 @@
 
                         <div class="csl-bib-body">
                             <div class="csl-entry">
-                                Drofova, I., Guo, W., <b>Wang, H.</b>, Adamek, M., <b><span class="text-success">2023</span></b>. Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality. <b>Bulletin EEI</b> 12, 868–881. 
+                                Drofova, I., Guo, W., <b>Wang, H.</b>, Adamek, M., <b><span class="text-muted">2023</span></b>. Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality. <b>Bulletin EEI</b> 12, 868–881. 
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -402,7 +407,7 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">Zhang, W., Peng, X., Cui, G., <b>Wang, H.</b>, Takata, D., Guo, W.,<b><span class="text-success">2023</span></b>. Tree Branch Skeleton Extraction from Drone-Based Photogrammetric Point Cloud. <b>Drones</b> 7, 65.
+                            <div class="csl-entry">Zhang, W., Peng, X., Cui, G., <b>Wang, H.</b>, Takata, D., Guo, W.,<b><span class="text-muted">2023</span></b>. Tree Branch Skeleton Extraction from Drone-Based Photogrammetric Point Cloud. <b>Drones</b> 7, 65.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -415,7 +420,7 @@
                         <hr />
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">Zhao, L., Guo, W., Wang, J., <b>Wang, H.</b>, Duan, Y., Wang, C., Wu, W., Shi, Y.,<b><span class="text-success">2021</span></b>. An Efficient Method for Estimating Wheat Heading Dates Using UAV Images. <b>Remote Sensing</b> 13(16), 3067.
+                            <div class="csl-entry">Zhao, L., Guo, W., Wang, J., <b>Wang, H.</b>, Duan, Y., Wang, C., Wu, W., Shi, Y.,<b><span class="text-muted">2021</span></b>. An Efficient Method for Estimating Wheat Heading Dates Using UAV Images. <b>Remote Sensing</b> 13(16), 3067.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -426,7 +431,7 @@
 
                         
                         <div class="csl-bib-body">
-                            <div class="csl-entry">Dai, X., Ducey, M.J., Kershaw, J.A., <b>Wang, H.</b>, <b><span class="text-success">2021</span></b>. Sector subsampling for basal area ratio estimation: an alternative to big BAF sampling. <b>Canadian Journal of Forest Research</b> 51(8), 1–9.
+                            <div class="csl-entry">Dai, X., Ducey, M.J., Kershaw, J.A., <b>Wang, H.</b>, <b><span class="text-muted">2021</span></b>. Sector subsampling for basal area ratio estimation: an alternative to big BAF sampling. <b>Canadian Journal of Forest Research</b> 51(8), 1–9.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -436,7 +441,7 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">Hsu, Y.-H., Kershaw, J.A., Ducey, M.J., Yang, T.-R., <b>Wang, H.</b>, <b><span class="text-success">2021</span></b>. Sampling with probability proportional to prediction (3P sampling) using covariates derived from spherical images. <b>Canadian Journal of Forest Research</b> 51(8), 1140-1147.
+                            <div class="csl-entry">Hsu, Y.-H., Kershaw, J.A., Ducey, M.J., Yang, T.-R., <b>Wang, H.</b>, <b><span class="text-muted">2021</span></b>. Sampling with probability proportional to prediction (3P sampling) using covariates derived from spherical images. <b>Canadian Journal of Forest Research</b> 51(8), 1140-1147.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -446,7 +451,7 @@
                         <hr/>
                         
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Duan, Y., Shi, Y., Kato, Y., Ninomiya, S., Guo, W., <b><span class="text-success">2021</span></b>. EasyIDP: A Python Package for Intermediate Data Processing in UAV-Based Plant Phenotyping. <b>Remote Sensing</b> 13(13), 2622.
+                            <div class="csl-entry"><b>Wang, H.</b>, Duan, Y., Shi, Y., Kato, Y., Ninomiya, S., Guo, W., <b><span class="text-muted">2021</span></b>. EasyIDP: A Python Package for Intermediate Data Processing in UAV-Based Plant Phenotyping. <b>Remote Sensing</b> 13(13), 2622.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -456,7 +461,7 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">Feldman, A., <b>Wang, H.</b>, Fukano, Y., Kato, Y., Ninomiya, S., Guo, W., <b><span class="text-success">2021</span></b>. EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D. <b>Methods in Ecology Evolution</b> 12(9), 1679–1686.
+                            <div class="csl-entry">Feldman, A., <b>Wang, H.</b>, Fukano, Y., Kato, Y., Ninomiya, S., Guo, W., <b><span class="text-muted">2021</span></b>. EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D. <b>Methods in Ecology Evolution</b> 12(9), 1679–1686.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -467,7 +472,7 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">Dai, X., Ducey, M.J., <b>Wang, H.</b>, Yang, T.-R., Hsu, Y.-H., Ogilvie, J., Kershaw, J.A., <b><span class="text-success">2021</span></b>. Biomass estimates derived from sector subsampling of 360° spherical images. <b>Forestry: An International Journal of Forest Research</b> 94(4), 565–575.
+                            <div class="csl-entry">Dai, X., Ducey, M.J., <b>Wang, H.</b>, Yang, T.-R., Hsu, Y.-H., Ogilvie, J., Kershaw, J.A., <b><span class="text-muted">2021</span></b>. Biomass estimates derived from sector subsampling of 360° spherical images. <b>Forestry: An International Journal of Forest Research</b> 94(4), 565–575.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -477,7 +482,7 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Yang, T.-R., Waldy, J., Kershaw, J.A., <b><span class="text-success">2021</span></b>. Estimating Individual Tree Heights DBHs from Vertically Displaced Spherical Image Pairs. <b>Mathematical and Computational Forestry & Natural-Resource Sciences</b> 13(1), 1-14.</div>
+                            <div class="csl-entry"><b>Wang, H.</b>, Yang, T.-R., Waldy, J., Kershaw, J.A., <b><span class="text-muted">2021</span></b>. Estimating Individual Tree Heights DBHs from Vertically Displaced Spherical Image Pairs. <b>Mathematical and Computational Forestry & Natural-Resource Sciences</b> 13(1), 1-14.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/21_mcfns.pdf" target="_blank">PDF</a>
@@ -487,7 +492,7 @@
                         <hr />
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Kershaw, J.A., Yang, T.-R., Hsu, Y.-H., Ma, X., Chen, Y., <b><span class="text-success">2020</span></b>. An Integrated System for Estimating Forest Basal Area from Spherical Images. <b>Mathematical and Computational Forestry & Natural-Resource Sciences</b> 12(0), 0–14.</div>
+                            <div class="csl-entry"><b>Wang, H.</b>, Kershaw, J.A., Yang, T.-R., Hsu, Y.-H., Ma, X., Chen, Y., <b><span class="text-muted">2020</span></b>. An Integrated System for Estimating Forest Basal Area from Spherical Images. <b>Mathematical and Computational Forestry & Natural-Resource Sciences</b> 12(0), 0–14.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/20_mcfns.pdf" target="_blank">PDF</a>
@@ -498,7 +503,7 @@
 
                         <div class="csl-bib-body">
                             <div class="csl-entry">
-                                <b>Wang, H.</b>, Han, D., Mu, Y., Jiang, L., Yao, X., Bai, Y., Lu, Q., Wang, F., <b><span class="text-success">2019</span></b>. Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform. <b>Agricultural and Forest Meteorology</b> 278, 107665.
+                                <b>Wang, H.</b>, Han, D., Mu, Y., Jiang, L., Yao, X., Bai, Y., Lu, Q., Wang, F., <b><span class="text-muted">2019</span></b>. Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform. <b>Agricultural and Forest Meteorology</b> 278, 107665.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -525,7 +530,9 @@
                         <hr />
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Blok M. P., Burridge J., Jiang T., Guo, W. <b><span class="text-success">May 19-23, 2024</span></b>. 3DPotatoTwin: Paired 3D Dataset of Potato Tubers for Plant Phenotyping Applications (<b><span class="text-info">Poster</span></b>), <b>The 6th CIGR International Conference 2024 (CIGR2024)</b>, Jeju International Convention Center (ICC JEJU), Jeju, Korea
+                            <div class="csl-entry">
+                                <b>Wang, H.</b>, Blok M. P., Burridge J., Jiang T., Guo, W. <b><span class="text-muted">May 19-23, 2024</span></b>. 3DPotatoTwin: Paired 3D Dataset of Potato Tubers for Plant Phenotyping Applications (poster), <b>The 6th CIGR International Conference 2024 (CIGR2024)</b>, Jeju International Convention Center (ICC JEJU), Jeju, Korea<br/>
+                                <span class="common-text mb-2 text-muted"><b data-i18n="awd.cigr24">award</b></span>
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -537,7 +544,7 @@
                         <hr />
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W. <b><span class="text-success">Nov 10-15, 2023</span></b>. Virtual Broccoli Farmland Implementation by Drone-based Phenotyping and Cross-scale Data Fusion (<b><span class="text-danger">Oral</span></b>), <b>The 10th International Horticulture Research Conference (IHRC2023)</b>, Guangzhou, China.
+                            <div class="csl-entry"><b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W. <b><span class="text-muted">Nov 10-15, 2023</span></b>. Virtual Broccoli Farmland Implementation by Drone-based Phenotyping and Cross-scale Data Fusion (oral), <b>The 10th International Horticulture Research Conference (IHRC2023)</b>, Guangzhou, China.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -548,19 +555,19 @@
                         <hr />
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W. <b><span class="text-success">July 3-5, 2023</span></b>. Virtual broccoli farmland by fusing close-range and aerial phenotyping (<b><span class="text-danger">Oral</span></b>), <b>Fifth International Workshop on Machine Learning for Cyber-Agricultural Systems (MLCAS2023)</b>, Sarabetsu Village, Hokkaido, Japan.
+                            <div class="csl-entry"><b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W. <b><span class="text-muted">July 3-5, 2023</span></b>. Virtual broccoli farmland by fusing close-range and aerial phenotyping (oral), <b>Fifth International Workshop on Machine Learning for Cyber-Agricultural Systems (MLCAS2023)</b>, Sarabetsu Village, Hokkaido, Japan.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/23_mlcas2023_abstract.pdf" target="_blank">Abstract</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/23_mlcas2023_ppt.pdf" target="_blank">Poster</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/23_mlcas2023_ppt.pdf" target="_blank">Oral</a>
                         </div>
 
                         <h3 class="pt-4">2022</h3>
                         <hr />
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W. <b><span class="text-success">Sept 27-30, 2022</span></b>. Estimate Optimal Harvest Time by Cross-scale Assimilated Digital Broccoli Farmland (<b><span class="text-info">Poster</span></b>), <b>7th International Plant Phenotyping Symposium: "Plant Phenotyping for a Sustainable Future"</b>, Wageningen, Netherlands.
+                            <div class="csl-entry"><b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W. <b><span class="text-muted">Sept 27-30, 2022</span></b>. Estimate Optimal Harvest Time by Cross-scale Assimilated Digital Broccoli Farmland (poster), <b>7th International Plant Phenotyping Symposium: "Plant Phenotyping for a Sustainable Future"</b>, Wageningen, Netherlands.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -570,20 +577,20 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Kato, Y., Guo, W. <b><span class="text-success">May 21-22, 2022</span></b>. Procedural Geometric Modeling for Plant Phenomics by 
-                                Blender: Case Study of Maize (<b><span class="text-danger">Oral</span></b>), <b>Annual Conference of the Japanese Society of Agricultural Informatics 2022 (農業情報学会2022年次大会, JSAI2022)</b>, Kyoto, Japan.
+                            <div class="csl-entry"><b>Wang, H.</b>, Kato, Y., Guo, W. <b><span class="text-muted">May 21-22, 2022</span></b>. Procedural Geometric Modeling for Plant Phenomics by 
+                                Blender: Case Study of Maize (oral), <b>Annual Conference of the Japanese Society of Agricultural Informatics 2022 (農業情報学会2022年次大会, JSAI2022)</b>, Kyoto, Japan.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/22_jsai_abstract.pdf" target="_blank">Abstract</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/22_jsai_ppt.pdf" target="_blank">PPT</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/22_jsai_ppt.pdf" target="_blank">Oral</a>
                         </div>
 
                         <h3 class="pt-4">2021</h3>
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W. <b><span class="text-success">July 20-22, 2021</span></b>. Cost-efficient broccoli head phenotyping using aerial imagery and SfM-based weakly supervised learning (<b><span class="text-info">poster</span></b>), <b>The 8th International Horticulture Research Conference</b>, Nanjing, Jiangsu, China.
+                            <div class="csl-entry"><b>Wang, H.</b>, Tang, L., Nishida, E., Fukano, Y., Kato, Y., Guo, W. <b><span class="text-muted">July 20-22, 2021</span></b>. Cost-efficient broccoli head phenotyping using aerial imagery and SfM-based weakly supervised learning (poster), <b>The 8th International Horticulture Research Conference</b>, Nanjing, Jiangsu, China.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
@@ -594,28 +601,30 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Kato, Y., Guo, W., <b><span class="text-success">June 3-4, 2021</span></b>. EasyIDP: A python package for intermediate data processing in UAV based plant phenotyping (<b><span class="text-info">poster</span></b>), <b>The 1th Research Meeting of Society of Trans-disciplinary Plant Sciences (超分野植物科学研究会第１回研究集会, TDPS2021)</b>, Zoom online, Tokyo, Japan.
+                            <div class="csl-entry"><b>Wang, H.</b>, Kato, Y., Guo, W., <b><span class="text-muted">June 3-4, 2021</span></b>. EasyIDP: A python package for intermediate data processing in UAV based plant phenotyping (poster), <b>The 1th Research Meeting of Society of Trans-disciplinary Plant Sciences (超分野植物科学研究会第１回研究集会, TDPS2021)</b>, Zoom online, Tokyo, Japan.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/21_cfy_poster.pdf" target="_blank">Poster</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://www.tdps.jp/tdps001#h.bqdgffvi239x" target="_blank">URL</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/21_cfy_poster.png" target="_blank">Poster</a>
                         </div>
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Kato, Y., Guo, W., <b><span class="text-success">May 22, 2021</span></b>. EasyIDP: A python package for intermediate data processing in UAV based plant phenotyping (<b><span class="text-info">poster</span></b>), <b>Annual Conference of the Japanese Society of Agricultural Informatics 2021 (農業情報学会2021年次大会, JSAI2021)</b>, Zoom online, Tokyo, Japan.<br/><span class="common-text mb-2 text-danger"><b>Young researcher innovation award (若手研究者イノベーション賞)</b></span>
+                            <div class="csl-entry">
+                                <b>Wang, H.</b>, Kato, Y., Guo, W., <b><span class="text-muted">May 22, 2021</span></b>. EasyIDP: A python package for intermediate data processing in UAV based plant phenotyping (poster), <b>Annual Conference of the Japanese Society of Agricultural Informatics 2021 (農業情報学会2021年次大会, JSAI2021)</b>, Zoom online, Tokyo, Japan.<br/>
+                                <span class="common-text mb-2 text-muted"><b data-i18n="awd.jsai21">若手研究者イノベーション賞</b></span>
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/22_jsai_poster.jpg" target="_blank">Poster</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/21_jsai_poster.pdf" target="_blank">Poster</a>
                         </div>
 
                         <h3 class="pt-4">2020</h3>
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">Feldman, A., <b>Wang, H.</b>, Fukano, Y., Kato, Y., Ninomiya, S., Guo, W., <b><span class="text-success">February 24-27, 2020</span></b>. Affordable high-throughput processing of handheld camera images of container plants to phenotypic data (<b><span class="text-info">poster</span></b>), <b>Phenome 2020</b>, Tucson Convention Center, Tucson, Arizona, U.S.</div>
+                            <div class="csl-entry">Feldman, A., <b>Wang, H.</b>, Fukano, Y., Kato, Y., Ninomiya, S., Guo, W., <b><span class="text-muted">February 24-27, 2020</span></b>. Affordable high-throughput processing of handheld camera images of container plants to phenotypic data (poster), <b>Phenome 2020</b>, Tucson Convention Center, Tucson, Arizona, U.S.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/20_phenome_poster.pdf" target="_blank">Poster</a>
@@ -625,7 +634,7 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">Feldman, A., <b>Wang, H.</b>, Fukano, Y., Guo, W., <b><span class="text-success">October 22-25, 2019</span></b>. Affordable high-throughput processing of multi-scale images to phenotypic data (<b><span class="text-info">poster</span></b>). <b>The 6th International Plant Phenotyping Symposium</b>, Nanjing Dongjiao State Guesthouse, Nanjing, Jiangsu, China.</div>
+                            <div class="csl-entry">Feldman, A., <b>Wang, H.</b>, Fukano, Y., Guo, W., <b><span class="text-muted">October 22-25, 2019</span></b>. Affordable high-throughput processing of multi-scale images to phenotypic data (poster). <b>The 6th International Plant Phenotyping Symposium</b>, Nanjing Dongjiao State Guesthouse, Nanjing, Jiangsu, China.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/19_IPPS_poster.pdf" target="_blank">Poster</a>
@@ -633,42 +642,90 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Kershaw, J.A., <b><span class="text-success">June 23-25, 2019</span></b>. Estimating Forest Attributes from Spherical Images (<b><span class="text-danger">oral</span></b>, <b><span class="text-info">poster</span></b>). <b>The Western Mensurationists 2019 Annual Meeting</b>, Kamloops Hotel and Conf. Center, Kamloops, British Columbia, Canada.</div>
+                            <div class="csl-entry"><b>Wang, H.</b>, Kershaw, J.A., <b><span class="text-muted">June 23-25, 2019</span></b>. Estimating Forest Attributes from Spherical Images (oral & poster). <b>The Western Mensurationists 2019 Annual Meeting</b>, Kamloops Hotel and Conf. Center, Kamloops, British Columbia, Canada.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/19_WFCA_abstract.pdf" target="_blank">Abstract</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/19_WFCA_ppt.pdf" target="_blank">PPT</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/19_WFCA_ppt.pdf" target="_blank">Oral</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/19_WFCA_poster.pdf" target="_blank">Poster</a>
                         </div>
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Kershaw, J.A., <b><span class="text-success">March 23, 2018</span></b>. Measuring Plant Area Index (PAI) from panorama photo images (<b><span class="text-danger">oral</span></b>). <b>The 25th Annual UNB Graduate Research Conference (GRC)</b>, Wu Conference Center, Fredericton, New Brunswick, Canada.<br/><span class="common-text mb-2 text-danger"><b>First Place for Oral Presentation in Science & Engineering</b></span>
+                            <div class="csl-entry">
+                                <b>Wang, H.</b>, Kershaw, J.A., <b><span class="text-muted">March 23, 2018</span></b>. Measuring Plant Area Index (PAI) from panorama photo images (oral). <b>The 25th Annual UNB Graduate Research Conference (GRC)</b>, Wu Conference Center, Fredericton, New Brunswick, Canada.<br/>
+                                <span class="common-text mb-2 text-muted"><b data-i18n="awd.unb25">award</b></span>
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/18_GSA_abstract.pdf" target="_blank">Abstract</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/18_GSA_ppt.pdf" target="_blank">PPT</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/18_GSA_ppt.pdf" target="_blank">Oral</a>
                         </div>
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Kershaw, J.A., <b><span class="text-success">November 5-7, 2017</span></b>. Extracting DBH Measurements from RGB Photo Images (<b><span class="text-danger">oral</span></b>). <b>The Northeastern Mensurationists 2017 Annual Meeting</b>, The Inn at Saratoga. Saratoga Springs, New York, U.S.</div>
+                            <div class="csl-entry"><b>Wang, H.</b>, Kershaw, J.A., <b><span class="text-muted">November 5-7, 2017</span></b>. Extracting DBH Measurements from RGB Photo Images (oral). <b>The Northeastern Mensurationists 2017 Annual Meeting</b>, The Inn at Saratoga. Saratoga Springs, New York, U.S.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/17_NEMO_abstact.pdf" target="_blank">Abstract</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/17_NEMO_ppt.pdf" target="_blank">PPT</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/17_NEMO_ppt.pdf" target="_blank">Oral</a>
                         </div>
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, Wang, F., Yao, X., Mu, Y., Bai, Y., Lu, Q., <b><span class="text-success">August 20-25, 2017</span></b> . UAV-HiRAP: A novel method to improve landscape-level vegetation classification and coverage fraction estimation with unmanned aerial vehicle platform (<b><span class="text-danger">oral</span></b>). <b>The 12th International Congress of Ecological (INTECOL)</b>, China National Convention Center, Beijing, China.</div>
+                            <div class="csl-entry"><b>Wang, H.</b>, Wang, F., Yao, X., Mu, Y., Bai, Y., Lu, Q., <b><span class="text-muted">August 20-25, 2017</span></b>. UAV-HiRAP: A novel method to improve landscape-level vegetation classification and coverage fraction estimation with unmanned aerial vehicle platform (oral). <b>The 12th International Congress of Ecological (INTECOL)</b>, China National Convention Center, Beijing, China.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/17_ICE_abstract.pdf" target="_blank">Abstract</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/17_ICE_ppt.pdf" target="_blank">PPT</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/17_ICE_ppt.pdf" target="_blank">Oral</a>
                         </div>
                     </div>
+
+                    <!-- Thesis Tab -->
+                    <div class="tab-pane fade" id="thesis" role="tabpanel" aria-labelledby="thesis-tab">
+
+                        <h3 class="pt-4" data-i18n="time.phd.title">毕业论文</span></h3>
+                        <hr />
+
+                        <div class="csl-bib-body">
+                            <div class="csl-entry"><b>Wang, H.</b>, <b><span class="text-muted">2023</span></b>. Studies on 3D-based plant phenotyping by multi-scale data fusion (<b>PhD thesis</b>). The University of Tokyo.</div>
+                        </div>
+                        <div class="my-link-btn csl-bib-btn pt-1">
+                            <a class="btn btn-sm btn-outline-dark" href="https://www.doi.org/10.13140/RG.2.2.11525.12009" target="_blank">DOI</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/DoctorThesis/releases" target="_blank">PDF</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/23_thesis_ppt.pdf" target="_blank">PPT</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/DoctorThesis" target="_blank">Codes</a>
+                        </div>
+
+                        <h3 class="pt-4" data-i18n="time.msc.title">毕业论文</span></h3>
+                        <hr />
+
+                        <div class="csl-bib-body">
+                            <div class="csl-entry"><b>Wang, H.</b>, <b><span class="text-muted">2019</span></b>. Estimating Forest Attributes from Spherical Images (<b>MSc Forestry thesis</b>). The University of New Brunswick.</div>
+                        </div>
+                        <div class="my-link-btn csl-bib-btn pt-1">
+                            <a class="btn btn-sm btn-outline-dark" href="https://www.doi.org/10.13140/RG.2.2.35680.64004" target="_blank">DOI</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis.pdf" target="_blank">PDF</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis_ppt.pdf" target="_blank">PPT</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/Spherical2TreeAttributes" target="_blank">Codes</a>
+                        </div>
+
+                        <h3 class="pt-4" data-i18n="time.bsc.title">毕业论文</span></h3>
+                        <hr />
+
+                        <div class="csl-bib-body">
+                            <div class="csl-entry"><b>Wang, H.</b>, <b><span class="text-muted">2017</span></b>. Extracting DBH Measurements from RGB Photo Images (<b>BSc Ecology thesis</b>). The Nanjing University of Forestry.</div>
+                        </div>
+                        <div class="my-link-btn csl-bib-btn pt-1">
+                            <a class="btn btn-sm btn-outline-dark" href="http://dx.doi.org/10.13140/RG.2.2.30588.77440" target="_blank">DOI</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis.pdf" target="_blank">PDF</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis_ppt.pdf" target="_blank">PPT</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/ImageDBH" target="_blank">Codes</a>
+                        </div>
+
+
+                    </div>
+
 
                     <!-- Others Tab -->
                     <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="others-tab">
@@ -677,7 +734,7 @@
                         <hr />
                         
                         <div class="csl-bib-body">
-                            <div class="csl-entry">王锋，韩东，<b>王浩舟</b>，卢琦，潘绪斌，一种基于无人机的景观尺度植被覆盖度的计算方法及系统：<b><span class="text-success">2019</span></b>. CN 201610913357</div>
+                            <div class="csl-entry">王锋，韩东，<b>王浩舟</b>，卢琦，潘绪斌，一种基于无人机的景观尺度植被覆盖度的计算方法及系统：<b><span class="text-muted">2019</span></b>. CN 201610913357</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://patents.google.com/patent/CN106403904A/zh" target="_blank">URL</a>
@@ -688,53 +745,19 @@
                         <hr />
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">David, E., Serouart, M., Smith, D., Madec, S., Velumani, K., Liu, S., Wang, X., Espinosa, F.P., Shafiee, S., Tahir, I.S.A., Tsujimoto, H., Nasuda, S., Zheng, B., Kichgessner, N., Aasen, H., Hund, A., Sadhegi-Tehran, P., Nagasawa, K., Ishikawa, G., Dandrifosse, S., Carlier, A., Mercatoris, B., Kuroki, K., <b>Wang, H.</b>, Ishii, M., Badhon, M.A., Pozniak, C., LeBauer, D.S., Lilimo, M., Poland, J., Chapman, S., de Solan, B., Baret, F., Stavness, I., Guo, W., <b><span class="text-success">2021</span></b>. Global Wheat Head Dataset 2021: more diversity to improve the benchmarking of wheat head localization methods.
+                            <div class="csl-entry">David, E., Serouart, M., Smith, D., Madec, S., Velumani, K., Liu, S., Wang, X., Espinosa, F.P., Shafiee, S., Tahir, I.S.A., Tsujimoto, H., Nasuda, S., Zheng, B., Kichgessner, N., Aasen, H., Hund, A., Sadhegi-Tehran, P., Nagasawa, K., Ishikawa, G., Dandrifosse, S., Carlier, A., Mercatoris, B., Kuroki, K., <b>Wang, H.</b>, Ishii, M., Badhon, M.A., Pozniak, C., LeBauer, D.S., Lilimo, M., Poland, J., Chapman, S., de Solan, B., Baret, F., Stavness, I., Guo, W., <b><span class="text-muted">2021</span></b>. Global Wheat Head Dataset 2021: more diversity to improve the benchmarking of wheat head localization methods.
                             </div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/abs/2105.07660v2" target="_blank">URL</a>
                             <a class="btn btn-sm btn-outline-dark" href="https://arxiv.org/abs/2105.07660v2" target="_blank">arXiv</a>
                         </div>
-
-                        <h3 class="pt-4" data-i18n="pub.tabs.t">学位论文</span></h3>
-                        <hr />
-
-                        <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, <b><span class="text-success">2023</span></b>. Studies on 3D-based plant phenotyping by multi-scale data fusion (<b>PhD thesis</b>). The University of Tokyo.</div>
-                        </div>
-                        <div class="my-link-btn csl-bib-btn pt-1">
-                            <a class="btn btn-sm btn-outline-dark" href="https://www.doi.org/10.13140/RG.2.2.11525.12009" target="_blank">DOI</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/DoctorThesis/releases" target="_blank">PDF</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/23_thesis_ppt.pdf" target="_blank">PPT</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/DoctorThesis" target="_blank">Codes</a>
-                        </div>
-                        <hr />
-
-                        <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, <b><span class="text-success">2019</span></b>. Estimating Forest Attributes from Spherical Images (<b>MSc Forestry thesis</b>). The University of New Brunswick.</div>
-                        </div>
-                        <div class="my-link-btn csl-bib-btn pt-1">
-                            <a class="btn btn-sm btn-outline-dark" href="https://www.doi.org/10.13140/RG.2.2.35680.64004" target="_blank">DOI</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis.pdf" target="_blank">PDF</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis_ppt.pdf" target="_blank">PPT</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/Spherical2TreeAttributes" target="_blank">Codes</a>
-                        </div>
-                        <hr/>
-
-                        <div class="csl-bib-body">
-                            <div class="csl-entry"><b>Wang, H.</b>, <b><span class="text-success">2017</span></b>. Extracting DBH Measurements from RGB Photo Images (<b>BSc Ecology thesis</b>). The Nanjing University of Forestry.</div>
-                        </div>
-                        <div class="my-link-btn csl-bib-btn pt-1">
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis.pdf" target="_blank">PDF</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis_ppt.pdf" target="_blank">PPT</a>
-                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/ImageDBH" target="_blank">Codes</a>
-                        </div>
-
+                       
                         <h3 class="pt-4" data-i18n="pub.tabs.s">软件</span></h3>
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">无人机高精度影像分析平台[简称: UAV-HiRAP] v3.0, <b><span class="text-success">2019</span></b>. 软著登字第 2019SR0286422.</div>
+                            <div class="csl-entry">无人机高精度影像分析平台[简称: UAV-HiRAP] v3.0, <b><span class="text-muted">2019</span></b>. 软著登字第 2019SR0286422.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://www.uav-hirap.org" target="_blank">URL</a>
@@ -743,7 +766,7 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">无人机高精度影像分析平台[简称: UAV-HiRAP] v2.0, <b><span class="text-success">2017</span></b>. 软著登字第 2017SR558256.</div>
+                            <div class="csl-entry">无人机高精度影像分析平台[简称: UAV-HiRAP] v2.0, <b><span class="text-muted">2017</span></b>. 软著登字第 2017SR558256.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://www.uav-hirap.org" target="_blank">URL</a>
@@ -752,7 +775,7 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">无人机高精度影像分析平台[简称: UAV-HiRAP] v1.0, <b><span class="text-success">2016</span></b>. 软著登字第 2016SR198498.</div>
+                            <div class="csl-entry">无人机高精度影像分析平台[简称: UAV-HiRAP] v1.0, <b><span class="text-muted">2016</span></b>. 软著登字第 2016SR198498.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://github.com/UAV-HiRAP/UAV-HiRAP-Matlab" target="_blank">Codes</a>
@@ -762,7 +785,7 @@
                         <hr/>
 
                         <div class="csl-bib-body">
-                            <div class="csl-entry">Yaira 实测数据多维可视化软件[简称:Yaira] v1.0, <b><span class="text-success">2016</span></b>. 软著登字第 2016SR178462.</div>
+                            <div class="csl-entry">Yaira 实测数据多维可视化软件[简称:Yaira] v1.0, <b><span class="text-muted">2016</span></b>. 软著登字第 2016SR178462.</div>
                         </div>
                         <div class="my-link-btn csl-bib-btn pt-1">
                             <a class="btn btn-sm btn-outline-dark" href="https://github.com/HowcanoeWang/Yaira" target="_blank">Codes</a>
@@ -802,9 +825,7 @@
                 <div class="card-footer">
                     <div class="d-flex justify-content-between align-items-center pt-2">
                         <div class="my-link-btn">
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP/wiki', '_blank');">Wiki</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP', '_blank');">Code</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://doi.org/10.3390/rs13132622', '_black');">DOI</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://easyidp.readthedocs.io/en/latest/', '_black');">Manual</button>
                         </div>
                         <small class="text-muted">2021.06</small>
@@ -823,7 +844,6 @@
                         <div class="my-link-btn">
                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UTokyo-FieldPhenomics-Lab/EasyDCP', '_black');">Code</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://www.youtube.com/watch?v=CbQEzUEybTo&ab_channel=U.TokyoInternationalFieldPhenomicsResearchLab', '_black');">Video</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('http://dx.doi.org/10.1111/2041-210X.13645', '_black');">DOI</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://www.a.u-tokyo.ac.jp/topics/topics_20210615-1.html', '_black');">News</button>
                         </div>
                         <small class="text-muted">2021.04</small>
@@ -860,7 +880,6 @@
                         <div class="my-link-btn">
                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://www.uav-hirap.org', '_black');">Web</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://github.com/UAV-HiRAP/UAV-HiRAP', '_black');">Code</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="javascript:window.open('https://doi.org/10.1016/j.agrformet.2019.107665', '_black');">DOI</button>
                         </div>
                         <small class="text-muted">2018.10</small>
                     </div>
