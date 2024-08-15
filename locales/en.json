@@ -1,0 +1,103 @@
+{
+    "nav": {
+        "profile": "Profile",
+        "project": "Projects",
+        "publication": "Publications",
+        "timeline": "Experience Timeline",
+        "award":"Awards"
+    },
+
+    "prof": {
+        "t": "Profile",
+        "name": "Haozhou Wang",
+        "position": "Project Research Assistant,<br/>The University of Tokyo",
+        "labname": "Laboratory of Field Phenomics",
+        "cite": "Citations",
+        "hidx": "H-index",
+        "mailto": "Replace [at] to @",
+        "close": "Close",
+
+        "intro": "A project research assistant at the Laboratory of Field Phenomics, UTokyo. Has a cross-disciplinary background in computer science, ecology, forestry, and agriculture. Research focuses on crop 3D reconstruction, 3D data processing, and digital twin crop models.",
+        "int": {
+            "t": "Research Interest",
+            "l1": "High-throughput plant phenotyping by 3D reconstruction",
+            "l2": "In-field traits optimization based on backward projection",
+            "l3": "Digital twin virtual plant model",
+            "l4": "Agriculture phenotyping software and tool development"
+        },
+        "edu": {
+            "t": "Education",
+            "l1": "Doctor in Agricultural science, The University of Tokyo",
+            "l2": "MSc in Forestry, The University of New Brunswick",
+            "l3": "BSc in Ecology, Nanjing Forestry University"
+        }
+    },
+
+    "inst": {
+        "ut": "The University of Tokyo",
+        "caf": "Chinese Academy of Forestry",
+        "unb": "The University of New Brunswick",
+        "nfu": "Nanjing Forestry University"
+    },
+
+    "pub": {
+        "t": "Publications",
+        "subt1":"Featured",
+        "subt2":"All contributions",
+        "note":"Please click the button below to switch",
+        "tabs": {
+            "p": "Papers",
+            "c": "Conferences",
+            "o": "Others",
+            "t": "Thesis",
+            "pa": "Patent",
+            "d": "Datasets",
+            "s": "Software Copyrights (CN)"
+        },
+        "if": {
+            "afm": "SCI, IF=6.424 (2023)",
+            "rs": "SCI, IF=5.349 (2023)",
+            "pp": "SCI, IF=12.0 (2023)"
+        }
+    },
+
+    "proj": {
+        "t": "Projects and Software",
+        "p1": "Easy Intermediate Data Processor (EasyIDP): A Python Package for intermediate preprocessing data between photogrammetry outputs and plant pheenotyping traits calculation.",
+        "p2": "Easy Dense Cloud Phenotyping (EasyDCP): A python package for agricultural phenotypic trait extraction from 2D image sets via 3D reconstruction and analysis of 3D point clouds.",
+        "p3": "A Python Program to measure tree attributes (Basal Area, DBH, Height, Gap Fraction) from two Ricoh Theta spherical image  pair taken at different height.",
+        "p4": "Unmanned Aerial Vehicles - High Resolution imagery Analysis Platform (UAV-HiRAP), is an open-source, web-based platform which provides service for image classification (maintenance suspended)."
+    },
+
+    "time": {
+        "t": "Experience Timeline",
+        "pdf": {
+            "title": "Project Research Assistant",
+            "intro": "Focused on 3D-based plant phenotyping by multi-scale data fusion."
+        },
+        "phd": {
+            "title": "Doctor in Agricultural Science",
+            "intro": "Focused on 3D reconstruction and virtual plant phenotyping, with a specific emphasis on broccoli and corn. During this period, several Python data processing toolkits and crop 3D reconstruction workflows were developed. The title of the thesis is \"Studies on 3D-based plant phenotyping by multi-scale data fusion\"."
+        },
+        "msc": {
+            "title": "Master of Science in Forestry",
+            "intro": "Focused on the area of distorted analyzing forest images taken by fisheye and spherical camera. Participated several university and international oral presentation and competition. The title of Thesis is \"Estimating Forest Attributes from Spherical Images\"."
+        },
+        "caf": {
+            "title": "Internship",
+            "intro": "Developed software for UAV image analysis in sparse Elm grassland. Registored software copyright for Matlab based UAV-HiRAP and Web-based UAV-HiRAP (www.uav-hirap.org) for semi-automatic classify plants and backgrounds. The achievements were extended to a patent, an oral presentation on The 12th International Congress of Ecological, and pulished on top journal \"Acta Ecologica Sinica\" and \"Agricultural and Forest Meteorology\", respectively."
+        }        ,
+        "bsc": {
+            "title": "Bachelor of Science in Ecology",
+            "intro": "During the study period, participated all kinds of activaties during study period, envolved in the College Student Innovation Training Projects and applied two software copyrights. The last year as a transfer student in the University of New Brunsiwick. The titile of dissertation is \"Extracting DBH Measurements from RGB Photo Images\"."
+        }
+    },
+
+    "awd": {
+        "t": "Awards",
+        "cigr24": "The 6th CIGR international conference young researcher travel award",
+        "jsai21": "Young researcher innovation award",
+        "lx3": "The Third Prize of the 8th Liang Xi Youth Paper Award",
+        "unb25": "First Place for Oral Presentation in Science & Engineering on 25th UNB GSA Conference"
+    }
+}
