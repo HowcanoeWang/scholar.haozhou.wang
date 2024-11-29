@@ -54,6 +54,9 @@ function updateContent() {
     // document.getElementById('welcome-text').innerHTML = i18next.t('welcome');
     $('body').localize();
 
+    // update lang-text
+    document.getElementById('lang-text').innerHTML = i18next.t('lang');
+
     // cite-badge
     const citeByBadges = document.querySelectorAll('.badge-cite');
     citeByBadges.forEach(badge => {
