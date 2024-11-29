@@ -158,11 +158,18 @@
             border-radius: .25rem;
         }
 
+        /* 导航栏毛玻璃效果 */
+        .navbar-blur {
+            background-color: rgba(255, 255, 255, 0.7) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom shadow-lg">
+<nav class="navbar navbar-expand-lg navbar-light navbar-blur bg-light sticky-top shadow-lg">
     <div class="container">
         <a class="navbar-brand nav-js-scroll" href="#profile-section">haozhou.wang</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -189,7 +196,7 @@
             </ul>
 
             <span class="dropdown navbar-text ml-auto">
-                <a class="" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: flex; align-items: center; text-decoration: none;">
+                <a class="nav-link" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: flex; align-items: center; text-decoration: none;">
                     <i class="fas fa-globe fa-large" style="font-size: 24px; color: gray;"></i>
                     <span class="text-muted ml-1" style="font-size: 14px;" id="lang-text"></span>
                 </a>
