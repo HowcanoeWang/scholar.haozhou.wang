@@ -53,7 +53,8 @@
             "t": "Thesis",
             "pa": "Patent",
             "d": "Datasets",
-            "s": "Software Copyrights (CN)"
+            "s": "Software Copyrights (CN)",
+            "bc": "Book chapters"
         },
         "if": {
             "afm": "SCI, IF=6.424 (2023)",
