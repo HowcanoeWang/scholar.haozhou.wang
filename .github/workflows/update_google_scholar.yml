@@ -1,4 +1,4 @@
-name: Update 3DGS Sheet Data
+name: Update Google Scholar Data
 
 on:
   schedule:
@@ -17,12 +17,11 @@ jobs:
       uses: astral-sh/setup-uv@v6
       with:
         enable-cache: true
-        cache-dependency-glob: |
-          **/pyproject.toml
+
     - name: Install dependencies with uv
       run: cd py/ && uv sync
 
-    - name: Fetch public sheet data
+    - name: Fetch google scholar data
       run: cd py/ && uv run get_google_scholar.py
 
     - name: Commit changes if updated
