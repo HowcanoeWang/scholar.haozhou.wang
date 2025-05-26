@@ -13,16 +13,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install uv
-      uses: astral-sh/setup-uv@v6
+     - name: Set up Python
+      uses: actions/setup-python@v4
       with:
-        enable-cache: true
+        python-version: '3.10'
 
-    - name: Install dependencies with uv
-      run: cd py/ && uv sync
+    - name: Install dependencies
+      run: pip install scholarly
 
     - name: Fetch google scholar data
-      run: cd py/ && uv run get_google_scholar.py
+      run: cd py/ && python get_google_scholar.py
 
     - name: Commit changes if updated
       run: |
