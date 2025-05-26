@@ -19,9 +19,11 @@ jobs:
         python-version: '3.10'
 
     - name: Install dependencies
-      run: pip install scholarly
+      run: pip install google-search-results
 
     - name: Fetch google scholar data
+      env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}  # 传递到环境变量
       run: cd py/ && python get_google_scholar.py
 
     - name: Commit changes if updated

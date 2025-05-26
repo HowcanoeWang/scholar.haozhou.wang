@@ -1,5 +1,6 @@
 
 .DS_Store
 */.DS_Store
-py/get_google_scholar.ipynb
+py/*.ipynb
 py/uv.lock
+py/serpapi.txt
