@@ -157,7 +157,7 @@
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux",
         "*.bbl",
-        "*.blg",
+        // "*.blg",
         "*.idx",
         "*.ind",
         "*.lof",

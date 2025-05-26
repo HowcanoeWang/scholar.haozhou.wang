@@ -43,6 +43,11 @@
 \newcommand{\textchinese}[1]{{\CJKfamily{chinese}#1}}
 
 %%%%%%%%%%%%%%%%%%%%
+% 解析scholar.json
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{jsonparse}
+
+%%%%%%%%%%%%%%%%%%%%
 % 右上角角标日期设置
 %%%%%%%%%%%%%%%%%%%%
 
@@ -232,6 +237,9 @@
         \cleaders\copy\ANDbox\hskip\wd\ANDbox
         \ignorespaces
     }
+
+    \JSONParseFromFile{\myJSONdata}{scholar.json}
+
     \newsavebox\ANDbox
     \sbox\ANDbox{}
 
@@ -270,7 +278,10 @@
         \kern 0.25 cm%
         \AND%
         \kern 0.25 cm%
-        \mbox{\hrefWithoutArrow{https://scholar.google.com/citations?user=CnTTa3EAAAAJ}{\color{black}{\footnotesize\faGraduationCap}\hspace*{0.13cm}313 citations, h-index 8}}%
+        \mbox{\hrefWithoutArrow{https://scholar.google.com/citations?user=CnTTa3EAAAAJ}{\color{black}{\footnotesize\faGraduationCap}\hspace*{0.13cm}
+            \JSONParseValue{\myJSONdata}{table[0].citations.all} citations, 
+            h-index \JSONParseValue{\myJSONdata}{table[1].h_index.all}
+        }}%
     \end{header}
 
     \vspace{0.3 cm - 0.3 cm}
