@@ -1,3 +1,5 @@
 
 .DS_Store
 */.DS_Store
+py/get_google_scholar.ipynb
+py/uv.lock
