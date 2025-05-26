@@ -4,3 +4,5 @@
 py/*.ipynb
 py/uv.lock
 py/serpapi.txt
+files/*.bbl
+files/*.gz
