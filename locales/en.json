@@ -17,6 +17,7 @@
         "hidx": "H-index",
         "mailto": "Replace [at] to @",
         "close": "Close",
+        "cv_down": "Download CV",
 
         "intro": "A project research assistant at the Laboratory of Field Phenomics, UTokyo. Has a cross-disciplinary background in computer science, ecology, forestry, and agriculture. Research focuses on crop 3D reconstruction, 3D data processing, and digital twin crop models.",
         "int": {
