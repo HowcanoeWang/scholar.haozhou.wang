@@ -36,7 +36,19 @@ try:
     results = search.get_dict()
     print(f"作者: {results.get('author', {}).get('name')}")
 
-    sout = {k: results[k] for k in ('cited_by', 'articles')}
+    sout = {}
+    sout = results['cited_by']
+
+    sout['articles'] = []
+    for art_dict in results['articles']:
+        selected_dict = {}
+        selected_dict['title'] = art_dict['title']
+        selected_dict['authors'] = art_dict['authors']
+        selected_dict['publication'] = art_dict['publication']
+        selected_dict['year'] = art_dict['year']
+        selected_dict['cited_by'] = art_dict['cited_by']['value']
+
+        sout['articles'].append(selected_dict)
 
     print("start saving json")
     with open('../files/scholar.json', 'w') as f:
