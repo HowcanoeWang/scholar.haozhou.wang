@@ -36,9 +36,11 @@ try:
     results = search.get_dict()
     print(f"作者: {results.get('author', {}).get('name')}")
 
+    sout = {k: results[k] for k in ('cited_by', 'articles')}
+
     print("start saving json")
     with open('../files/scholar.json', 'w') as f:
-        json.dump(results['cited_by'], f)
+        json.dump(sout, f)
         
     print("json saved")
     
