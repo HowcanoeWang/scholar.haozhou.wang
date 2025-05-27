@@ -29,7 +29,6 @@ function createEchartScholar() {
     const scholarData = window.scholarData;
 
     const chart = echarts.init(document.getElementById('citationChart'));
-    console.log( '{a|' + i18next.t('prof.cite') + ':} {b|313} {a|' + i18next.t('prof.hidx') + ':} {b|8}' )
     const option = {
         tooltip: {
             trigger: 'axis',
