@@ -1,3 +1,7 @@
+///////////////////////
+// parse scholar.json
+///////////////////////
+
 // 使用 fetch API 加载 JSON 文件
 fetch('./files/scholar.json')  // 替换为你的 JSON 文件路径
     .then(response => {
@@ -73,3 +77,33 @@ function createEchartScholar() {
     };
     chart.setOption(option);
 }
+
+////////////////////////////
+// parse publications.bib
+////////////////////////////
+
+fetch('./files/publications.bib')  // 替换为你的 .bib 文件路径
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('无法加载 publication.bib 文件');
+        }
+        return response.text();  // 注意：.bib 是文本文件，用 .text() 而不是 .json()
+    })
+    .then(bibContent => {
+        // // 将report 替换成 inproceedings，不然parseToJSON识别不了
+        // let bibContentRP = bibContent.replaceAll('@report', '@inproceedings');
+        // // 还需要将最后的}加上，不然会报错（但是不影响解析）
+        // bibContentRP = bibContentRP.replaceAll('}\n}', '},\n}');
+
+        let parser = new window.BibLatexParser(bibContent, {processUnexpected: true, processUnknown: true})
+        let bibjson = parser.parse()
+        
+        // 将数据存储在全局变量
+        window.bibjson = bibjson;
+        console.log('BibTeX 数据已加载:', window.bibjson);
+    })
+    .catch(error => {
+        console.error('加载 .bib 文件时出错:', error);
+        document.getElementById('bib-output').textContent = 
+            '加载数据时出错: ' + error.message;
+    });

@@ -22,6 +22,13 @@
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.12.2/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend@1.4.5/i18nextHttpBackend.min.js"></script>
     <script src="https://unpkg.com/jquery-i18next@1.2.1/dist/umd/jquery-i18next.min.js"></script>
+    <!-- <script src="https://unpkg.com/bibtex-js-parser/umd/bibtex-js-parser.js"></script> -->
+
+    <script type="module">
+        import {BibLatexParser} from 'https://cdn.jsdelivr.net/npm/biblatex-csl-converter@3.2.2/+esm';
+        window.BibLatexParser = BibLatexParser;
+    </script>
+
     <script src="js/switch_lang.js?rnd=003"></script>
 
     <style>
@@ -290,6 +297,7 @@
 
 <div class="masthead pt-4 pb-3" id="publication-section">
     <div class="container pb-3">
+
         <div class="row">
             <div class="col-lg-12 py-4">
                 <h3 class="font-weight-bold text-center" data-i18n="pub.t">学术成果</h3>
