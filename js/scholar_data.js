@@ -10,6 +10,9 @@ const customLinks = {
     ////////////
 
     // 2025
+    'zhang_grapecpnet_2025':{
+        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_compag3.pdf"
+    },
     'liu_improved_2025': {
         "PDF": "https://www.mdpi.com/2072-4292/17/5/906/pdf?version=1741184643"
     },
