@@ -58,7 +58,8 @@ const customLinks = {
     },
     "feldman_easydcp_2021": {
         "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/21_easydcp.pdf",
-        "News": "https://www.a.u-tokyo.ac.jp/topics/topics_20210615-1.html"
+        "News": "https://sj.jst.go.jp/news/202109/n0902-03k.html",
+        "東大ニュース": "https://www.a.u-tokyo.ac.jp/topics/topics_20210615-1.html"
     },
     "dai_biomass_2021": {
         "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/21_forestry.pdf",
