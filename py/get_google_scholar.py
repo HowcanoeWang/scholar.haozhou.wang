@@ -51,8 +51,8 @@ try:
         sout['articles'].append(selected_dict)
 
     print("start saving json")
-    with open('../files/scholar.json', 'w') as f:
-        json.dump(sout, f)
+    with open('../files/scholar.json', 'w', encoding="utf-8") as f:
+        json.dump(sout, f, indent=2, ensure_ascii=False)
         
     print("json saved")
     
