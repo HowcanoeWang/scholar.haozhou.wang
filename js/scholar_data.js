@@ -89,6 +89,10 @@ const customLinks = {
         "Abstract": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/25_jsai_abstract.pdf",
         "Oral": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/25_jsai_ppt.pdf"
     },
+    "wang_camera_2025mlcas": {
+        "Abstract": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/25_mlcas2025_abstract.pdf",
+        "Oral": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/25_mlcas2025_ppt.pdf"
+    },
 
     // 2024
     "wang_dronebased_2024apfita": {
