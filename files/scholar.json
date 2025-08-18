@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 333,
-        "since_2020": 332
+        "all": 334,
+        "since_2020": 333
       }
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 73
+      "citations": 74
     }
   ],
   "articles": [
@@ -142,6 +142,13 @@
       "cited_by": 4
     },
     {
+      "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
+      "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
+      "publication": "Remote Sensing 16 (9), 1570, 2024",
+      "year": "2024",
+      "cited_by": 3
+    },
+    {
       "title": "3D reconstruction of a group of plants by the ground multi-image photogrammetry method",
       "authors": "I Drofova, H Wang, W Guo, M Pospisilik, M Adamek, J Valouch",
       "publication": "2023 33rd International Conference Radioelektronika (RADIOELEKTRONIKA), 1-4, 2023",
@@ -181,13 +188,6 @@
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 2
-    },
-    {
-      "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
-      "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
-      "publication": "Remote Sensing 16 (9), 1570, 2024",
-      "year": "2024",
       "cited_by": 2
     }
   ]
