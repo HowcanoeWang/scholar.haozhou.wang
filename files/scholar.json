@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 335,
-        "since_2020": 334
+        "all": 337,
+        "since_2020": 336
       }
     },
     {
@@ -14,8 +14,8 @@
     },
     {
       "i10_index": {
-        "all": 6,
-        "since_2020": 6
+        "all": 7,
+        "since_2020": 7
       }
     }
   ],
@@ -42,11 +42,11 @@
     },
     {
       "year": 2024,
-      "citations": 102
+      "citations": 103
     },
     {
       "year": 2025,
-      "citations": 75
+      "citations": 76
     }
   ],
   "articles": [
@@ -76,7 +76,7 @@
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 18
+      "cited_by": 19
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -97,7 +97,7 @@
       "authors": "韩东， 王浩舟， 郑邦友， 王锋",
       "publication": "生态学报 38 (18), 6655-6663, 2018",
       "year": "2018",
-      "cited_by": 9
+      "cited_by": 10
     },
     {
       "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
