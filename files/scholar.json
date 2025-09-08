@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 337,
-        "since_2020": 336
+        "all": 340,
+        "since_2020": 339
       }
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 76
+      "citations": 79
     }
   ],
   "articles": [
@@ -55,7 +55,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 134
+      "cited_by": 135
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -76,7 +76,7 @@
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 19
+      "cited_by": 20
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -104,7 +104,7 @@
       "authors": "I Drofova, W Guo, H Wang, M Adamek",
       "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
       "year": "2023",
-      "cited_by": 8
+      "cited_by": 9
     },
     {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
