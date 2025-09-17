@@ -22,6 +22,10 @@ const customLinks = {
     'blok_highthroughput_2025': {
         "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_compag.pdf"
     },
+    'zhou_global_2025': {
+        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_pp.pdf",
+        "東大ニュース": "https://www.a.u-tokyo.ac.jp/topics/topics_20250916-1.html"
+    },
 
     // 2024
     "zhang_uavbased_2024": {
