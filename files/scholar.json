@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 343,
-        "since_2020": 342
+        "all": 348,
+        "since_2020": 347
       }
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 82
+      "citations": 87
     }
   ],
   "articles": [
@@ -55,7 +55,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 138
+      "cited_by": 140
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -69,21 +69,21 @@
       "authors": "H Wang, Y Duan, Y Shi, Y Kato, S Ninomiya, W Guo",
       "publication": "Remote Sensing 13 (13), 2622, 2021",
       "year": "2021",
-      "cited_by": 38
+      "cited_by": 39
     },
     {
       "title": "Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income",
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 20
+      "cited_by": 21
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
       "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
       "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
       "year": "2021",
-      "cited_by": 18
+      "cited_by": 19
     },
     {
       "title": "An efficient method for estimating wheat heading dates using UAV images",
@@ -128,7 +128,7 @@
       "cited_by": 5
     },
     {
-      "title": "AN INTEGRATED SYSTEM FOR ESTIMATING FOREST BASAL AREA FROM SPHERICAL IMAGES.",
+      "title": "An Integrated System for Estimating Forest Basal Area from Spherical Images",
       "authors": "H Wang, JA Kershaw, T Yang, Y Hsu, X Ma, Y Chen",
       "publication": "Mathematical & Computational Forestry & Natural Resource Sciences 12 (1), 2020",
       "year": "2020",
