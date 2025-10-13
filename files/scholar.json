@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 356,
-        "since_2020": 355
+        "all": 358,
+        "since_2020": 357
       }
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 95
+      "citations": 97
     }
   ],
   "articles": [
@@ -114,6 +114,13 @@
       "cited_by": 8
     },
     {
+      "title": "High-throughput 3D shape completion of potato tubers on a harvester",
+      "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
+      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
+      "year": "2025",
+      "cited_by": 5
+    },
+    {
       "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
       "authors": "X Dai, MJ Ducey, H Wang, TR Yang, YH Hsu, J Ogilvie, JA Kershaw Jr",
       "publication": "Forestry: An International Journal of Forest Research 94 (4), 565-575, 2021",
@@ -140,13 +147,6 @@
       "publication": "University of New Brunswick, 2019",
       "year": "2019",
       "cited_by": 4
-    },
-    {
-      "title": "High-throughput 3D shape completion of potato tubers on a harvester",
-      "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
-      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
-      "year": "2025",
-      "cited_by": 3
     },
     {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
