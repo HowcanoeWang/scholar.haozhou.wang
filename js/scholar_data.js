@@ -214,6 +214,9 @@ async function initGoogleScholarGraph() {
 
             // 创建echarts表格
             createEchartScholar();
+
+            // 更新论文引用数量
+            updateFeaturedCiteCount();
         }
     } catch (error) {
         console.error('初始化页面时出错:', error);
@@ -269,6 +272,30 @@ function createEchartScholar() {
         }],
     };
     chart.setOption(option);
+}
+
+function updateFeaturedCiteCount() {
+    const citeSpans = document.querySelectorAll('span.js-cite-count');
+    citeSpans.forEach(span => {
+        const titleElement = span.closest('h5'); // 获取最近的父级 h5 元素
+        if (titleElement) {
+            // 获取 h5 的文本内容作为标题，排除 <span> 标签内的内容
+            let publicationTitle = titleElement.cloneNode(true); // 克隆元素以避免修改原始DOM
+            publicationTitle.querySelectorAll('span').forEach(s => s.remove()); // 移除所有 span 元素
+            publicationTitle = publicationTitle.textContent.trim();
+            
+            if (window.scholarData && window.scholarData.articles) {
+                const article = window.scholarData.articles.find(
+                    article => article.title.trim().toLowerCase() === publicationTitle.toLowerCase()
+                );
+                
+                if (article && article.cited_by) {
+                    span.textContent = article.cited_by;
+                }
+            }
+        }
+    });
+
 }
 
 ////////////////////////////
