@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 360,
-        "since_2020": 359
+        "all": 362,
+        "since_2020": 361
       }
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 99
+      "citations": 101
     }
   ],
   "articles": [
@@ -184,11 +184,67 @@
       "cited_by": 3
     },
     {
+      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
+      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
+      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
+      "year": "2025",
+      "cited_by": 2
+    },
+    {
       "title": "Improved Detection and Location of Small Crop Organs by Fusing UAV Orthophoto Maps and Raw Images",
       "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
       "publication": "Remote Sensing 17 (5), 906, 2025",
       "year": "2025",
       "cited_by": 2
+    },
+    {
+      "title": "EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotyping",
+      "authors": "H Wang, W Guo",
+      "publication": "Harnessing Data Science for Sustainable Agriculture and Natural Resource …, 2024",
+      "year": "2024",
+      "cited_by": 2
+    },
+    {
+      "title": "UAV-HiRAP: A novel method to improve landscape-level vegetation classification and coverage fraction estimation with unmanned aerial vehicle platform",
+      "authors": "H Wang, F Wang, X Yao, Y Mu, Y Bai, Q Lu",
+      "publication": "The 12th International Congress of Ecological (INTECOL),, 2017",
+      "year": "2017",
+      "cited_by": 2
+    },
+    {
+      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
+      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
+      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
+      "year": "2025",
+      "cited_by": null
+    },
+    {
+      "title": "Improved Detecting and Locating Organ Level Small Agricultural Objects by Fusion Ortho Maps and UAV Raw Images",
+      "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
+      "publication": "Preprints, 2024",
+      "year": "2024",
+      "cited_by": null
+    },
+    {
+      "title": "Studies on 3D-based plant phenotyping by multi-scale data fusion",
+      "authors": "H Wang",
+      "publication": "The University of Tokyo, 2023",
+      "year": "2023",
+      "cited_by": null
+    },
+    {
+      "title": "Extracting DBH measurements from RGB photo images",
+      "authors": "W Haozhou, JA Kershaw",
+      "publication": "",
+      "year": "2017",
+      "cited_by": null
+    },
+    {
+      "title": "Drone-Based Multi-spectral Pipeline for Detecting Abnormal Potato Strains in the Field",
+      "authors": "H Wang, S Inoshishi, M Shimizu, T Kato, W Guo",
+      "publication": "",
+      "year": "",
+      "cited_by": null
     }
   ]
 }
