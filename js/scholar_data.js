@@ -23,8 +23,11 @@ const customLinks = {
         "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_compag.pdf"
     },
     'zhou_global_2025': {
-        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_pp.pdf",
+        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_pp_riceseg.pdf",
         "東大ニュース": "https://www.a.u-tokyo.ac.jp/topics/topics_20250916-1.html"
+    },
+    'wang_global_2025': {
+        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_pp_gwfss.pdf"
     },
 
     // 2024
