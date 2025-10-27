@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 358,
-        "since_2020": 357
+        "all": 360,
+        "since_2020": 359
       }
     },
     {
@@ -34,7 +34,7 @@
     },
     {
       "year": 2022,
-      "citations": 50
+      "citations": 51
     },
     {
       "year": 2023,
@@ -42,11 +42,11 @@
     },
     {
       "year": 2024,
-      "citations": 103
+      "citations": 102
     },
     {
       "year": 2025,
-      "citations": 97
+      "citations": 99
     }
   ],
   "articles": [
@@ -55,7 +55,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 143
+      "cited_by": 144
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -83,7 +83,7 @@
       "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
       "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
       "year": "2021",
-      "cited_by": 19
+      "cited_by": 20
     },
     {
       "title": "An efficient method for estimating wheat heading dates using UAV images",
