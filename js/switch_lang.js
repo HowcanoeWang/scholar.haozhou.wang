@@ -65,11 +65,17 @@ function updateContent() {
 
     // 卡片瀑布流
     $(document).ready(function() {
-        var $container = $('#post-area');
+        var $container1 = $('#flow-award');
+        var $container2 = $('#flow-featured');
 
         setTimeout(function() {    
 
-            $container.masonry({
+            $container1.masonry({
+                itemSelector : '.col',
+                percentPosition: true
+            });   
+
+            $container2.masonry({
                 itemSelector : '.col',
                 percentPosition: true
             });    
