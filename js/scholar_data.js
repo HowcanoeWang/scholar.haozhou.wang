@@ -516,7 +516,7 @@ function generateCiteCountHTML(entry, type) {
             );
             
             if (article && article.cited_by) {
-                citeHtml = `<span type="button" class="badge badge-secondary d-inline ml-2" title="被引数">${article.cited_by}</span>`
+                citeHtml = `<span type="button" class="badge badge-secondary badge-cite d-inline ml-2" title="被引数">${article.cited_by}</span>`
             } else {
                 console.log(`bib title: [${bibtitle}] or citation count not found in google json`)
             }
