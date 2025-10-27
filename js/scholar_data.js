@@ -174,6 +174,11 @@ const customLinks = {
     }
 };
 
+function normalizeTitle(t) {
+    // normalize title to only alphabet and number
+    return t.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
 // 使用 fetch API 加载 JSON 文件
 function loadLocalJsonData(json_file) {
     return fetch(json_file)  // 替换为你的 JSON 文件路径
@@ -405,13 +410,13 @@ function generateYearSections(entriesByYear, type, links) {
             html += '<hr />';
             html += `
                 <div class="csl-bib-body">
-                <div class="csl-entry">
-                    ${generateAuthorsHTML(entry.fields.author)}
-                    <b><span class="text-muted">${generateDateHTML(entry.fields.date, type)}</span></b>.
-                    ${generateTitleHTML(entry.fields.title)}.
-                    ${generateJournalOrConferenceHTML(entry, type)}${generatePagesOrLocationHTML(entry, type)}
-                    <br/>${generateAwardHTML(entry, awardi18n)}
-                </div>
+                    <div class="csl-entry">
+                        ${generateAuthorsHTML(entry.fields.author)}
+                        <b><span class="text-muted">${generateDateHTML(entry.fields.date, type)}</span></b>.
+                        ${generateTitleHTML(entry.fields.title)}.
+                        ${generateJournalOrConferenceHTML(entry, type)}${generatePagesOrLocationHTML(entry, type)}${generateCiteCountHTML(entry, type)}
+                        <br/>${generateAwardHTML(entry, awardi18n)}
+                    </div>
                 </div>
             `;
 
@@ -491,6 +496,32 @@ function generateDateHTML(date, type) {
             return dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
         }
     }
+}
+
+function generateCiteCountHTML(entry, type) {
+    let citeHtml = '';
+
+    if (type === 'paper') {
+
+        let bibtitle = generateTitleHTML(entry.fields.title);
+
+        if (window.scholarData && window.scholarData.articles) {
+
+            // 尝试精确匹配，如果失败则尝试模糊匹配
+            let article = window.scholarData.articles.find(
+                article => normalizeTitle(article.title) === normalizeTitle(bibtitle)
+            );
+            
+            if (article && article.cited_by) {
+                citeHtml = `<span type="button" class="badge badge-secondary d-inline ml-2" title="被引数">${article.cited_by}</span>`
+            } else {
+                console.log(`bib title: [${bibtitle}] or citation count not found in google json`)
+            }
+        }
+
+    };
+
+    return citeHtml
 }
 
 function generateAwardHTML(entry, award) {
