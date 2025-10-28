@@ -30,6 +30,7 @@ const customLinks = {
         "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_pp_gwfss.pdf"
     },
     'wang_3dpotatotwin_2025': {
+        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_pp_3dpotatotwin.pdf",
         "東大ニュース": "https://www.a.u-tokyo.ac.jp/topics/topics_20251028-1.html",
         "日本日経新聞": "https://www.nikkei.com/nkd/company/article/?DisplayType=11&ng=DGXZRSP698560_U5A021C2000000&scode=6326"
     },
