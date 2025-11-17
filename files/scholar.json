@@ -2,14 +2,14 @@
   "table": [
     {
       "citations": {
-        "all": 366,
-        "since_2020": 365
+        "all": 371,
+        "since_2020": 370
       }
     },
     {
       "h_index": {
-        "all": 8,
-        "since_2020": 8
+        "all": 9,
+        "since_2020": 9
       }
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 105
+      "citations": 109
     }
   ],
   "articles": [
@@ -55,7 +55,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 146
+      "cited_by": 147
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -76,7 +76,7 @@
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 21
+      "cited_by": 22
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -111,13 +111,20 @@
       "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
       "publication": "Drones 7 (2), 65, 2023",
       "year": "2023",
-      "cited_by": 8
+      "cited_by": 9
     },
     {
       "title": "High-throughput 3D shape completion of potato tubers on a harvester",
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
+      "cited_by": 5
+    },
+    {
+      "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
+      "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
+      "publication": "Remote Sensing 16 (9), 1570, 2024",
+      "year": "2024",
       "cited_by": 5
     },
     {
@@ -140,13 +147,6 @@
       "publication": "Mathematical & Computational Forestry & Natural Resource Sciences 12 (1), 2020",
       "year": "2020",
       "cited_by": 5
-    },
-    {
-      "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
-      "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
-      "publication": "Remote Sensing 16 (9), 1570, 2024",
-      "year": "2024",
-      "cited_by": 4
     },
     {
       "title": "Estimating forest attributes from spherical images",
@@ -216,7 +216,7 @@
       "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
       "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
       "year": "2025",
-      "cited_by": null
+      "cited_by": 1
     },
     {
       "title": "Improved Detecting and Locating Organ Level Small Agricultural Objects by Fusion Ortho Maps and UAV Raw Images",
