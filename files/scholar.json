@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 371,
-        "since_2020": 370
+        "all": 374,
+        "since_2020": 373
       }
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 109
+      "citations": 112
     }
   ],
   "articles": [
@@ -55,21 +55,21 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 147
+      "cited_by": 148
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
       "authors": "H Wang, D Han, Y Mu, L Jiang, X Yao, Y Bai, Q Lu, F Wang",
       "publication": "Agricultural and Forest Meteorology 278, 107665, 2019",
       "year": "2019",
-      "cited_by": 46
+      "cited_by": 47
     },
     {
       "title": "EasyIDP: A python package for intermediate data processing in UAV-based plant phenotyping",
       "authors": "H Wang, Y Duan, Y Shi, Y Kato, S Ninomiya, W Guo",
       "publication": "Remote Sensing 13 (13), 2622, 2021",
       "year": "2021",
-      "cited_by": 40
+      "cited_by": 41
     },
     {
       "title": "Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income",
