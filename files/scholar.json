@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 375,
-        "since_2020": 374
+        "all": 378,
+        "since_2020": 377
       }
     },
     {
@@ -14,8 +14,8 @@
     },
     {
       "i10_index": {
-        "all": 7,
-        "since_2020": 7
+        "all": 8,
+        "since_2020": 8
       }
     }
   ],
@@ -38,7 +38,7 @@
     },
     {
       "year": 2023,
-      "citations": 65
+      "citations": 67
     },
     {
       "year": 2024,
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 113
+      "citations": 114
     }
   ],
   "articles": [
@@ -93,6 +93,13 @@
       "cited_by": 18
     },
     {
+      "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
+      "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
+      "publication": "Drones 7 (2), 65, 2023",
+      "year": "2023",
+      "cited_by": 10
+    },
+    {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
       "authors": "韩东， 王浩舟， 郑邦友， 王锋",
       "publication": "生态学报 38 (18), 6655-6663, 2018",
@@ -103,13 +110,6 @@
       "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
       "authors": "I Drofova, W Guo, H Wang, M Adamek",
       "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
-      "year": "2023",
-      "cited_by": 9
-    },
-    {
-      "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
-      "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
-      "publication": "Drones 7 (2), 65, 2023",
       "year": "2023",
       "cited_by": 9
     },
@@ -149,6 +149,13 @@
       "cited_by": 5
     },
     {
+      "title": "Sampling with probability proportional to prediction (3P sampling) using covariates derived from spherical images",
+      "authors": "YH Hsu, JA Kershaw Jr, MJ Ducey, TR Yang, H Wang",
+      "publication": "Canadian Journal of Forest Research 51 (8), 1140-1147, 2021",
+      "year": "2021",
+      "cited_by": 4
+    },
+    {
       "title": "Estimating forest attributes from spherical images",
       "authors": "H Wang",
       "publication": "University of New Brunswick, 2019",
@@ -170,10 +177,10 @@
       "cited_by": 3
     },
     {
-      "title": "Sampling with probability proportional to prediction (3P sampling) using covariates derived from spherical images",
-      "authors": "YH Hsu, JA Kershaw Jr, MJ Ducey, TR Yang, H Wang",
-      "publication": "Canadian Journal of Forest Research 51 (8), 1140-1147, 2021",
-      "year": "2021",
+      "title": "UAV-HiRAP: A novel method to improve landscape-level vegetation classification and coverage fraction estimation with unmanned aerial vehicle platform",
+      "authors": "H Wang, F Wang, X Yao, Y Mu, Y Bai, Q Lu",
+      "publication": "The 12th International Congress of Ecological (INTECOL),, 2017",
+      "year": "2017",
       "cited_by": 3
     },
     {
@@ -202,13 +209,6 @@
       "authors": "H Wang, W Guo",
       "publication": "Harnessing Data Science for Sustainable Agriculture and Natural Resource …, 2024",
       "year": "2024",
-      "cited_by": 2
-    },
-    {
-      "title": "UAV-HiRAP: A novel method to improve landscape-level vegetation classification and coverage fraction estimation with unmanned aerial vehicle platform",
-      "authors": "H Wang, F Wang, X Yao, Y Mu, Y Bai, Q Lu",
-      "publication": "The 12th International Congress of Ecological (INTECOL),, 2017",
-      "year": "2017",
       "cited_by": 2
     },
     {
