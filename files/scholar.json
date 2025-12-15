@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 378,
-        "since_2020": 377
+        "all": 379,
+        "since_2020": 378
       }
     },
     {
@@ -114,17 +114,17 @@
       "cited_by": 9
     },
     {
-      "title": "High-throughput 3D shape completion of potato tubers on a harvester",
-      "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
-      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
-      "year": "2025",
-      "cited_by": 5
-    },
-    {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
       "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
       "publication": "Remote Sensing 16 (9), 1570, 2024",
       "year": "2024",
+      "cited_by": 6
+    },
+    {
+      "title": "High-throughput 3D shape completion of potato tubers on a harvester",
+      "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
+      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
+      "year": "2025",
       "cited_by": 5
     },
     {
