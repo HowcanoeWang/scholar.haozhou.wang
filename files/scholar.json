@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 379,
-        "since_2020": 378
+        "all": 381,
+        "since_2020": 380
       }
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "year": 2021,
-      "citations": 32
+      "citations": 33
     },
     {
       "year": 2022,
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 114
+      "citations": 115
     }
   ],
   "articles": [
@@ -55,14 +55,14 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 148
+      "cited_by": 149
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
       "authors": "H Wang, D Han, Y Mu, L Jiang, X Yao, Y Bai, Q Lu, F Wang",
       "publication": "Agricultural and Forest Meteorology 278, 107665, 2019",
       "year": "2019",
-      "cited_by": 47
+      "cited_by": 48
     },
     {
       "title": "EasyIDP: A python package for intermediate data processing in UAV-based plant phenotyping",
