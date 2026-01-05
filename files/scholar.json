@@ -2,20 +2,20 @@
   "table": [
     {
       "citations": {
-        "all": 380,
-        "since_2020": 378
+        "all": 383,
+        "since_2021": 372
       }
     },
     {
       "h_index": {
         "all": 9,
-        "since_2020": 9
+        "since_2021": 8
       }
     },
     {
       "i10_index": {
         "all": 8,
-        "since_2020": 8
+        "since_2021": 7
       }
     }
   ],
@@ -46,7 +46,11 @@
     },
     {
       "year": 2025,
-      "citations": 113
+      "citations": 116
+    },
+    {
+      "year": 2026,
+      "citations": 2
     }
   ],
   "articles": [
@@ -114,18 +118,18 @@
       "cited_by": 9
     },
     {
+      "title": "High-throughput 3D shape completion of potato tubers on a harvester",
+      "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
+      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
+      "year": "2025",
+      "cited_by": 7
+    },
+    {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
       "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
       "publication": "Remote Sensing 16 (9), 1570, 2024",
       "year": "2024",
       "cited_by": 6
-    },
-    {
-      "title": "High-throughput 3D shape completion of potato tubers on a harvester",
-      "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
-      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
-      "year": "2025",
-      "cited_by": 5
     },
     {
       "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
@@ -163,6 +167,13 @@
       "cited_by": 4
     },
     {
+      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
+      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
+      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
+      "year": "2025",
+      "cited_by": 3
+    },
+    {
       "title": "3D reconstruction of a group of plants by the ground multi-image photogrammetry method",
       "authors": "I Drofova, H Wang, W Guo, M Pospisilik, M Adamek, J Valouch",
       "publication": "2023 33rd International Conference Radioelektronika (RADIOELEKTRONIKA), 1-4, 2023",
@@ -189,13 +200,6 @@
       "publication": "甘肃科技 22, 018, 2017",
       "year": "2017",
       "cited_by": 3
-    },
-    {
-      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
-      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
-      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
-      "year": "2025",
-      "cited_by": 2
     },
     {
       "title": "Improved Detection and Location of Small Crop Organs by Fusing UAV Orthophoto Maps and Raw Images",
