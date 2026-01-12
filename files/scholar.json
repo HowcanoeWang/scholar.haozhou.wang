@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 383,
-        "since_2021": 372
+        "all": 387,
+        "since_2021": 376
       }
     },
     {
@@ -42,15 +42,15 @@
     },
     {
       "year": 2024,
-      "citations": 102
+      "citations": 103
     },
     {
       "year": 2025,
-      "citations": 116
+      "citations": 117
     },
     {
       "year": 2026,
-      "citations": 2
+      "citations": 3
     }
   ],
   "articles": [
@@ -59,7 +59,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 148
+      "cited_by": 149
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -73,7 +73,7 @@
       "authors": "H Wang, Y Duan, Y Shi, Y Kato, S Ninomiya, W Guo",
       "publication": "Remote Sensing 13 (13), 2622, 2021",
       "year": "2021",
-      "cited_by": 41
+      "cited_by": 43
     },
     {
       "title": "Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income",
@@ -97,17 +97,17 @@
       "cited_by": 18
     },
     {
-      "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
-      "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
-      "publication": "Drones 7 (2), 65, 2023",
-      "year": "2023",
-      "cited_by": 10
-    },
-    {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
       "authors": "韩东， 王浩舟， 郑邦友， 王锋",
       "publication": "生态学报 38 (18), 6655-6663, 2018",
       "year": "2018",
+      "cited_by": 11
+    },
+    {
+      "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
+      "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
+      "publication": "Drones 7 (2), 65, 2023",
+      "year": "2023",
       "cited_by": 10
     },
     {
