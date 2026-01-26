@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 387,
-        "since_2021": 376
+        "all": 390,
+        "since_2021": 379
       }
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "year": 2025,
-      "citations": 117
+      "citations": 120
     },
     {
       "year": 2026,
@@ -59,7 +59,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 149
+      "cited_by": 150
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -80,7 +80,7 @@
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 23
+      "cited_by": 24
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -94,7 +94,7 @@
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
       "publication": "Remote Sensing 13 (16), 3067, 2021",
       "year": "2021",
-      "cited_by": 18
+      "cited_by": 19
     },
     {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
