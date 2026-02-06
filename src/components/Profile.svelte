@@ -14,7 +14,7 @@
 </script>
 
 <div class="bg-gray-800 text-white py-12" id="profile-section">
-    <div class="container mx-auto px-4">
+    <div class="w-full max-w-[960px] mx-auto px-4">
         <div class="flex flex-col lg:flex-row gap-12">
             <!-- Profile Card -->
             <div class="lg:w-1/3 flex flex-col items-center text-center">

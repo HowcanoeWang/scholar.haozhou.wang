@@ -30,7 +30,7 @@
 
   <!-- Projects Section -->
   <div class="bg-base-100 py-16" id="project-section">
-      <div class="container mx-auto px-4">
+      <div class="w-full max-w-[960px] mx-auto px-4">
           <div class="text-center mb-12">
               <h3 class="text-3xl font-bold">{$t('proj.t')}</h3>
           </div>
@@ -40,7 +40,7 @@
 
   <!-- Timeline Section -->
   <div class="bg-white py-16" id="timeline-section">
-      <div class="container mx-auto px-4">
+      <div class="w-full max-w-[960px] mx-auto px-4">
           <div class="text-center mb-12">
               <h3 class="text-3xl font-bold">{$t('time.t')}</h3>
           </div>
@@ -50,7 +50,7 @@
 
   <!-- Awards Section -->
   <div class="bg-base-100 py-16" id="award-section">
-      <div class="container mx-auto px-4">
+      <div class="w-full max-w-[960px] mx-auto px-4">
           <div class="text-center mb-12">
               <h3 class="text-3xl font-bold">{$t('awd.t')}</h3>
           </div>

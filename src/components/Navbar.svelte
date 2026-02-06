@@ -25,7 +25,8 @@
   }
 </script>
 
-<nav class="navbar bg-base-100/70 backdrop-blur-md sticky top-0 z-50 shadow-lg px-4 sm:px-16">
+<nav class="bg-base-100/70 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+  <div class="navbar w-full max-w-[960px] mx-auto px-4">
   <div class="navbar-start">
     <div class="dropdown">
       <div role="button" tabindex="0" class="btn btn-ghost lg:hidden" onclick={toggleMenu} aria-label="Toggle navigation">
@@ -66,5 +67,6 @@
         {/each}
       </ul>
     </div>
+  </div>
   </div>
 </nav>
