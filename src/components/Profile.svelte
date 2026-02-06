@@ -21,37 +21,37 @@
                 <img 
                     src="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/header.jpg" 
                     alt="Haozhou Wang" 
-                    class="rounded-full w-40 h-40 object-cover mb-6 border-4 border-gray-700 shadow-lg"
+                    class="rounded-full w-40 h-40 object-cover mb-6 border-4 border-gray-600 shadow-lg"
                 />
 
                 <h1 class="text-3xl font-bold mb-1">
-                    {$t('prof.name')}
+                    {@html $t('prof.name')}
                 </h1>
                 <p class="text-xl mb-1 text-gray-300">
-                    {$t('prof.position')}
+                    {@html $t('prof.position')}
                 </p>
                 <a href="https://lab.fieldphenomics.com/" target="_blank" class="italic hover:text-blue-300 transition-colors">
                     {$t('prof.labname')}
                 </a>
 
-                <div class="mt-8 w-full max-w-sm">
-                    <a class="btn btn-sm btn-light w-full mb-4 bg-white text-gray-800 hover:bg-gray-200 border-none" 
+                <div class="mt-8 w-full max-w-sm flex flex-col items-center">
+                    <a class="btn btn-sm bg-white text-gray-900 hover:bg-white-200 border-none px-6 mb-6" 
                        href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/cv.pdf" 
                        target="_blank">
                         <i class="fas fa-file-pdf mr-2"></i> {$t('prof.cv_down')}
                     </a>
 
-                    <a href="https://scholar.google.com/citations?user=CnTTa3EAAAAJ" target="_blank" class="block mb-4 hover:opacity-80">
+                    <a href="https://scholar.google.com/citations?user=CnTTa3EAAAAJ" target="_blank" class="block mb-6 hover:opacity-80">
                         <div class="flex justify-center gap-4 text-sm">
-                            <div>
+                            <div class="flex items-center">
                                 {$t('prof.cite')}
-                                <span class="badge badge-neutral bg-gray-600 text-white border-0 ml-1">
+                                <span class="badge bg-white text-black border-none ml-2">
                                     {scholarData?.table[0].citations.all || '???'}
                                 </span>
                             </div>
-                            <div>
+                            <div class="flex items-center">
                                 {$t('prof.hidx')}
-                                <span class="badge badge-neutral bg-gray-600 text-white border-0 ml-1">
+                                <span class="badge bg-white text-black border-none ml-2">
                                     {scholarData?.table[1].h_index.all || '???'}
                                 </span>
                             </div>
@@ -59,24 +59,26 @@
                     </a>
 
                     <!-- Chart -->
-                    <CitationChart data={scholarData} />
+                    <div class="w-full">
+                         <CitationChart data={scholarData} />
+                    </div>
 
                     <!-- Social Icons -->
                     <div class="flex justify-center gap-4 mt-6">
-                        <button class="btn btn-ghost btn-circle btn-sm text-white" aria-label="Email" onclick={() => (document.getElementById('email_modal') as HTMLDialogElement).showModal()}>
-                            <i class="fa fa-envelope fa-lg"></i>
+                        <button class="btn btn-ghost btn-circle text-white text-xl" aria-label="Email" onclick={() => (document.getElementById('email_modal') as HTMLDialogElement).showModal()}>
+                            <i class="fa fa-envelope"></i>
                         </button>
-                        <a href="https://github.com/HowcanoeWang" target="_blank" aria-label="GitHub" class="btn btn-ghost btn-circle btn-sm text-white">
-                            <i class="fa-brands fa-github fa-lg"></i>
+                        <a href="https://github.com/HowcanoeWang" target="_blank" aria-label="GitHub" class="btn btn-ghost btn-circle text-white text-xl">
+                            <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="https://www.researchgate.net/profile/Haozhou_Wang" target="_blank" aria-label="ResearchGate" class="btn btn-ghost btn-circle btn-sm text-white">
-                            <i class="ai ai-researchgate ai-lg"></i>
+                        <a href="https://www.researchgate.net/profile/Haozhou_Wang" target="_blank" aria-label="ResearchGate" class="btn btn-ghost btn-circle text-white text-xl">
+                            <i class="ai ai-researchgate"></i>
                         </a>
-                        <a href="https://scholar.google.com/citations?user=CnTTa3EAAAAJ" target="_blank" aria-label="Google Scholar" class="btn btn-ghost btn-circle btn-sm text-white">
-                            <i class="ai ai-google-scholar ai-lg"></i>
+                        <a href="https://scholar.google.com/citations?user=CnTTa3EAAAAJ" target="_blank" aria-label="Google Scholar" class="btn btn-ghost btn-circle text-white text-xl">
+                            <i class="ai ai-google-scholar"></i>
                         </a>
-                        <a href="https://orcid.org/0000-0001-6135-402X" target="_blank" aria-label="ORCID" class="btn btn-ghost btn-circle btn-sm text-white">
-                             <i class="ai ai-orcid ai-lg"></i>
+                        <a href="https://orcid.org/0000-0001-6135-402X" target="_blank" aria-label="ORCID" class="btn btn-ghost btn-circle text-white text-xl">
+                             <i class="ai ai-orcid"></i>
                         </a>
                     </div>
                 </div>
