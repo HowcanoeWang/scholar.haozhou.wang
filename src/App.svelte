@@ -1,36 +1,74 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import daisyuiLogo from './assets/daisyui.svg' // 假设你已将 daisyui.svg 放入 assets 文件夹
-  import typescriptLogo from './assets/typescript.svg' // 假设你已将 typescript.svg 放入 assets 文件夹
+  import { onMount } from 'svelte';
+  import { setupI18n } from '$lib/i18n';
+  import Navbar from './components/Navbar.svelte';
+  import Profile from './components/Profile.svelte';
+  import Publications from './components/Publications.svelte';
+  import Projects from './components/Projects.svelte';
+  import Timeline from './components/Timeline.svelte';
+  import Awards from './components/Awards.svelte';
+  import Footer from './components/Footer.svelte';
+  import { t, isLoading } from 'svelte-i18n';
 
-  import "./app.css"
+  let isReady = $state(false);
+
+  onMount(async () => {
+      await setupI18n();
+      isReady = true;
+  });
 </script>
 
-<main>
-  <div class="hero min-h-screen bg-base-200">
-    <div class="hero-content text-center">
-      <div class="max-w-md">
-        <div class="flex justify-center p-8 space-x-8">
-          <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-            <img src={viteLogo} class="h-24" alt="Vite Logo" />
-          </a>
-          <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-            <img src={svelteLogo} class="h-24" alt="Svelte Logo" />
-          </a>
-          <a href="https://daisyui.com/" target="_blank" rel="noreferrer">
-            <img src={daisyuiLogo} class="h-24" alt="DaisyUI Logo" />
-          </a>
-          <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-            <img src={typescriptLogo} class="h-24" alt="TypeScript Logo" />
-          </a>
-        </div>
-        <h1 class="text-2xl font-bold">Vite + Svelte + DaisyUI + TypeScript</h1>
-        <p class="py-6">
-          这是一个使用 Vite、Svelte、DaisyUI 和 TypeScript 构建的静态起始页面。
-        </p>
-        <button class="btn btn-primary">Get Started</button>
+{#if isReady}
+<main class="min-h-screen bg-base-50 font-sans text-base-content relative selection:bg-primary selection:text-primary-content">
+  <Navbar />
+
+  <!-- Profile Section (Masthead) -->
+  <Profile />
+
+  <!-- Publication Section -->
+  <Publications />
+
+  <!-- Projects Section -->
+  <div class="bg-base-100 py-16" id="project-section">
+      <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+              <h3 class="text-3xl font-bold">{$t('proj.t')}</h3>
+          </div>
+          <Projects />
       </div>
-    </div>
   </div>
+
+  <!-- Timeline Section -->
+  <div class="bg-white py-16" id="timeline-section">
+      <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+              <h3 class="text-3xl font-bold">{$t('time.t')}</h3>
+          </div>
+          <Timeline />
+      </div>
+  </div>
+
+  <!-- Awards Section -->
+  <div class="bg-base-100 py-16" id="award-section">
+      <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+              <h3 class="text-3xl font-bold">{$t('awd.t')}</h3>
+          </div>
+          <Awards />
+      </div>
+  </div>
+
+  <Footer />
 </main>
+{:else}
+    <div class="flex h-screen w-full items-center justify-center">
+        <span class="loading loading-spinner loading-lg"></span>
+    </div>
+{/if}
+
+<style>
+  /* Global font adjustments if needed, though Tailwind sans is usually fine */
+  :global(html) {
+      scroll-behavior: smooth;
+  }
+</style>
