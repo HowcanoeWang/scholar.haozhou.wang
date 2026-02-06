@@ -64,7 +64,7 @@
     }
 </script>
 
-<div class="container mx-auto px-4 py-8" id="publication-section">
+<div class="w-full max-w-[960px] mx-auto px-4 py-8" id="publication-section">
     <div class="text-center mb-10">
         <h3 class="text-3xl font-bold mb-2">
             {$t('pub.t')}
