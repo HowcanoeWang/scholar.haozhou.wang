@@ -35,10 +35,10 @@
                 </a>
 
                 <div class="mt-8 w-full max-w-sm flex flex-col items-center">
-                    <a class="btn btn-sm bg-white text-gray-900 hover:bg-white-200 border-none px-6 mb-6" 
+                    <a class="btn btn-sm bg-white text-gray-900 hover:bg-white-200 border-none px-2 mb-6" 
                        href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/cv.pdf" 
                        target="_blank">
-                        <i class="fas fa-file-pdf mr-2"></i> {$t('prof.cv_down')}
+                        <i class="fas fa-file-pdf fa-xl"></i> {$t('prof.cv_down')}
                     </a>
 
                     <a href="https://scholar.google.com/citations?user=CnTTa3EAAAAJ" target="_blank" class="block mb-6 hover:opacity-80">
@@ -66,19 +66,19 @@
                     <!-- Social Icons -->
                     <div class="flex justify-center gap-4 mt-6">
                         <button class="btn btn-ghost btn-circle text-white text-xl" aria-label="Email" onclick={() => (document.getElementById('email_modal') as HTMLDialogElement).showModal()}>
-                            <i class="fa fa-envelope"></i>
+                            <i class="fa fa-envelope fa-xl"></i>
                         </button>
                         <a href="https://github.com/HowcanoeWang" target="_blank" aria-label="GitHub" class="btn btn-ghost btn-circle text-white text-xl">
-                            <i class="fa-brands fa-github"></i>
+                            <i class="fa-brands fa-github fa-xl"></i>
                         </a>
                         <a href="https://www.researchgate.net/profile/Haozhou_Wang" target="_blank" aria-label="ResearchGate" class="btn btn-ghost btn-circle text-white text-xl">
-                            <i class="ai ai-researchgate"></i>
+                            <i class="ai ai-researchgate fa-xl"></i>
                         </a>
                         <a href="https://scholar.google.com/citations?user=CnTTa3EAAAAJ" target="_blank" aria-label="Google Scholar" class="btn btn-ghost btn-circle text-white text-xl">
-                            <i class="ai ai-google-scholar"></i>
+                            <i class="ai ai-google-scholar fa-xl"></i>
                         </a>
                         <a href="https://orcid.org/0000-0001-6135-402X" target="_blank" aria-label="ORCID" class="btn btn-ghost btn-circle text-white text-xl">
-                             <i class="ai ai-orcid"></i>
+                             <i class="ai ai-orcid fa-xl"></i>
                         </a>
                     </div>
                 </div>
