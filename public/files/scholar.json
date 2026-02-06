@@ -1,0 +1,254 @@
+{
+  "table": [
+    {
+      "citations": {
+        "all": 390,
+        "since_2021": 379
+      }
+    },
+    {
+      "h_index": {
+        "all": 9,
+        "since_2021": 8
+      }
+    },
+    {
+      "i10_index": {
+        "all": 8,
+        "since_2021": 7
+      }
+    }
+  ],
+  "graph": [
+    {
+      "year": 2019,
+      "citations": 1
+    },
+    {
+      "year": 2020,
+      "citations": 9
+    },
+    {
+      "year": 2021,
+      "citations": 33
+    },
+    {
+      "year": 2022,
+      "citations": 52
+    },
+    {
+      "year": 2023,
+      "citations": 66
+    },
+    {
+      "year": 2024,
+      "citations": 103
+    },
+    {
+      "year": 2025,
+      "citations": 119
+    },
+    {
+      "year": 2026,
+      "citations": 4
+    }
+  ],
+  "articles": [
+    {
+      "title": "Global wheat head detection 2021: An improved dataset for benchmarking wheat head detection methods",
+      "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
+      "publication": "Plant Phenomics, 2021",
+      "year": "2021",
+      "cited_by": 149
+    },
+    {
+      "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
+      "authors": "H Wang, D Han, Y Mu, L Jiang, X Yao, Y Bai, Q Lu, F Wang",
+      "publication": "Agricultural and Forest Meteorology 278, 107665, 2019",
+      "year": "2019",
+      "cited_by": 48
+    },
+    {
+      "title": "EasyIDP: A python package for intermediate data processing in UAV-based plant phenotyping",
+      "authors": "H Wang, Y Duan, Y Shi, Y Kato, S Ninomiya, W Guo",
+      "publication": "Remote Sensing 13 (13), 2622, 2021",
+      "year": "2021",
+      "cited_by": 43
+    },
+    {
+      "title": "Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income",
+      "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
+      "publication": "Plant Phenomics 5, 0086, 2023",
+      "year": "2023",
+      "cited_by": 24
+    },
+    {
+      "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
+      "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
+      "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
+      "year": "2021",
+      "cited_by": 20
+    },
+    {
+      "title": "An efficient method for estimating wheat heading dates using UAV images",
+      "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
+      "publication": "Remote Sensing 13 (16), 3067, 2021",
+      "year": "2021",
+      "cited_by": 19
+    },
+    {
+      "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
+      "authors": "韩东， 王浩舟， 郑邦友， 王锋",
+      "publication": "生态学报 38 (18), 6655-6663, 2018",
+      "year": "2018",
+      "cited_by": 11
+    },
+    {
+      "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
+      "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
+      "publication": "Drones 7 (2), 65, 2023",
+      "year": "2023",
+      "cited_by": 10
+    },
+    {
+      "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
+      "authors": "I Drofova, W Guo, H Wang, M Adamek",
+      "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
+      "year": "2023",
+      "cited_by": 9
+    },
+    {
+      "title": "High-throughput 3D shape completion of potato tubers on a harvester",
+      "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
+      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
+      "year": "2025",
+      "cited_by": 7
+    },
+    {
+      "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
+      "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
+      "publication": "Remote Sensing 16 (9), 1570, 2024",
+      "year": "2024",
+      "cited_by": 6
+    },
+    {
+      "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
+      "authors": "X Dai, MJ Ducey, H Wang, TR Yang, YH Hsu, J Ogilvie, JA Kershaw Jr",
+      "publication": "Forestry: An International Journal of Forest Research 94 (4), 565-575, 2021",
+      "year": "2021",
+      "cited_by": 5
+    },
+    {
+      "title": "Estimating Individual Tree Heights and DBHs from Vertically Displaced Spherical Image Pairs",
+      "authors": "H Wang, TR Yang, J Waldy, JA Kershaw Jr",
+      "publication": "Mathematical and Computational Forestry & Natural-Resource Sciences (MCFNS), 2021",
+      "year": "2021",
+      "cited_by": 5
+    },
+    {
+      "title": "An Integrated System for Estimating Forest Basal Area from Spherical Images",
+      "authors": "H Wang, JA Kershaw, T Yang, Y Hsu, X Ma, Y Chen",
+      "publication": "Mathematical & Computational Forestry & Natural Resource Sciences 12 (1), 2020",
+      "year": "2020",
+      "cited_by": 5
+    },
+    {
+      "title": "Sampling with probability proportional to prediction (3P sampling) using covariates derived from spherical images",
+      "authors": "YH Hsu, JA Kershaw Jr, MJ Ducey, TR Yang, H Wang",
+      "publication": "Canadian Journal of Forest Research 51 (8), 1140-1147, 2021",
+      "year": "2021",
+      "cited_by": 4
+    },
+    {
+      "title": "Estimating forest attributes from spherical images",
+      "authors": "H Wang",
+      "publication": "University of New Brunswick, 2019",
+      "year": "2019",
+      "cited_by": 4
+    },
+    {
+      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
+      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
+      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
+      "year": "2025",
+      "cited_by": 3
+    },
+    {
+      "title": "Improved Detection and Location of Small Crop Organs by Fusing UAV Orthophoto Maps and Raw Images",
+      "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
+      "publication": "Remote Sensing 17 (5), 906, 2025",
+      "year": "2025",
+      "cited_by": 3
+    },
+    {
+      "title": "3D reconstruction of a group of plants by the ground multi-image photogrammetry method",
+      "authors": "I Drofova, H Wang, W Guo, M Pospisilik, M Adamek, J Valouch",
+      "publication": "2023 33rd International Conference Radioelektronika (RADIOELEKTRONIKA), 1-4, 2023",
+      "year": "2023",
+      "cited_by": 3
+    },
+    {
+      "title": "Sector subsampling for basal area ratio estimation: an alternative to big BAF sampling",
+      "authors": "X Dai, MJ Ducey, JA Kershaw Jr, H Wang",
+      "publication": "Canadian Journal of Forest Research 51 (8), 1131-1139, 2021",
+      "year": "2021",
+      "cited_by": 3
+    },
+    {
+      "title": "UAV-HiRAP: A novel method to improve landscape-level vegetation classification and coverage fraction estimation with unmanned aerial vehicle platform",
+      "authors": "H Wang, F Wang, X Yao, Y Mu, Y Bai, Q Lu",
+      "publication": "The 12th International Congress of Ecological (INTECOL),, 2017",
+      "year": "2017",
+      "cited_by": 3
+    },
+    {
+      "title": "无人机影像处理软件 Pix4Dmapper 与 Photoscan 在资源普查中的成像性能分析",
+      "authors": "王浩舟， 常雅荃， 李川， 刘秋蓉， 钟敏， 陈沁璇",
+      "publication": "甘肃科技 22, 018, 2017",
+      "year": "2017",
+      "cited_by": 3
+    },
+    {
+      "title": "EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotyping",
+      "authors": "H Wang, W Guo",
+      "publication": "Harnessing Data Science for Sustainable Agriculture and Natural Resource …, 2024",
+      "year": "2024",
+      "cited_by": 2
+    },
+    {
+      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
+      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
+      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
+      "year": "2025",
+      "cited_by": 1
+    },
+    {
+      "title": "Improved Detecting and Locating Organ Level Small Agricultural Objects by Fusion Ortho Maps and UAV Raw Images",
+      "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
+      "publication": "Preprints, 2024",
+      "year": "2024",
+      "cited_by": null
+    },
+    {
+      "title": "Studies on 3D-based plant phenotyping by multi-scale data fusion",
+      "authors": "H Wang",
+      "publication": "The University of Tokyo, 2023",
+      "year": "2023",
+      "cited_by": null
+    },
+    {
+      "title": "Extracting DBH measurements from RGB photo images",
+      "authors": "W Haozhou, JA Kershaw",
+      "publication": "",
+      "year": "2017",
+      "cited_by": null
+    },
+    {
+      "title": "Drone-Based Multi-spectral Pipeline for Detecting Abnormal Potato Strains in the Field",
+      "authors": "H Wang, S Inoshishi, M Shimizu, T Kato, W Guo",
+      "publication": "",
+      "year": "",
+      "cited_by": null
+    }
+  ]
+}
