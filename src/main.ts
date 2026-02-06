@@ -1,6 +1,6 @@
 import { mount } from 'svelte'
 import './app.css'
-import 'font-awesome/css/font-awesome.min.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'academicons/css/academicons.min.css'
 import App from './App.svelte'
 
