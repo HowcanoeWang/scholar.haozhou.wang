@@ -42,7 +42,9 @@ export async function fetchBibTeX(baseUrl: string = ''): Promise<BibJson | null>
     }
 }
 
-export function normalizeTitle(t: string) {
-    // normalize title to only alphabet and number
-    return t.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+export function normalizeTitle(t: string | undefined | null) {
+    if (!t) return '';
+    // normalize title to only alphabet and number, supporting unicode (e.g. Chinese)
+    // remove everything that is not a letter or number
+    return t.trim().toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
 }
