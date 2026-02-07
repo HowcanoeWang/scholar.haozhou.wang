@@ -40,6 +40,16 @@
             if (!groups[year]) groups[year] = [];
             groups[year].push(entry);
         });
+        
+        // Sort entries within each year by author name (A-Z)
+        Object.keys(groups).forEach(year => {
+            groups[year].sort((a, b) => {
+                const authorA = getFormatAuthors(a.fields.author).replace(/<[^>]*>/g, '');
+                const authorB = getFormatAuthors(b.fields.author).replace(/<[^>]*>/g, '');
+                return authorA.localeCompare(authorB);
+            });
+        });
+
         return Object.entries(groups).sort((a,b)=> Number(b[0])-Number(a[0]));
     }
 
@@ -49,17 +59,36 @@
     function getCiteCount(title: string) {
         if (!scholarData) return null;
         const normTitle = normalizeTitle(title);
-        const article = scholarData.articles.find(a => normalizeTitle(a.title) === normTitle);
+        if (!normTitle) return null;
+        
+        // More robust matching: partial match to handle truncations
+        const article = scholarData.articles.find(a => {
+            const normA = normalizeTitle(a.title);
+            if (!normA) return false;
+            return normA.includes(normTitle) || normTitle.includes(normA);
+        });
         return article ? article.cited_by : null;
+    }
+
+    function getText(field: any): string {
+        if (!field) return '';
+        if (typeof field === 'string') return field;
+        if (Array.isArray(field)) {
+            return field.map(getText).join('');
+        }
+        if (typeof field === 'object' && 'text' in field) {
+            return field.text;
+        }
+        return '';
     }
 
     function getFormatAuthors(authors: any[]) {
         if (!Array.isArray(authors)) return '';
         return authors.map(a => {
-            const family = a.family?.[0]?.text || '';
-            const given = a.given?.[0]?.text || '';
+            const family = getText(a.family);
+            const given = getText(a.given);
             const name = `${family}, ${given.split(' ').map((n:string) => n[0]).join('.')}.`;
-            return name.includes('Wang, H.') ? `<b>${name}</b>` : name;
+            return name.includes('Wang, H') ? `<b>${name}</b>` : name;
         }).join(', ');
     }
 </script>
@@ -103,6 +132,7 @@
         </button>
         <button role="tab" class="tab tab-lg {activeTab === 'others' ? 'tab-active font-bold' : ''}" onclick={() => activeTab = 'others'}>
             {$t('pub.tabs.o')}
+            <span class="badge badge-neutral ml-2">6</span>
         </button>
     </div>
 
@@ -117,13 +147,13 @@
                             <div class="text-base text-gray-800 dark:text-gray-200">
                                 {@html getFormatAuthors(entry.fields.author)}
                                 <span class="text-gray-500 font-bold mx-1">{entry.fields.date?.match(/\d{4}/)?.[0]}</span>.
-                                <span class="font-medium">{entry.fields.title?.[0]?.text}.</span>
-                                <span class="font-bold">{entry.fields.journaltitle?.[0]?.text}</span>
-                                {entry.fields.volume?.[0]?.text}.
+                                <span class="font-medium">{getText(entry.fields.title)}.</span>
+                                <span class="font-bold">{getText(entry.fields.journaltitle)}</span>
+                                {getText(entry.fields.volume)}{#if getText(entry.fields.pages)}, {getText(entry.fields.pages)}{/if}.
                                 <!-- Cite Count -->
-                                {#if getCiteCount(entry.fields.title?.[0]?.text)}
+                                {#if getCiteCount(getText(entry.fields.title))}
                                     <span class="badge badge-secondary ml-2" title={$t('prof.cite')}>
-                                        {getCiteCount(entry.fields.title?.[0]?.text)}
+                                        {getCiteCount(getText(entry.fields.title))}
                                     </span>
                                 {/if}
                             </div>
@@ -160,9 +190,9 @@
                             <div class="text-base text-gray-800 dark:text-gray-200">
                                 {@html getFormatAuthors(entry.fields.author)}
                                 <span class="text-gray-500 font-bold mx-1">{entry.fields.date}</span>.
-                                <span class="font-medium">{entry.fields.title?.[0]?.text}.</span>
-                                <span class="font-bold">{entry.fields.institution?.[0]?.[0]?.text || ''}</span>
-                                {entry.fields.location?.[0]?.[0]?.text ? `, ${entry.fields.location[0][0].text}` : ''}.
+                                <span class="font-medium">{getText(entry.fields.title)}.</span>
+                                <span class="font-bold">{getText(entry.fields.institution)}</span>
+                                {getText(entry.fields.location) ? `, ${getText(entry.fields.location)}` : ''}.
                             </div>
                             
                             <div class="mt-2 space-x-2">
@@ -178,23 +208,25 @@
             {/each}
 
         {:else if activeTab === 'thesis'}
-            <div class="space-y-8 mt-4">
+            <div class="space-y-6 mt-8">
                 {#each [{key: 'phd', year: '2023', degree: 'PhD thesis', inst: 'The University of Tokyo', doi: '10.13140/RG.2.2.11525.12009', pdf: 'https://github.com/HowcanoeWang/DoctorThesis/releases', code: 'https://github.com/HowcanoeWang/DoctorThesis', ppt: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/23_thesis_ppt.pdf'}, 
                         {key: 'msc', year: '2019', degree: 'MSc Forestry thesis', inst: 'The University of New Brunswick', doi: '10.13140/RG.2.2.35680.64004', pdf: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis.pdf', code: 'https://github.com/HowcanoeWang/Spherical2TreeAttributes', ppt: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis_ppt.pdf'},
                         {key: 'bsc', year: '2017', degree: 'BSc Ecology thesis', inst: 'The Nanjing University of Forestry', doi: '10.13140/RG.2.2.30588.77440', pdf: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis.pdf', code: 'https://github.com/HowcanoeWang/ImageDBH', ppt: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis_ppt.pdf'}] as thesis}
-                <div>
-                   <h3 class="text-xl font-bold mb-2">{$t(`time.${thesis.key}.title`)}</h3>
-                   <hr class="mb-2"/>
-                   <div class="csl-entry dark:text-gray-200">
-                      <b>Wang, H.</b>, <b><span class="text-gray-500">{thesis.year}</span></b>. 
-                       Studies... ({thesis.degree}). {thesis.inst}.
-                   </div>
-                   <div class="mt-2 space-x-2">
-                       <a class="btn btn-xs btn-outline" href={`https://doi.org/${thesis.doi}`} target="_blank">DOI</a>
-                       <a class="btn btn-xs btn-outline" href={thesis.pdf} target="_blank">PDF</a>
-                       {#if thesis.ppt}<a class="btn btn-xs btn-outline" href={thesis.ppt} target="_blank">PPT</a>{/if}
-                       {#if thesis.code}<a class="btn btn-xs btn-outline" href={thesis.code} target="_blank">Codes</a>{/if}
-                   </div>
+                
+                <h3 class="text-2xl font-bold border-b pb-2">{$t(`time.${thesis.key}.title`)}</h3>
+                
+                <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                    <div class="text-base text-gray-800 dark:text-gray-200">
+                        <b>Wang, H.</b>, <b><span class="text-gray-500">{thesis.year}</span></b>. 
+                        Studies... ({thesis.degree}). {thesis.inst}.
+                    </div>
+                    
+                    <div class="mt-2 space-x-2">
+                        <a class="btn btn-xs btn-outline" href={`https://doi.org/${thesis.doi}`} target="_blank">DOI</a>
+                        <a class="btn btn-xs btn-outline" href={thesis.pdf} target="_blank">PDF</a>
+                        {#if thesis.ppt}<a class="btn btn-xs btn-outline" href={thesis.ppt} target="_blank">PPT</a>{/if}
+                        {#if thesis.code}<a class="btn btn-xs btn-outline" href={thesis.code} target="_blank">Codes</a>{/if}
+                    </div>
                 </div>
                 {/each}
             </div>
@@ -202,14 +234,76 @@
         {:else if activeTab === 'others'}
              <div class="space-y-8 mt-4">
                  <div>
-                    <h3 class="text-xl font-bold mb-2">{$t('pub.tabs.bc')}</h3>
-                    <hr class="mb-2"/>
-                    <div class="dark:text-gray-200">
-                        <b>Wang, H.</b>, Guo, W., <b><span class="text-gray-500">2024</span></b>. EasyIDP V2.0...
+                    <h3 class="text-2xl font-bold mt-8 mb-4 border-b pb-2">{$t('pub.tabs.bc')}</h3>
+                    <div class="dark:text-gray-200 pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                        <div class="mb-2">
+                             <b>Wang, H.</b>, Guo, W., <b><span class="text-gray-500">2024</span></b>. EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotypin, in: Raval, M.S., Chaudhary, S., Adinarayana, J., Guo, W. (Eds.), Harnessing Data Science for Sustainable Agriculture and Natural Resource Management, Studies in Big Data. Springer Nature Singapore, Singapore, pp. 149–172.
+                        </div>
+                        <div class="space-x-2">
+                            <a class="btn btn-xs btn-outline" href="https://doi.org/10.1007/978-981-97-7762-4_7" target="_blank">DOI</a>
+                            <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/books/24_easyidp_v2.pdf" target="_blank">PDF</a>
+                        </div>
                     </div>
-                    <div class="mt-2 space-x-2">
-                        <a class="btn btn-xs btn-outline" href="https://doi.org/10.1007/978-981-97-7762-4_7" target="_blank">DOI</a>
-                        <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/books/24_easyidp_v2.pdf" target="_blank">PDF</a>
+                 </div>
+
+                 <div>
+                    <h3 class="text-2xl font-bold mt-8 mb-4 border-b pb-2">{$t('pub.tabs.pa')}</h3>
+                    <div class="dark:text-gray-200 pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                        <div class="mb-2">
+                            王锋，韩东，<b>王浩舟</b>，卢琦，潘绪斌，一种基于无人机的景观尺度植被覆盖度的计算方法及系统：<b><span class="text-gray-500">2019</span></b>. CN 201610913357
+                        </div>
+                        <div class="space-x-2">
+                            <a class="btn btn-xs btn-outline" href="https://patents.google.com/patent/CN106403904A/zh" target="_blank">URL</a>
+                            <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/19_CAF.pdf" target="_blank">PDF</a>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div>
+                    <h3 class="text-2xl font-bold mt-8 mb-4 border-b pb-2">{$t('pub.tabs.s')}</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                            <div class="dark:text-gray-200 mb-2">
+                                无人机高精度影像分析平台[简称: UAV-HiRAP] v3.0, <b><span class="text-gray-500">2019</span></b>. 软著登字第 2019SR0286422.
+                            </div>
+                            <div class="space-x-2">
+                                <a class="btn btn-xs btn-outline" href="https://www.uav-hirap.org" target="_blank">URL</a>
+                                <a class="btn btn-xs btn-outline" href="https://github.com/UAV-HiRAP/UAV-HiRAP" target="_blank">Codes</a>
+                            </div>
+                        </div>
+
+                        <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                            <div class="dark:text-gray-200 mb-2">
+                                无人机高精度影像分析平台[简称: UAV-HiRAP] v2.0, <b><span class="text-gray-500">2017</span></b>. 软著登字第 2017SR558256.
+                            </div>
+                            <div class="space-x-2">
+                                <a class="btn btn-xs btn-outline" href="https://www.uav-hirap.org" target="_blank">URL</a>
+                                <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/17_uavhirap2.pdf" target="_blank">Manual</a>
+                            </div>
+                        </div>
+
+                        <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                            <div class="dark:text-gray-200 mb-2">
+                                无人机高精度影像分析平台[简称: UAV-HiRAP] v1.0, <b><span class="text-gray-500">2016</span></b>. 软著登字第 2016SR198498.
+                            </div>
+                            <div class="space-x-2">
+                                <a class="btn btn-xs btn-outline" href="https://github.com/UAV-HiRAP/UAV-HiRAP-Matlab" target="_blank">Codes</a>
+                                <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/16_uavhirap.pdf" target="_blank">Manual</a>
+                                <a class="btn btn-xs btn-outline" href="https://github.com/UAV-HiRAP/UAV-HiRAP-Matlab/releases/tag/v1.0" target="_blank">EXE</a>
+                            </div>
+                        </div>
+
+                        <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                            <div class="dark:text-gray-200 mb-2">
+                                Yaira 实测数据多维可视化软件[简称:Yaira] v1.0, <b><span class="text-gray-500">2016</span></b>. 软著登字第 2016SR178462.
+                            </div>
+                            <div class="space-x-2">
+                                <a class="btn btn-xs btn-outline" href="https://github.com/HowcanoeWang/Yaira" target="_blank">Codes</a>
+                                <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/16_yaira.pdf" target="_blank">Manual</a>
+                                <a class="btn btn-xs btn-outline" href="https://github.com/HowcanoeWang/Yaira/releases/tag/v1.0" target="_blank">EXE</a>
+                            </div>
+                        </div>
                     </div>
                  </div>
              </div>
