@@ -1,0 +1,82 @@
+# 工作流名称
+name: Deploy Vite Project to GitHub Pages
+
+on:
+  # 在 push 到 main 分支时触发
+  push:
+    branches:
+      - main
+
+  # 允许你手动从 Actions 标签页运行此工作流
+  workflow_dispatch:
+
+# 设置工作流的默认权限
+permissions:
+  contents: read      # contents 需要 read 权限以检出代码
+  pages: write        # pages 需要 write 权限以部署到 GitHub Pages
+  id-token: write     # id-token 需要 write 权限以进行 OIDC 身份验证
+
+# 只允许一个并发部署，会取消正在进行中的、但不是最新的那次部署
+# 这对于快速连续推送的场景非常有用
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # 构建任务 (Build job)
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9 # 你可以保持或更改 pnpm 版本
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build project
+        # 环境变量 GITHUB_PAGES 会被 Vite 读取，用于设置正确的 publicPath
+        # 这可以确保你的资源（如 CSS, JS, 图片）在部署后能被正确加载
+        run: pnpm build
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 上传构建产物目录
+          path: './dist'
+
+  # 部署任务 (Deploy job)
+  deploy:
+    # 部署任务需要构建任务成功完成
+    needs: build
+
+    # 部署任务需要特定的权限
+    permissions:
+      pages: write      # 部署到 GitHub Pages 的权限
+      id-token: write   # OIDC 认证的权限
+
+    # 设置部署环境
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
