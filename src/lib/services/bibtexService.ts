@@ -31,10 +31,22 @@ export async function fetchBibTeX(baseUrl: string = ''): Promise<BibJson | null>
         }
         const bibContent = await response.text();
         
+        // Clean up bib content: replace @software with @misc as the parser doesn't support @software
+        const cleanContent = bibContent.replace(/@software/g, '@misc');
+
         // Parse BibTeX
-        const parser = new BibLatexParser(bibContent, { processUnexpected: true, processUnknown: true });
+        const parser = new BibLatexParser(cleanContent, { processUnexpected: true, processUnknown: true });
         const bibjson = parser.parse();
         
+        // Merge unexpected_fields into fields for easier access
+        if (bibjson.entries) {
+            Object.values(bibjson.entries).forEach((entry: any) => {
+                if (entry.unexpected_fields) {
+                    entry.fields = { ...entry.fields, ...entry.unexpected_fields };
+                }
+            });
+        }
+
         return bibjson as unknown as BibJson;
     } catch (error) {
         console.error('Error loading BibTeX data:', error);

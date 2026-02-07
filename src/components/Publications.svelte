@@ -25,10 +25,16 @@
     let papers = $derived(entries.filter((e: BibEntry) => e.bib_type === 'article').sort(sortByDateDesc));
     let conferences = $derived(entries.filter((e: BibEntry) => e.bib_type === 'report').sort(sortByDateDesc));
     let theses = $derived(entries.filter((e: BibEntry) => e.bib_type === 'thesis').sort(sortByDateDesc));
+    let books = $derived(entries.filter((e: BibEntry) => e.bib_type === 'incollection').sort(sortByDateDesc));
+    let patents = $derived(entries.filter((e: BibEntry) => e.bib_type === 'patent').sort(sortByDateDesc));
+    let softwares = $derived(entries.filter((e: BibEntry) => e.bib_type === 'misc').sort(sortByDateDesc));
 
     function sortByDateDesc(a: BibEntry, b: BibEntry) {
         const dateA = a.fields.date || '';
         const dateB = b.fields.date || '';
+        if (!dateA && !dateB) return 0;
+        if (!dateA) return 1;
+        if (!dateB) return -1;
         return dateB.localeCompare(dateA); 
     }
 
@@ -79,6 +85,7 @@
         if (typeof field === 'object' && 'text' in field) {
             return field.text;
         }
+        if (typeof field === 'number') return field.toString();
         return '';
     }
 
@@ -128,11 +135,11 @@
         </button>
         <button role="tab" class="tab tab-lg {activeTab === 'thesis' ? 'tab-active font-bold' : ''}" onclick={() => activeTab = 'thesis'}>
             {$t('pub.tabs.t')}
-            <span class="badge badge-neutral ml-2">3</span>
+            <span class="badge badge-neutral ml-2">{theses.length}</span>
         </button>
         <button role="tab" class="tab tab-lg {activeTab === 'others' ? 'tab-active font-bold' : ''}" onclick={() => activeTab = 'others'}>
             {$t('pub.tabs.o')}
-            <span class="badge badge-neutral ml-2">6</span>
+            <span class="badge badge-neutral ml-2">{books.length + patents.length + softwares.length}</span>
         </button>
     </div>
 
@@ -209,103 +216,110 @@
 
         {:else if activeTab === 'thesis'}
             <div class="space-y-6 mt-8">
-                {#each [{key: 'phd', year: '2023', degree: 'PhD thesis', inst: 'The University of Tokyo', doi: '10.13140/RG.2.2.11525.12009', pdf: 'https://github.com/HowcanoeWang/DoctorThesis/releases', code: 'https://github.com/HowcanoeWang/DoctorThesis', ppt: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/23_thesis_ppt.pdf'}, 
-                        {key: 'msc', year: '2019', degree: 'MSc Forestry thesis', inst: 'The University of New Brunswick', doi: '10.13140/RG.2.2.35680.64004', pdf: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis.pdf', code: 'https://github.com/HowcanoeWang/Spherical2TreeAttributes', ppt: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis_ppt.pdf'},
-                        {key: 'bsc', year: '2017', degree: 'BSc Ecology thesis', inst: 'The Nanjing University of Forestry', doi: '10.13140/RG.2.2.30588.77440', pdf: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis.pdf', code: 'https://github.com/HowcanoeWang/ImageDBH', ppt: 'https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis_ppt.pdf'}] as thesis}
-                
-                <h3 class="text-2xl font-bold border-b pb-2">{$t(`time.${thesis.key}.title`)}</h3>
-                
-                <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
-                    <div class="text-base text-gray-800 dark:text-gray-200">
-                        <b>Wang, H.</b>, <b><span class="text-gray-500">{thesis.year}</span></b>. 
-                        Studies... ({thesis.degree}). {thesis.inst}.
+                {#each theses as thesis}
+                    <h3 class="text-2xl font-bold border-b pb-2">{$t(`time.${thesis.entry_key.split('_').pop() === '2023' ? 'phd' : thesis.entry_key.split('_').pop() === '2019' ? 'msc' : 'bsc'}.title`)}</h3>
+                    <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                        <div class="text-base text-gray-800 dark:text-gray-200">
+                            <b>Wang, H.</b>, <b><span class="text-gray-500">{thesis.fields.date?.match(/\d{4}/)?.[0]}</span></b>. 
+                            {getText(thesis.fields.title)}. (<b>{getText(thesis.fields.type)}</b>). {getText(thesis.fields.institution)}.
+                        </div>
+                        
+                        <div class="mt-2 space-x-2">
+                            {#if thesis.fields.doi}
+                                <a href="https://doi.org/{thesis.fields.doi}" target="_blank" class="btn btn-xs btn-outline">DOI</a>
+                            {/if}
+                            {#if thesis.fields.url}
+                                <a href={getText(thesis.fields.url)} target="_blank" class="btn btn-xs btn-outline">URL</a>
+                            {/if}
+                            {#if customLinks[thesis.entry_key]}
+                                {#each Object.entries(customLinks[thesis.entry_key]) as [label, url]}
+                                    <a href={url} target="_blank" class="btn btn-xs btn-outline">{label}</a>
+                                {/each}
+                            {/if}
+                        </div>
                     </div>
-                    
-                    <div class="mt-2 space-x-2">
-                        <a class="btn btn-xs btn-outline" href={`https://doi.org/${thesis.doi}`} target="_blank">DOI</a>
-                        <a class="btn btn-xs btn-outline" href={thesis.pdf} target="_blank">PDF</a>
-                        {#if thesis.ppt}<a class="btn btn-xs btn-outline" href={thesis.ppt} target="_blank">PPT</a>{/if}
-                        {#if thesis.code}<a class="btn btn-xs btn-outline" href={thesis.code} target="_blank">Codes</a>{/if}
-                    </div>
-                </div>
                 {/each}
             </div>
 
         {:else if activeTab === 'others'}
              <div class="space-y-8 mt-4">
+                 {#if books.length > 0}
                  <div>
                     <h3 class="text-2xl font-bold mt-8 mb-4 border-b pb-2">{$t('pub.tabs.bc')}</h3>
-                    <div class="dark:text-gray-200 pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
-                        <div class="mb-2">
-                             <b>Wang, H.</b>, Guo, W., <b><span class="text-gray-500">2024</span></b>. EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotypin, in: Raval, M.S., Chaudhary, S., Adinarayana, J., Guo, W. (Eds.), Harnessing Data Science for Sustainable Agriculture and Natural Resource Management, Studies in Big Data. Springer Nature Singapore, Singapore, pp. 149–172.
+                    <div class="space-y-6">
+                        {#each books as entry}
+                        <div class="dark:text-gray-200 pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                            <div class="mb-2">
+                                {@html getFormatAuthors(entry.fields.author)}
+                                <b><span class="text-gray-500">{entry.fields.date?.match(/\d{4}/)?.[0]}</span></b>. 
+                                {getText(entry.fields.title)}, in: {getText(entry.fields.editor)} (Eds.), {getText(entry.fields.booktitle)}. {getText(entry.fields.publisher)}, {getText(entry.fields.location)}, pp. {getText(entry.fields.pages)}.
+                            </div>
+                            <div class="space-x-2">
+                                {#if entry.fields.doi}
+                                    <a href="https://doi.org/{entry.fields.doi}" target="_blank" class="btn btn-xs btn-outline">DOI</a>
+                                {/if}
+                                {#if customLinks[entry.entry_key]}
+                                    {#each Object.entries(customLinks[entry.entry_key]) as [label, url]}
+                                        <a href={url} target="_blank" class="btn btn-xs btn-outline">{label}</a>
+                                    {/each}
+                                {/if}
+                            </div>
                         </div>
-                        <div class="space-x-2">
-                            <a class="btn btn-xs btn-outline" href="https://doi.org/10.1007/978-981-97-7762-4_7" target="_blank">DOI</a>
-                            <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/books/24_easyidp_v2.pdf" target="_blank">PDF</a>
-                        </div>
+                        {/each}
                     </div>
                  </div>
+                 {/if}
 
+                 {#if patents.length > 0}
                  <div>
                     <h3 class="text-2xl font-bold mt-8 mb-4 border-b pb-2">{$t('pub.tabs.pa')}</h3>
-                    <div class="dark:text-gray-200 pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
-                        <div class="mb-2">
-                            王锋，韩东，<b>王浩舟</b>，卢琦，潘绪斌，一种基于无人机的景观尺度植被覆盖度的计算方法及系统：<b><span class="text-gray-500">2019</span></b>. CN 201610913357
+                    <div class="space-y-6">
+                        {#each patents as entry}
+                        <div class="dark:text-gray-200 pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
+                            <div class="mb-2">
+                                {@html getFormatAuthors(entry.fields.author)}
+                                {getText(entry.fields.title)}: <b><span class="text-gray-500">{entry.fields.date?.match(/\d{4}/)?.[0]}</span></b>. {getText(entry.fields.number)}
+                            </div>
+                            <div class="space-x-2">
+                                {#if entry.fields.url}
+                                    <a href={getText(entry.fields.url)} target="_blank" class="btn btn-xs btn-outline">URL</a>
+                                {/if}
+                                {#if customLinks[entry.entry_key]}
+                                    {#each Object.entries(customLinks[entry.entry_key]) as [label, url]}
+                                        <a href={url} target="_blank" class="btn btn-xs btn-outline">{label}</a>
+                                    {/each}
+                                {/if}
+                            </div>
                         </div>
-                        <div class="space-x-2">
-                            <a class="btn btn-xs btn-outline" href="https://patents.google.com/patent/CN106403904A/zh" target="_blank">URL</a>
-                            <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/19_CAF.pdf" target="_blank">PDF</a>
-                        </div>
+                        {/each}
                     </div>
                  </div>
+                 {/if}
 
+                 {#if softwares.length > 0}
                  <div>
                     <h3 class="text-2xl font-bold mt-8 mb-4 border-b pb-2">{$t('pub.tabs.s')}</h3>
-                    
                     <div class="space-y-6">
+                        {#each softwares as entry}
                         <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
                             <div class="dark:text-gray-200 mb-2">
-                                无人机高精度影像分析平台[简称: UAV-HiRAP] v3.0, <b><span class="text-gray-500">2019</span></b>. 软著登字第 2019SR0286422.
+                                {getText(entry.fields.title)} [{getText(entry.fields.shorttitle)}] {getText(entry.fields.version)}, <b><span class="text-gray-500">{entry.fields.date?.match(/\d{4}/)?.[0]}</span></b>. {getText(entry.fields.number)}.
                             </div>
                             <div class="space-x-2">
-                                <a class="btn btn-xs btn-outline" href="https://www.uav-hirap.org" target="_blank">URL</a>
-                                <a class="btn btn-xs btn-outline" href="https://github.com/UAV-HiRAP/UAV-HiRAP" target="_blank">Codes</a>
+                                {#if entry.fields.url}
+                                    <a href={getText(entry.fields.url)} target="_blank" class="btn btn-xs btn-outline">URL</a>
+                                {/if}
+                                {#if customLinks[entry.entry_key]}
+                                    {#each Object.entries(customLinks[entry.entry_key]) as [label, url]}
+                                        <a href={url} target="_blank" class="btn btn-xs btn-outline">{label}</a>
+                                    {/each}
+                                {/if}
                             </div>
                         </div>
-
-                        <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
-                            <div class="dark:text-gray-200 mb-2">
-                                无人机高精度影像分析平台[简称: UAV-HiRAP] v2.0, <b><span class="text-gray-500">2017</span></b>. 软著登字第 2017SR558256.
-                            </div>
-                            <div class="space-x-2">
-                                <a class="btn btn-xs btn-outline" href="https://www.uav-hirap.org" target="_blank">URL</a>
-                                <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/17_uavhirap2.pdf" target="_blank">Manual</a>
-                            </div>
-                        </div>
-
-                        <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
-                            <div class="dark:text-gray-200 mb-2">
-                                无人机高精度影像分析平台[简称: UAV-HiRAP] v1.0, <b><span class="text-gray-500">2016</span></b>. 软著登字第 2016SR198498.
-                            </div>
-                            <div class="space-x-2">
-                                <a class="btn btn-xs btn-outline" href="https://github.com/UAV-HiRAP/UAV-HiRAP-Matlab" target="_blank">Codes</a>
-                                <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/16_uavhirap.pdf" target="_blank">Manual</a>
-                                <a class="btn btn-xs btn-outline" href="https://github.com/UAV-HiRAP/UAV-HiRAP-Matlab/releases/tag/v1.0" target="_blank">EXE</a>
-                            </div>
-                        </div>
-
-                        <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
-                            <div class="dark:text-gray-200 mb-2">
-                                Yaira 实测数据多维可视化软件[简称:Yaira] v1.0, <b><span class="text-gray-500">2016</span></b>. 软著登字第 2016SR178462.
-                            </div>
-                            <div class="space-x-2">
-                                <a class="btn btn-xs btn-outline" href="https://github.com/HowcanoeWang/Yaira" target="_blank">Codes</a>
-                                <a class="btn btn-xs btn-outline" href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/16_yaira.pdf" target="_blank">Manual</a>
-                                <a class="btn btn-xs btn-outline" href="https://github.com/HowcanoeWang/Yaira/releases/tag/v1.0" target="_blank">EXE</a>
-                            </div>
-                        </div>
+                        {/each}
                     </div>
                  </div>
+                 {/if}
              </div>
         {/if}
     </div>
