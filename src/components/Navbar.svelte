@@ -46,7 +46,7 @@
   </div>
   
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 font-medium">
+    <ul class="menu menu-horizontal px-1 font-medium text-xl">
       <li><a href="#profile-section">{$t('nav.profile')}</a></li>
       <li><a href="#publication-section">{$t('nav.publication')}</a></li>
       <li><a href="#project-section">{$t('nav.project')}</a></li>
@@ -59,9 +59,9 @@
     <div class="dropdown dropdown-end">
       <div role="button" tabindex="0" class="btn btn-ghost flex items-center gap-2">
         <i class="fas fa-globe text-lg"></i>
-        <span class="text-sm hidden sm:inline">{currentLangLabel}</span>
+        <span class="text-md hidden sm:inline">{currentLangLabel}</span>
       </div>
-      <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+      <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box mt-4">
         {#each languages as lang}
             <li><button onclick={() => switchLanguage(lang.code)}>{lang.label}</button></li>
         {/each}
