@@ -173,5 +173,50 @@ export const customLinks: Record<string, Record<string, string>> = {
     "wang_uavhirap_2017intecol": {
         "Abstract": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/17_ICE_abstract.pdf",
         "Oral": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/conf/17_ICE_ppt.pdf"
+    },
+
+    ////////////
+    // Thesis //
+    ////////////
+    "wang_studies_2023": {
+        "PDF": "https://github.com/HowcanoeWang/DoctorThesis/releases",
+        "Codes": "https://github.com/HowcanoeWang/DoctorThesis",
+        "PPT": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/23_thesis_ppt.pdf"
+    },
+    "wang_estimating_2019": {
+        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis.pdf",
+        "Codes": "https://github.com/HowcanoeWang/Spherical2TreeAttributes",
+        "PPT": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/19_thesis_ppt.pdf"
+    },
+    "wang_extracting_2017": {
+        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis.pdf",
+        "Codes": "https://github.com/HowcanoeWang/ImageDBH",
+        "PPT": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/thesis/17_thesis_ppt.pdf"
+    },
+
+    ///////////
+    // Other //
+    ///////////
+    "wang_easyidp_2024": {
+        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/books/24_easyidp_v2.pdf"
+    },
+    "wang_landscapescale_2017": {
+        "PDF": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/19_CAF.pdf"
+    },
+    "wang_uavhirapweb_2019": {
+        "Codes": "https://github.com/UAV-HiRAP/UAV-HiRAP"
+    },
+    "wang_uavhirapweb_2017": {
+        "Manual": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/17_uavhirap2.pdf"
+    },
+    "wang_uavhirapapp_2016": {
+        "Codes": "https://github.com/UAV-HiRAP/UAV-HiRAP-Matlab",
+        "Manual": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/16_uavhirap.pdf",
+        "EXE": "https://github.com/UAV-HiRAP/UAV-HiRAP-Matlab/releases/tag/v1.0"
+    },
+    "wang_yaira_2016": {
+        "Codes": "https://github.com/HowcanoeWang/Yaira",
+        "Manual": "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/patent/16_yaira.pdf",
+        "EXE": "https://github.com/HowcanoeWang/Yaira/releases/tag/v1.0"
     }
 };
