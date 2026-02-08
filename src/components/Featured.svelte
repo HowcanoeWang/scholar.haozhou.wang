@@ -91,11 +91,11 @@
                  </h2>
                  <p class="text-sm text-muted-foreground mb-6">
                      <span class="font-semibold text-foreground">{item.journal}</span> <br>
-                     <span class="inline-block mt-1 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider border border-border rounded-full text-muted-foreground">sci</span>
+                     <span class="mt-1 py-0.5 text-[12px] font-bold uppercase tracking-wider text-muted-foreground">{$t(item.badge)}</span>
                  </p>
                  <div class="flex flex-wrap gap-2 mt-auto">
                      {#each item.links as link}
-                         <a href={link.url} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{link.label}</a>
+                         <a href={link.url} target="_blank" class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{link.label}</a>
                      {/each}
                  </div>
              </div>
