@@ -8,8 +8,15 @@ export interface TimelineItem {
 
 export const timeline: TimelineItem[] = [
     {
-        period: "2023.10 | Present",
-        periodSm: "2023.10-",
+        period: "2026.02 | Present",
+        periodSm: "2026.02-",
+        institutionKey: "inst.ut",
+        titleKey: "time.paf.title",
+        descKey: "time.paf.intro"
+    },
+    {
+        period: "2023.10 | 2026.01",
+        periodSm: "2023.10-2026.01",
         institutionKey: "inst.ut",
         titleKey: "time.pdf.title",
         descKey: "time.pdf.intro"
