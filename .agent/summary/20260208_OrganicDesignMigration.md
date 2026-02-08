@@ -55,6 +55,7 @@ I refactored all major components to align with the new design system:
 - **Intro & Skills**:
   - **Research & Education**: Refactored lists to remove standard bullets and badges, adopting organic spacing and understated "pill" styles (`bg-muted`, `rounded-full`) for dates.
   - **Skills**: Added a new "Skills" section showcasing Python, Web Frontend, LaTeX, and Plugin Development capabilities, fully localized.
+- **Typography**: Enabled **HarmonyOS Sans** via CDN to ensure a modern, unified font style across English, Chinese, and Japanese, resolving the user's request for cross-language consistency.
 
 ## Verification
 - **Build**: Ran `pnpm run build` successfully.
