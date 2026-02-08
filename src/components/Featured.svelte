@@ -21,25 +21,25 @@
    // Hardcoded featured list from original index.html
    const featured = [
        {
-           img: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/cover_3dpotatotwin.png",
+           img: "/files/imgs/cover_3dpotatotwin.png",
            title: "3DPotatoTwin: a Paired Potato Tuber Dataset for 3D Multi-Sensory Fusion",
            journal: "Plant Phenomics",
            badge: "pub.if.pp", // i18n key or text
            links: [
                { label: "DOI", url: "https://doi.org/10.1016/j.plaphe.2025.100123" },
-               { label: "PDF", url: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/25_pp_3dpotatotwin.pdf" },
+               { label: "PDF", url: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/public/files/paper/25_pp_3dpotatotwin.pdf" },
                { label: "東大ニュース", url: "https://www.a.u-tokyo.ac.jp/topics/topics_20251028-1.html" },
                { label: "日本日経新聞", url: "https://www.nikkei.com/nkd/company/article/?DisplayType=11&ng=DGXZRSP698560_U5A021C2000000&scode=6326" }
            ]
        },
        {
-           img: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/cover_broccoli.png",
+           img: "/files/imgs/cover_broccoli.png",
            title: "Drone-Based Harvest Data Prediction Can Reduce On-Farm Food Loss and Improve Farmer Income",
            journal: "Plant Phenomics",
            badge: "pub.if.pp",
            links: [
                { label: "DOI", url: "https://doi.org/10.34133/plantphenomics.0086" },
-               { label: "PDF", url: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/23_pp.pdf" },
+               { label: "PDF", url: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/public/files/paper/23_pp.pdf" },
                { label: "新京报", url: "https://www.bjnews.com.cn/detail/1698978347129712.html" },
                { label: "EurekAlert!", url: "https://www.eurekalert.org/news-releases/1003639" },
                { label: "日本日経新聞", url: "https://www.nikkei.com/article/DGXZRSP661800_Y3A900C2000000/" }
@@ -52,17 +52,17 @@
            badge: "pub.if.rs", 
            links: [
                { label: "DOI", url: "https://doi.org/10.3390/rs13132622" },
-               { label: "PDF", url: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/21_easyidp.pdf" }
+               { label: "PDF", url: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/public/files/paper/21_easyidp.pdf" }
            ]
        },
        {
-           img: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/imgs/19_afm_graph.svg",
+           img: "/files/imgs/19_afm_graph.svg",
            title: "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
            journal: "Agricultural and Forest Meteorology",
            badge: "pub.if.afm",
            links: [
                { label: "DOI", url: "https://doi.org/10.1016/j.agrformet.2019.107665" },
-               { label: "PDF", url: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/files/paper/19_afm.pdf" },
+               { label: "PDF", url: "https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/public/files/paper/19_afm.pdf" },
                { label: "News", url: "https://mp.weixin.qq.com/s/7icns8uY78pEonHESMmuTg" }
            ]
        }
