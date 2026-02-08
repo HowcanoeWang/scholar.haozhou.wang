@@ -23,6 +23,28 @@
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
+
+  /* Theme Logic */
+  let currentTheme = $state('light');
+
+  onMount(() => {
+    // Check localStorage or system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        currentTheme = savedTheme;
+    } else {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            currentTheme = 'dark';
+        }
+    }
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  });
+
+  function toggleTheme() {
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    localStorage.setItem('theme', currentTheme);
+  }
 </script>
 
 <nav class="bg-base-100/70 backdrop-blur-md sticky top-0 z-50 shadow-lg">
@@ -67,6 +89,17 @@
         {/each}
       </ul>
     </div>
+    
+    <!-- Theme Toggle -->
+    <button class="btn btn-ghost btn-circle ml-2 p-1" onclick={toggleTheme} aria-label="Toggle Theme">
+      {#if currentTheme === 'dark'}
+        <!-- Sun Icon (Click to switch to Light) -->
+        <img src="/icons/sun.svg" alt="Sun" class="w-6 h-6 invert dark:invert-0" />
+      {:else}
+        <!-- Moon Icon (Click to switch to Dark) -->
+        <img src="/icons/moon.svg" alt="Moon" class="w-6 h-6 invert-0 dark:invert" />
+      {/if}
+    </button>
   </div>
   </div>
 </nav>

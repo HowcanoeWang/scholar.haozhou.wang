@@ -151,7 +151,7 @@
                 <div class="space-y-6">
                     {#each group as entry}
                         <div class="pl-4 border-l-4 border-gray-200 hover:border-blue-500 transition-colors">
-                            <div class="text-base text-gray-800 dark:text-gray-200">
+                            <div class="text-base text-base-content/80 dark:text-gray-200">
                                 {@html getFormatAuthors(entry.fields.author)}
                                 <span class="text-gray-500 font-bold mx-1">{entry.fields.date?.match(/\d{4}/)?.[0]}</span>.
                                 <span class="font-medium">{getText(entry.fields.title)}.</span>
