@@ -50,19 +50,17 @@
 <nav class="bg-background/80 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-border/50">
   <div class="navbar w-full max-w-[960px] mx-auto px-4">
   <div class="navbar-start">
-    <div class="dropdown">
-      <div role="button" tabindex="0" class="btn btn-ghost lg:hidden rounded-full" onclick={toggleMenu} onkeydown={(e) => e.key === 'Enter' && toggleMenu()} aria-label="Toggle navigation">
+    <div class="dropdown {isMenuOpen ? 'dropdown-open' : ''} lg:hidden">
+      <div role="button" tabindex="0" class="btn btn-ghost rounded-full" onclick={toggleMenu} onkeydown={(e) => e.key === 'Enter' && toggleMenu()} aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
-      {#if isMenuOpen}
-        <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-card text-card-foreground rounded-[1.5rem] w-52 border border-border">
-          <li><a href="#profile-section" class="rounded-full">{$t('nav.profile')}</a></li>
-          <li><a href="#publication-section" class="rounded-full">{$t('nav.publication')}</a></li>
-          <li><a href="#project-section" class="rounded-full">{$t('nav.project')}</a></li>
-          <li><a href="#timeline-section" class="rounded-full">{$t('nav.timeline')}</a></li>
-          <li><a href="#award-section" class="rounded-full">{$t('nav.award')}</a></li>
-        </ul>
-      {/if}
+      <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow-lg bg-card text-card-foreground rounded-3xl w-52 border border-border">
+          <li><a href="#profile-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.profile')}</a></li>
+          <li><a href="#publication-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.publication')}</a></li>
+          <li><a href="#project-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.project')}</a></li>
+          <li><a href="#timeline-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.timeline')}</a></li>
+          <li><a href="#award-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.award')}</a></li>
+      </ul>
     </div>
     <a class="btn btn-ghost text-xl font-serif tracking-tight rounded-full hover:bg-muted" href="#profile-section">haozhou.wang</a>
   </div>
