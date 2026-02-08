@@ -31,7 +31,7 @@
   </div>
 
   <!-- Projects Section -->
-  <div class="bg-muted/30 py-24 relative" id="project-section">
+  <div class="bg-muted/30 py-24 relative overflow-hidden" id="project-section">
       <!-- Decorator Blob -->
       <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-gray-200/20 dark:bg-gray-800/20 blur-3xl rounded-full mix-blend-multiply dark:mix-blend-overlay filter pointer-events-none blob-shape-1"></div>
       
@@ -56,7 +56,7 @@
   </div>
 
   <!-- Awards Section -->
-  <div class="bg-muted/30 py-24 relative" id="award-section">
+  <div class="bg-muted/30 py-24 relative overflow-hidden" id="award-section">
       <!-- Decorator Blob -->
        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-gray-200/20 dark:bg-gray-800/20 blur-3xl rounded-full mix-blend-multiply dark:mix-blend-overlay filter pointer-events-none blob-shape-2"></div>
 

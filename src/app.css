@@ -114,6 +114,7 @@
     @apply bg-background text-foreground font-sans antialiased;
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   
   /* Texture Overlay */
