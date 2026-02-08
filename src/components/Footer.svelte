@@ -2,9 +2,9 @@
   const year = new Date().getFullYear();
 </script>
 
-<footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-auto border-t border-base-300">
+<footer class="footer footer-center p-10 bg-muted text-muted-foreground rounded-t-[2rem] mt-auto border-t border-border">
   <aside>
-    <p>Copyright © {year} - Haozhou Wang</p>
-    <p>Powered by Vite, Svelte 5 & TailwindCSS 4</p>
+    <p class="font-bold tracking-wide">Copyright © {year} - Haozhou Wang</p>
+    <p class="text-xs opacity-70">Powered by Vite, Svelte 5 & TailwindCSS 4</p>
   </aside>
 </footer>

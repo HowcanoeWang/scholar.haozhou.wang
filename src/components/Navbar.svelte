@@ -47,51 +47,51 @@
   }
 </script>
 
-<nav class="bg-base-100/70 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+<nav class="bg-background/80 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-border/50">
   <div class="navbar w-full max-w-[960px] mx-auto px-4">
   <div class="navbar-start">
     <div class="dropdown">
-      <div role="button" tabindex="0" class="btn btn-ghost lg:hidden" onclick={toggleMenu} aria-label="Toggle navigation">
+      <div role="button" tabindex="0" class="btn btn-ghost lg:hidden rounded-full" onclick={toggleMenu} onkeydown={(e) => e.key === 'Enter' && toggleMenu()} aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
       {#if isMenuOpen}
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-          <li><a href="#profile-section">{$t('nav.profile')}</a></li>
-          <li><a href="#publication-section">{$t('nav.publication')}</a></li>
-          <li><a href="#project-section">{$t('nav.project')}</a></li>
-          <li><a href="#timeline-section">{$t('nav.timeline')}</a></li>
-          <li><a href="#award-section">{$t('nav.award')}</a></li>
+        <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-card text-card-foreground rounded-[1.5rem] w-52 border border-border">
+          <li><a href="#profile-section" class="rounded-full">{$t('nav.profile')}</a></li>
+          <li><a href="#publication-section" class="rounded-full">{$t('nav.publication')}</a></li>
+          <li><a href="#project-section" class="rounded-full">{$t('nav.project')}</a></li>
+          <li><a href="#timeline-section" class="rounded-full">{$t('nav.timeline')}</a></li>
+          <li><a href="#award-section" class="rounded-full">{$t('nav.award')}</a></li>
         </ul>
       {/if}
     </div>
-    <a class="btn btn-ghost text-xl" href="#profile-section">haozhou.wang</a>
+    <a class="btn btn-ghost text-xl font-serif tracking-tight rounded-full hover:bg-muted" href="#profile-section">haozhou.wang</a>
   </div>
   
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 font-medium text-xl">
-      <li><a href="#profile-section">{$t('nav.profile')}</a></li>
-      <li><a href="#publication-section">{$t('nav.publication')}</a></li>
-      <li><a href="#project-section">{$t('nav.project')}</a></li>
-      <li><a href="#timeline-section">{$t('nav.timeline')}</a></li>
-      <li><a href="#award-section">{$t('nav.award')}</a></li>
+    <ul class="menu menu-horizontal px-1 font-medium text-base gap-1">
+      <li><a href="#profile-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.profile')}</a></li>
+      <li><a href="#publication-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.publication')}</a></li>
+      <li><a href="#project-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.project')}</a></li>
+      <li><a href="#timeline-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.timeline')}</a></li>
+      <li><a href="#award-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.award')}</a></li>
     </ul>
   </div>
 
   <div class="navbar-end">
     <div class="dropdown dropdown-end">
-      <div role="button" tabindex="0" class="btn btn-ghost flex items-center gap-2">
+      <div role="button" tabindex="0" class="btn btn-ghost rounded-full flex items-center gap-2 hover:bg-muted">
         <i class="fas fa-globe text-lg"></i>
-        <span class="text-md hidden sm:inline">{currentLangLabel}</span>
+        <span class="text-md hidden sm:inline font-serif">{currentLangLabel}</span>
       </div>
-      <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box mt-4">
+      <ul tabindex="-1" class="dropdown-content z-[1] menu p-2 shadow-lg bg-card text-card-foreground rounded-[1.5rem] mt-4 border border-border w-32">
         {#each languages as lang}
-            <li><button onclick={() => switchLanguage(lang.code)}>{lang.label}</button></li>
+            <li><button class="rounded-full" onclick={() => switchLanguage(lang.code)}>{lang.label}</button></li>
         {/each}
       </ul>
     </div>
     
     <!-- Theme Toggle -->
-    <button class="btn btn-ghost btn-circle ml-2 p-1" onclick={toggleTheme} aria-label="Toggle Theme">
+    <button class="btn btn-ghost btn-circle ml-2 p-1 hover:bg-muted" onclick={toggleTheme} aria-label="Toggle Theme">
       {#if currentTheme === 'dark'}
         <!-- Sun Icon (Click to switch to Light) -->
         <img src="/icons/sun.svg" alt="Sun" class="w-6 h-6 invert dark:invert-0" />
