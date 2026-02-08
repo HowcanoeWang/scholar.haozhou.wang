@@ -1,17 +1,6 @@
 <script lang="ts">
     import { t } from 'svelte-i18n';
-    
-    // Define awards data locally since it's small, or move to data file if it grows
-    const awards = [
-        {
-            img: "./files/awards/24_cigr.png",
-            titleKey: "awd.cigr24",
-            date: "2024.05",
-            links: [
-                { label: "Web", url: "https://www.jsidre.or.jp/the-6th-cigr-international-conference-2024/" }
-            ]
-        }
-    ];
+    import { awards } from '$lib/data/awards';
 </script>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
