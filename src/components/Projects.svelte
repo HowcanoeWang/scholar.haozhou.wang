@@ -3,32 +3,40 @@
     import { t } from 'svelte-i18n';
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {#each projects as project}
-        <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-            <figure class="h-48 overflow-hidden bg-white/10 dark:bg-white/5">
-                <!-- Use object-contain or cover based on original look. Original was card-img-top -->
-                <img src={project.img} alt={project.title} class="w-full h-full object-contain p-4" />
+        <div class="group relative bg-card text-card-foreground rounded-[2rem] border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+            <!-- Image Container with organic mask possibly, but keeping it simple rounded for now to match card -->
+            <figure class="h-56 overflow-hidden bg-muted/50 relative">
+                <div class="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+                <img 
+                    src={project.img} 
+                    alt={project.title} 
+                    class="w-full h-full object-contain p-6 transform group-hover:scale-105 transition-transform duration-700 ease-out" 
+                />
             </figure>
-            <div class="card-body">
-                <div class="text-sm font-bold text-gray-500 uppercase tracking-wide">
+            
+            <div class="p-8">
+                <div class="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-2">
                     {$t(project.institution)}
                 </div>
-                <h2 class="card-title mt-0">
+                <h2 class="text-2xl font-serif font-bold mb-3 leading-tight">
                     {project.title}
                 </h2>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                <p class="text-muted-foreground text-sm leading-relaxed mb-6">
                     {$t(project.descriptionKey)}
                 </p>
-                <div class="card-actions justify-between items-end mt-4">
-                    <div class="space-x-2">
+                
+                <div class="flex flex-wrap items-center justify-between gap-4 mt-auto pt-4 border-t border-border/50">
+                    <div class="flex gap-2 flex-wrap">
                         {#each project.links as link}
-                            <a href={link.url} target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                            <a href={link.url} target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">
                                 {link.label}
                             </a>
                         {/each}
                     </div>
-                    <span class="text-xs text-gray-400 font-mono">{project.date}</span>
+                    <span class="text-xs font-mono text-muted-foreground/70">{project.date}</span>
                 </div>
             </div>
         </div>
