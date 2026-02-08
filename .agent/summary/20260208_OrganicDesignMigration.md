@@ -55,7 +55,9 @@ I refactored all major components to align with the new design system:
 - **Intro & Skills**:
   - **Research & Education**: Refactored lists to remove standard bullets and badges, adopting organic spacing and understated "pill" styles (`bg-muted`, `rounded-full`) for dates.
   - **Skills**: Added a new "Skills" section showcasing Python, Web Frontend, LaTeX, and Plugin Development capabilities, fully localized.
-- **Typography**: Enabled **HarmonyOS Sans** via CDN to ensure a modern, unified font style across English, Chinese, and Japanese, resolving the user's request for cross-language consistency.
+- **Typography**: Unified the entire website to use **HarmonyOS Sans** via CDN. Removed all custom serif (Fraunces) and other sans-serif (Nunito) fonts to ensure a strictly consistent, modern, and high-legibility look across all languages (English, Chinese, Japanese).
+- **Navigation**: Fixed the mobile menu toggle by replacing the focus-based dropdown behavior with an explicit state-based toggle (`dropdown-open` class controlled by `isMenuOpen`), ensuring reliable interaction on touch devices.
+- **Layout Fixes**: Adjusted the Publication timeline layout by adding left margin (`ml-6`) to timeline items. This resolves the issue where year circles were being clipped by the left screen edge on mobile devices.
 
 ## Verification
 - **Build**: Ran `pnpm run build` successfully.
