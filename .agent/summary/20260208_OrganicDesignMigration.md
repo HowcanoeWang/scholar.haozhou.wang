@@ -50,7 +50,11 @@ I refactored all major components to align with the new design system:
   - Eliminated dark mode overlays to ensure image visibility.
 - **Featured & Project Cards**:
   - **Projects**: Updated card images to fill the full width (removed padding, switched to `object-cover`) to match `Featured` card aesthetics.
+  - **Projects**: Updated card images to fill the full width (removed padding, switched to `object-cover`) to match `Featured` card aesthetics.
   - **Featured**: Enabled dynamic rendering of Journal Impact Factor/Citation info in the badge area using i18n keys (`{$t(item.badge)}`).
+- **Intro & Skills**:
+  - **Research & Education**: Refactored lists to remove standard bullets and badges, adopting organic spacing and understated "pill" styles (`bg-muted`, `rounded-full`) for dates.
+  - **Skills**: Added a new "Skills" section showcasing Python, Web Frontend, LaTeX, and Plugin Development capabilities, fully localized.
 
 ## Verification
 - **Build**: Ran `pnpm run build` successfully.

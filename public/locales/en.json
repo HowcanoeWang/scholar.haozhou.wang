@@ -19,7 +19,7 @@
         "close": "Close",
         "cv_down": "Download CV",
 
-        "intro": "A project research assistant at the Laboratory of Field Phenomics, UTokyo. Has a cross-disciplinary background in computer science, ecology, forestry, and agriculture. Research focuses on crop 3D reconstruction, 3D data processing, and digital twin crop models.",
+        "intro": "A project assistant professor at the Laboratory of Field Phenomics, UTokyo. Has a cross-disciplinary background in computer science, ecology, forestry, and agriculture. Research focuses on crop 3D reconstruction, 3D data processing, and digital twin crop models.",
         "int": {
             "t": "Research Interest",
             "l1": "High-throughput plant phenotyping by 3D reconstruction",
@@ -32,6 +32,22 @@
             "l1": "Doctor in Agricultural science, The University of Tokyo",
             "l2": "MSc in Forestry, The University of New Brunswick",
             "l3": "BSc in Ecology, Nanjing Forestry University"
+        },
+        "skills": {
+            "t": "Skills",
+            "python": "Image Processing, 3D Data Processing, PyQt GUI, PyPI Package Development",
+            "web": {
+                "t": "Web Frontend",
+                "l": "Vite, Pnpm, Bootstrap, Svelte, TailwindCSS"
+            },
+            "plugin": {
+                "t": "Software and Plugin Development",
+                "l": "Metashape Plugin (Python), QGIS Plugin (Python), Rime Input Method (Lua), SiYuan Note Plugin (TypeScript)"
+            },
+            "others": {
+                "t": "Others",
+                "l": "Linux (Debian & Arch), LaTeX, Blender 3D Modeling, 3D Printing"
+            }
         }
     },
 
@@ -74,9 +90,13 @@
 
     "time": {
         "t": "Experience Timeline",
+        "paf": {
+            "title": "Project Assistant Professor",
+            "intro": "Research focuses on greenhouse digital twin crop models, IoT sensor networks for greenhouse monitoring, and aerodynamic simulation and optimization of greenhouse structures."
+        },
         "pdf": {
-            "title": "Project Research Assistant",
-            "intro": "Focused on 3D-based plant phenotyping by multi-scale data fusion."
+            "title": "Project Researcher",
+            "intro": "Specializing in multi-scale data fusion for plant 3D phenotyping. Co-developed a 3D potato database using RGBD and high-precision reconstruction for yield prediction models in collaboration with Kubota and Sarabetsu Village. Furthermore, in a Nagasaki JA project, integrated UAV multispectral and RGB imagery to develop a time-series deep learning workflow and dedicated software for detecting anomalous potato plants."
         },
         "phd": {
             "title": "Doctor in Agricultural Science",
