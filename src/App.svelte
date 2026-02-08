@@ -19,42 +19,51 @@
 </script>
 
 {#if isReady}
-<main class="min-h-screen bg-base-200 font-sans text-base-content relative selection:bg-primary selection:text-primary-content">
+<main class="min-h-screen bg-background font-sans text-foreground relative selection:bg-foreground selection:text-background">
   <Navbar />
 
   <!-- Profile Section (Masthead) -->
   <Profile />
 
   <!-- Publication Section -->
-  <div class="bg-base-100">
+  <div class="bg-background relative">
       <Publications />
   </div>
 
   <!-- Projects Section -->
-  <div class="bg-base-200 py-16" id="project-section">
-      <div class="w-full max-w-[960px] mx-auto px-4">
-          <div class="text-center mb-12">
-              <h3 class="text-3xl font-bold">{$t('proj.t')}</h3>
+  <div class="bg-muted/30 py-24 relative" id="project-section">
+      <!-- Decorator Blob -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-gray-200/20 dark:bg-gray-800/20 blur-3xl rounded-full mix-blend-multiply dark:mix-blend-overlay filter pointer-events-none blob-shape-1"></div>
+      
+      <div class="w-full max-w-[960px] mx-auto px-4 relative z-10">
+          <div class="text-center mb-16">
+              <h3 class="text-4xl font-serif font-bold tracking-tight">{$t('proj.t')}</h3>
+              <div class="h-1 w-20 bg-foreground/10 mx-auto mt-4 rounded-full"></div>
           </div>
           <Projects />
       </div>
   </div>
 
   <!-- Timeline Section -->
-  <div class="bg-base-100 py-16" id="timeline-section">
+  <div class="bg-background py-24 relative" id="timeline-section">
       <div class="w-full max-w-[960px] mx-auto px-4">
-          <div class="text-center mb-12">
-              <h3 class="text-3xl font-bold">{$t('time.t')}</h3>
+          <div class="text-center mb-16">
+              <h3 class="text-4xl font-serif font-bold tracking-tight">{$t('time.t')}</h3>
+              <div class="h-1 w-20 bg-foreground/10 mx-auto mt-4 rounded-full"></div>
           </div>
           <Timeline />
       </div>
   </div>
 
   <!-- Awards Section -->
-  <div class="bg-base-200 py-16" id="award-section">
-      <div class="w-full max-w-[960px] mx-auto px-4">
-          <div class="text-center mb-12">
-              <h3 class="text-3xl font-bold">{$t('awd.t')}</h3>
+  <div class="bg-muted/30 py-24 relative" id="award-section">
+      <!-- Decorator Blob -->
+       <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-gray-200/20 dark:bg-gray-800/20 blur-3xl rounded-full mix-blend-multiply dark:mix-blend-overlay filter pointer-events-none blob-shape-2"></div>
+
+      <div class="w-full max-w-[960px] mx-auto px-4 relative z-10">
+          <div class="text-center mb-16">
+              <h3 class="text-4xl font-serif font-bold tracking-tight">{$t('awd.t')}</h3>
+              <div class="h-1 w-20 bg-foreground/10 mx-auto mt-4 rounded-full"></div>
           </div>
           <Awards />
       </div>

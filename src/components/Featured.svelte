@@ -69,29 +69,34 @@
    ];
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
     {#each featured as item}
-        <div class="card bg-base-100 shadow-xl">
-             <figure class="h-48">
-                 <img src={item.img} alt={item.title} class="w-full h-full object-cover" />
+        <div class="group relative bg-card text-card-foreground rounded-[2rem] border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+             <figure class="h-56 relative bg-muted/30">
+                 <div class="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+                 <img 
+                    src={item.img} 
+                    alt={item.title} 
+                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" 
+                 />
              </figure>
-             <div class="card-body">
-                 <h2 class="card-title text-base">
+             <div class="p-8">
+                 <h2 class="text-xl font-serif font-bold leading-tight mb-3">
                      {item.title}
-                     <div class="badge badge-secondary" title={$t('prof.cite')}>
-                         {getCiteCount(item.title)}
-                     </div>
+                     {#if getCiteCount(item.title) !== '0' && getCiteCount(item.title) !== '??'}
+                         <div class="inline-flex items-center justify-center px-2 py-0.5 ml-2 text-xs font-bold text-background bg-foreground rounded-full align-middle" title={$t('prof.cite')}>
+                             {getCiteCount(item.title)}
+                         </div>
+                     {/if}
                  </h2>
-                 <p class="text-sm text-gray-500">
-                     {item.journal} <br>
-                     <span class="font-bold text-gray-400">sci</span>
+                 <p class="text-sm text-muted-foreground mb-6">
+                     <span class="font-semibold text-foreground">{item.journal}</span> <br>
+                     <span class="inline-block mt-1 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider border border-border rounded-full text-muted-foreground">sci</span>
                  </p>
-                 <div class="card-actions justify-start mt-2">
-                     <div class="btn-group space-x-2">
-                         {#each item.links as link}
-                             <a href={link.url} target="_blank" class="btn btn-xs btn-outline">{link.label}</a>
-                         {/each}
-                     </div>
+                 <div class="flex flex-wrap gap-2 mt-auto">
+                     {#each item.links as link}
+                         <a href={link.url} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{link.label}</a>
+                     {/each}
                  </div>
              </div>
         </div>
