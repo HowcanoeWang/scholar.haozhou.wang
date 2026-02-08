@@ -157,7 +157,7 @@
                     <div class="space-y-8 pt-1">
                         {#each group as entry}
                             <div class="group relative pl-6 transition-all duration-300">
-                                <span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
+                                <span class="absolute left-0 top-[1.1rem] w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
                                 <div class="text-base text-foreground/90 leading-relaxed">
                                     {@html getFormatAuthors(entry.fields.author)}
                                     <span class="text-muted-foreground mx-1">{entry.fields.date?.match(/\d{4}/)?.[0]}</span>.
@@ -166,7 +166,7 @@
                                     {getText(entry.fields.volume)}{#if getText(entry.fields.pages)}, {getText(entry.fields.pages)}{/if}.
                                     <!-- Cite Count -->
                                     {#if getCiteCount(getText(entry.fields.title))}
-                                        <span class="inline-flex items-center justify-center px-1.5 py-0.5 ml-1 text-[10px] font-bold border border-border rounded-full text-muted-foreground" title={$t('prof.cite')}>
+                                        <span class="inline-flex items-center justify-center px-2 py-0.5 ml-1 text-[10px] font-bold text-background bg-foreground rounded-full align-middle" title={$t('prof.cite')}>
                                             {getCiteCount(getText(entry.fields.title))}
                                         </span>
                                     {/if}
@@ -182,12 +182,11 @@
                                 <!-- Buttons -->
                                 <div class="mt-3 flex flex-wrap gap-2 opacity-100 sm:opacity-60 sm:group-hover:opacity-100 transition-opacity duration-300">
                                     {#if entry.fields.doi}
-                                        <a href="https://doi.org/{entry.fields.doi}" target="_blank" class="text-xs font-bold uppercase tracking-wider hover:text-foreground text-muted-foreground transition-colors border-b border-transparent hover:border-foreground">DOI</a>
+                                        <a href="https://doi.org/{entry.fields.doi}" target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">DOI</a>
                                     {/if}
                                     {#if customLinks[entry.entry_key]}
                                         {#each Object.entries(customLinks[entry.entry_key]) as [label, url]}
-                                             <span class="text-border mx-1">/</span>
-                                             <a href={url} target="_blank" class="text-xs font-bold uppercase tracking-wider hover:text-foreground text-muted-foreground transition-colors border-b border-transparent hover:border-foreground">{label}</a>
+                                             <a href={url} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{label}</a>
                                         {/each}
                                     {/if}
                                 </div>
@@ -206,7 +205,7 @@
                     <div class="space-y-6 pt-1">
                         {#each group as entry}
                             <div class="group relative pl-6 transition-all duration-300">
-                                <span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
+                                <span class="absolute left-0 top-[1.1rem] w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
                                 <div class="text-base text-foreground/90 leading-relaxed">
                                     {@html getFormatAuthors(entry.fields.author)}
                                     <span class="text-muted-foreground mx-1">{entry.fields.date}</span>.
@@ -217,9 +216,8 @@
                                 
                                 <div class="mt-3 flex flex-wrap gap-2 opacity-100 sm:opacity-60 sm:group-hover:opacity-100 transition-opacity duration-300">
                                     {#if customLinks[entry.entry_key]}
-                                        {#each Object.entries(customLinks[entry.entry_key]) as [label, url] , i}
-                                            {#if i > 0}<span class="text-border mx-1">/</span>{/if}
-                                            <a href={url} target="_blank" class="text-xs font-bold uppercase tracking-wider hover:text-foreground text-muted-foreground transition-colors border-b border-transparent hover:border-foreground">{label}</a>
+                                        {#each Object.entries(customLinks[entry.entry_key]) as [label, url]}
+                                            <a href={url} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{label}</a>
                                         {/each}
                                     {/if}
                                 </div>
@@ -233,28 +231,30 @@
             <div class="space-y-12 mt-8">
                 {#each theses as thesis}
                     <div>
-                        <h3 class="text-2xl font-serif font-bold mb-4 flex items-center gap-3">
-                            <span class="w-2 h-2 rounded-full bg-foreground"></span>
+                        <h3 class="text-2xl font-serif font-bold mb-6 pb-2 border-b border-border/50">
                             {$t(`time.${thesis.entry_key.split('_').pop() === '2023' ? 'phd' : thesis.entry_key.split('_').pop() === '2019' ? 'msc' : 'bsc'}.title`)}
                         </h3>
-                        <div class="pl-5 border-l border-border/50 ml-1 py-2">
-                            <div class="text-base text-foreground/90 leading-relaxed pl-4">
-                                <b>Wang, H.</b>, <b><span class="text-muted-foreground">{thesis.fields.date?.match(/\d{4}/)?.[0]}</span></b>. 
-                                {getText(thesis.fields.title)}. (<b>{getText(thesis.fields.type)}</b>). {getText(thesis.fields.institution)}.
-                            </div>
-                            
-                            <div class="mt-3 pl-4 flex flex-wrap gap-2">
-                                {#if thesis.fields.doi}
-                                    <a href="https://doi.org/{thesis.fields.doi}" target="_blank" class="btn btn-xs rounded-full bg-background border-border hover:bg-foreground hover:text-background">DOI</a>
-                                {/if}
-                                {#if thesis.fields.url}
-                                    <a href={getText(thesis.fields.url)} target="_blank" class="btn btn-xs rounded-full bg-background border-border hover:bg-foreground hover:text-background">URL</a>
-                                {/if}
-                                {#if customLinks[thesis.entry_key]}
-                                    {#each Object.entries(customLinks[thesis.entry_key]) as [label, url]}
-                                        <a href={url} target="_blank" class="btn btn-xs rounded-full bg-background border-border hover:bg-foreground hover:text-background">{label}</a>
-                                    {/each}
-                                {/if}
+                        <div class="space-y-6">
+                            <div class="group relative pl-6 transition-all duration-300">
+                                <span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
+                                <div class="text-base text-foreground/90 leading-relaxed">
+                                    <b>Wang, H.</b>, <b><span class="text-muted-foreground">{thesis.fields.date?.match(/\d{4}/)?.[0]}</span></b>. 
+                                    {getText(thesis.fields.title)}. (<b>{getText(thesis.fields.type)}</b>). {getText(thesis.fields.institution)}.
+                                </div>
+                                
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    {#if thesis.fields.doi}
+                                        <a href="https://doi.org/{thesis.fields.doi}" target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">DOI</a>
+                                    {/if}
+                                    {#if thesis.fields.url}
+                                        <a href={getText(thesis.fields.url)} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">URL</a>
+                                    {/if}
+                                    {#if customLinks[thesis.entry_key]}
+                                        {#each Object.entries(customLinks[thesis.entry_key]) as [label, url]}
+                                            <a href={url} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{label}</a>
+                                        {/each}
+                                    {/if}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -262,25 +262,26 @@
             </div>
 
         {:else if activeTab === 'others'}
-             <div class="space-y-16 mt-4">
+             <div class="space-y-16 mt-8">
                  {#if books.length > 0}
                  <div>
                     <h3 class="text-2xl font-serif font-bold mb-6 pb-2 border-b border-border/50">{$t('pub.tabs.bc')}</h3>
                     <div class="space-y-6">
                         {#each books as entry}
-                        <div class="pl-4 border-l-2 border-border/50 hover:border-foreground transition-colors duration-300">
-                            <div class="mb-2 text-foreground/90">
+                        <div class="group relative pl-6 transition-all duration-300">
+                            <span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
+                            <div class="mb-2 text-foreground/90 leading-relaxed">
                                 {@html getFormatAuthors(entry.fields.author)}
                                 <b><span class="text-muted-foreground">{entry.fields.date?.match(/\d{4}/)?.[0]}</span></b>. 
                                 {getText(entry.fields.title)}, in: {getText(entry.fields.editor)} (Eds.), {getText(entry.fields.booktitle)}. {getText(entry.fields.publisher)}, {getText(entry.fields.location)}, pp. {getText(entry.fields.pages)}.
                             </div>
                             <div class="flex gap-2">
                                 {#if entry.fields.doi}
-                                    <a href="https://doi.org/{entry.fields.doi}" target="_blank" class="text-xs font-bold uppercase hover:underline">DOI</a>
+                                    <a href="https://doi.org/{entry.fields.doi}" target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">DOI</a>
                                 {/if}
                                 {#if customLinks[entry.entry_key]}
                                     {#each Object.entries(customLinks[entry.entry_key]) as [label, url]}
-                                        <a href={url} target="_blank" class="text-xs font-bold uppercase hover:underline">{label}</a>
+                                        <a href={url} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{label}</a>
                                     {/each}
                                 {/if}
                             </div>
@@ -295,18 +296,19 @@
                     <h3 class="text-2xl font-serif font-bold mb-6 pb-2 border-b border-border/50">{$t('pub.tabs.pa')}</h3>
                     <div class="space-y-6">
                         {#each patents as entry}
-                        <div class="pl-4 border-l-2 border-border/50 hover:border-foreground transition-colors duration-300">
-                            <div class="mb-2 text-foreground/90">
+                        <div class="group relative pl-6 transition-all duration-300">
+                            <span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
+                            <div class="mb-2 text-foreground/90 leading-relaxed">
                                 {@html getFormatAuthors(entry.fields.author)}
                                 {getText(entry.fields.title)}: <b><span class="text-muted-foreground">{entry.fields.date?.match(/\d{4}/)?.[0]}</span></b>. {getText(entry.fields.number)}
                             </div>
                             <div class="flex gap-2">
                                 {#if entry.fields.url}
-                                    <a href={getText(entry.fields.url)} target="_blank" class="text-xs font-bold uppercase hover:underline">URL</a>
+                                    <a href={getText(entry.fields.url)} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">URL</a>
                                 {/if}
                                 {#if customLinks[entry.entry_key]}
                                     {#each Object.entries(customLinks[entry.entry_key]) as [label, url]}
-                                        <a href={url} target="_blank" class="text-xs font-bold uppercase hover:underline">{label}</a>
+                                        <a href={url} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{label}</a>
                                     {/each}
                                 {/if}
                             </div>
@@ -321,17 +323,18 @@
                     <h3 class="text-2xl font-serif font-bold mb-6 pb-2 border-b border-border/50">{$t('pub.tabs.s')}</h3>
                     <div class="space-y-6">
                         {#each softwares as entry}
-                        <div class="pl-4 border-l-2 border-border/50 hover:border-foreground transition-colors duration-300">
-                            <div class="text-foreground/90 mb-2">
+                        <div class="group relative pl-6 transition-all duration-300">
+                            <span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
+                            <div class="text-foreground/90 mb-2 leading-relaxed">
                                 {getText(entry.fields.title)} [{getText(entry.fields.shorttitle)}] {getText(entry.fields.version)}, <b><span class="text-muted-foreground">{entry.fields.date?.match(/\d{4}/)?.[0]}</span></b>. {getText(entry.fields.number)}.
                             </div>
                             <div class="flex gap-2">
                                 {#if entry.fields.url}
-                                    <a href={getText(entry.fields.url)} target="_blank" class="text-xs font-bold uppercase hover:underline">URL</a>
+                                    <a href={getText(entry.fields.url)} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">URL</a>
                                 {/if}
                                 {#if customLinks[entry.entry_key]}
                                     {#each Object.entries(customLinks[entry.entry_key]) as [label, url]}
-                                        <a href={url} target="_blank" class="text-xs font-bold uppercase hover:underline">{label}</a>
+                                        <a href={url} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{label}</a>
                                     {/each}
                                 {/if}
                             </div>
