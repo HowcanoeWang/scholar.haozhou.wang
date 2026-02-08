@@ -150,7 +150,7 @@
     <div class="max-w-4xl mx-auto">
         {#if activeTab === 'paper'}
             {#each papersByYear as [year, group]}
-                <div class="relative pl-8 pb-12 last:pb-0 border-l border-border/50">
+                <div class="relative pl-8 pb-12 last:pb-0 border-l border-border/50 ml-6">
                     <span class="absolute -left-[1.35rem] top-0 bg-background border border-border text-muted-foreground font-serif font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-sm z-10 text-sm">
                         {year}
                     </span>
@@ -198,7 +198,7 @@
 
         {:else if activeTab === 'conference'}
             {#each confByYear as [year, group]}
-                <div class="relative pl-8 pb-12 last:pb-0 border-l border-border/50">
+                <div class="relative pl-8 pb-12 last:pb-0 border-l border-border/50 ml-6">
                     <span class="absolute -left-[1.35rem] top-0 bg-background border border-border text-muted-foreground font-serif font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-sm z-10 text-sm">
                         {year}
                     </span>
