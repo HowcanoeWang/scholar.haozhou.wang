@@ -19,17 +19,19 @@
 </script>
 
 {#if isReady}
-<main class="min-h-screen bg-base-50 font-sans text-base-content relative selection:bg-primary selection:text-primary-content">
+<main class="min-h-screen bg-base-200 font-sans text-base-content relative selection:bg-primary selection:text-primary-content">
   <Navbar />
 
   <!-- Profile Section (Masthead) -->
   <Profile />
 
   <!-- Publication Section -->
-  <Publications />
+  <div class="bg-base-100">
+      <Publications />
+  </div>
 
   <!-- Projects Section -->
-  <div class="bg-base-100 py-16" id="project-section">
+  <div class="bg-base-200 py-16" id="project-section">
       <div class="w-full max-w-[960px] mx-auto px-4">
           <div class="text-center mb-12">
               <h3 class="text-3xl font-bold">{$t('proj.t')}</h3>
@@ -39,7 +41,7 @@
   </div>
 
   <!-- Timeline Section -->
-  <div class="bg-white py-16" id="timeline-section">
+  <div class="bg-base-100 py-16" id="timeline-section">
       <div class="w-full max-w-[960px] mx-auto px-4">
           <div class="text-center mb-12">
               <h3 class="text-3xl font-bold">{$t('time.t')}</h3>
@@ -49,7 +51,7 @@
   </div>
 
   <!-- Awards Section -->
-  <div class="bg-base-100 py-16" id="award-section">
+  <div class="bg-base-200 py-16" id="award-section">
       <div class="w-full max-w-[960px] mx-auto px-4">
           <div class="text-center mb-12">
               <h3 class="text-3xl font-bold">{$t('awd.t')}</h3>
