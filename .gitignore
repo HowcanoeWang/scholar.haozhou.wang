@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 scripts/serpapi.txt
+scripts/get_scholar_by_serpapi.ipynb
 public/files/cv.bbl
 public/files/cv.synctex.*
