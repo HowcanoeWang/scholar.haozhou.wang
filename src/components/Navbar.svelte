@@ -1,21 +1,23 @@
 <script lang="ts">
-  import { t, locale } from 'svelte-i18n';
-  import { onMount } from 'svelte';
+  import { t, locale } from "svelte-i18n";
+  import { onMount } from "svelte";
 
   const languages = [
-    { code: 'cn', label: '简体中文' },
-    { code: 'en', label: 'English' },
-    { code: 'jp', label: '日本語' }
+    { code: "cn", label: "简体中文" },
+    { code: "en", label: "English" },
+    { code: "jp", label: "日本語" },
   ];
 
-  let currentLangLabel = $derived(languages.find(l => l.code === $locale)?.label || 'English');
+  let currentLangLabel = $derived(
+    languages.find((l) => l.code === $locale)?.label || "English",
+  );
 
   function switchLanguage(lang: string) {
     locale.set(lang);
     // Update URL param
     const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
-    window.history.replaceState({}, '', url);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState({}, "", url);
   }
 
   let isMenuOpen = $state(false);
@@ -25,79 +27,236 @@
   }
 
   /* Theme Logic */
-  let currentTheme = $state('light');
+  let currentTheme = $state("light");
 
   onMount(() => {
     // Check localStorage or system preference
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
-        currentTheme = savedTheme;
+      currentTheme = savedTheme;
     } else {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            currentTheme = 'dark';
-        }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        currentTheme = "dark";
+      }
     }
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    document.documentElement.setAttribute("data-theme", currentTheme);
   });
 
   function toggleTheme() {
-    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    localStorage.setItem('theme', currentTheme);
+    currentTheme = currentTheme === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    localStorage.setItem("theme", currentTheme);
   }
 </script>
 
-<nav class="bg-background/80 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-border/50">
+<nav
+  class="bg-background/80 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-border/50"
+>
   <div class="navbar w-full max-w-[960px] mx-auto px-4">
-  <div class="navbar-start">
-    <div class="dropdown {isMenuOpen ? 'dropdown-open' : ''} lg:hidden">
-      <div role="button" tabindex="0" class="btn btn-ghost rounded-full" onclick={toggleMenu} onkeydown={(e) => e.key === 'Enter' && toggleMenu()} aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+    <div class="navbar-start">
+      <div class="dropdown {isMenuOpen ? 'dropdown-open' : ''} lg:hidden">
+        <div
+          role="button"
+          tabindex="0"
+          class="btn btn-ghost rounded-full"
+          onclick={toggleMenu}
+          onkeydown={(e) => e.key === "Enter" && toggleMenu()}
+          aria-label="Toggle navigation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            /></svg
+          >
+        </div>
+        <ul
+          tabindex="-1"
+          class="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow-lg bg-card text-card-foreground rounded-3xl w-52 border border-border"
+        >
+          <li>
+            <a
+              href="#profile-section"
+              class="rounded-full"
+              onclick={() => (isMenuOpen = false)}>{$t("nav.profile")}</a
+            >
+          </li>
+          <li>
+            <a
+              href="#publication-section"
+              class="rounded-full"
+              onclick={() => (isMenuOpen = false)}>{$t("nav.publication")}</a
+            >
+          </li>
+          <li>
+            <a
+              href="#project-section"
+              class="rounded-full"
+              onclick={() => (isMenuOpen = false)}>{$t("nav.project")}</a
+            >
+          </li>
+          <li>
+            <a
+              href="#timeline-section"
+              class="rounded-full"
+              onclick={() => (isMenuOpen = false)}>{$t("nav.timeline")}</a
+            >
+          </li>
+          <li>
+            <a
+              href="#award-section"
+              class="rounded-full"
+              onclick={() => (isMenuOpen = false)}>{$t("nav.award")}</a
+            >
+          </li>
+        </ul>
       </div>
-      <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow-lg bg-card text-card-foreground rounded-3xl w-52 border border-border">
-          <li><a href="#profile-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.profile')}</a></li>
-          <li><a href="#publication-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.publication')}</a></li>
-          <li><a href="#project-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.project')}</a></li>
-          <li><a href="#timeline-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.timeline')}</a></li>
-          <li><a href="#award-section" class="rounded-full" onclick={() => isMenuOpen = false}>{$t('nav.award')}</a></li>
-      </ul>
+      <a
+        class="btn btn-ghost text-xl font-serif tracking-tight rounded-full hover:bg-muted"
+        href="#profile-section">haozhou.wang</a
+      >
     </div>
-    <a class="btn btn-ghost text-xl font-serif tracking-tight rounded-full hover:bg-muted" href="#profile-section">haozhou.wang</a>
-  </div>
-  
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 font-medium text-base gap-1">
-      <li><a href="#profile-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.profile')}</a></li>
-      <li><a href="#publication-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.publication')}</a></li>
-      <li><a href="#project-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.project')}</a></li>
-      <li><a href="#timeline-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.timeline')}</a></li>
-      <li><a href="#award-section" class="rounded-full hover:bg-muted transition-colors">{$t('nav.award')}</a></li>
-    </ul>
-  </div>
 
-  <div class="navbar-end">
-    <div class="dropdown dropdown-end">
-      <div role="button" tabindex="0" class="btn btn-ghost rounded-full flex items-center gap-2 hover:bg-muted">
-        <i class="fas fa-globe text-lg"></i>
-        <span class="text-md hidden sm:inline font-serif">{currentLangLabel}</span>
-      </div>
-      <ul tabindex="-1" class="dropdown-content z-[1] menu p-2 shadow-lg bg-card text-card-foreground rounded-[1.5rem] mt-4 border border-border w-32">
-        {#each languages as lang}
-            <li><button class="rounded-full" onclick={() => switchLanguage(lang.code)}>{lang.label}</button></li>
-        {/each}
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 font-medium text-base gap-1">
+        <li>
+          <a
+            href="#profile-section"
+            class="rounded-full hover:bg-muted transition-colors"
+            >{$t("nav.profile")}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#publication-section"
+            class="rounded-full hover:bg-muted transition-colors"
+            >{$t("nav.publication")}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#project-section"
+            class="rounded-full hover:bg-muted transition-colors"
+            >{$t("nav.project")}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#timeline-section"
+            class="rounded-full hover:bg-muted transition-colors"
+            >{$t("nav.timeline")}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#award-section"
+            class="rounded-full hover:bg-muted transition-colors"
+            >{$t("nav.award")}</a
+          >
+        </li>
       </ul>
     </div>
-    
-    <!-- Theme Toggle -->
-    <button class="btn btn-ghost btn-circle ml-2 p-1 hover:bg-muted" onclick={toggleTheme} aria-label="Toggle Theme">
-      {#if currentTheme === 'dark'}
-        <!-- Sun Icon (Click to switch to Light) -->
-        <img src="/icons/sun.svg" alt="Sun" class="w-6 h-6 invert dark:invert-0" />
-      {:else}
-        <!-- Moon Icon (Click to switch to Dark) -->
-        <img src="/icons/moon.svg" alt="Moon" class="w-6 h-6 invert-0 dark:invert" />
-      {/if}
-    </button>
-  </div>
+
+    <div class="navbar-end">
+      <div class="dropdown dropdown-end">
+        <div
+          role="button"
+          tabindex="0"
+          class="btn btn-ghost rounded-full flex items-center gap-2 hover:bg-muted"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-5 h-5"
+          >
+            <path d="m5 8 6 6" />
+            <path d="m4 14 6-6 2-3" />
+            <path d="M2 5h12" />
+            <path d="M7 2h1" />
+            <path d="m22 22-5-10-5 10" />
+            <path d="M14 18h6" />
+          </svg>
+          <span class="text-md hidden sm:inline font-serif"
+            >{currentLangLabel}</span
+          >
+        </div>
+        <ul
+          tabindex="-1"
+          class="dropdown-content z-[1] menu p-2 shadow-lg bg-card text-card-foreground rounded-[1.5rem] mt-4 border border-border w-32"
+        >
+          {#each languages as lang}
+            <li>
+              <button
+                class="rounded-full"
+                onclick={() => switchLanguage(lang.code)}>{lang.label}</button
+              >
+            </li>
+          {/each}
+        </ul>
+      </div>
+
+      <!-- Theme Toggle -->
+      <button
+        class="btn btn-ghost btn-circle ml-2 p-1 hover:bg-muted text-foreground"
+        onclick={toggleTheme}
+        aria-label="Toggle Theme"
+      >
+        {#if currentTheme === "dark"}
+          <!-- Sun Icon (Click to switch to Light) -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+        {:else}
+          <!-- Moon Icon (Click to switch to Dark) -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6"
+          >
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        {/if}
+      </button>
+    </div>
   </div>
 </nav>
