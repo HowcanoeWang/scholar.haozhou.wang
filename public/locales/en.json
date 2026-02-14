@@ -5,9 +5,8 @@
         "project": "Projects",
         "publication": "Publications",
         "timeline": "Experience Timeline",
-        "award":"Awards"
+        "award": "Awards"
     },
-
     "prof": {
         "t": "Profile",
         "name": "Haozhou Wang",
@@ -18,7 +17,6 @@
         "mailto": "Replace [at] to @",
         "close": "Close",
         "cv_down": "Download CV",
-
         "intro": "A project assistant professor at the Laboratory of Field Phenomics, UTokyo. Has a cross-disciplinary background in computer science, ecology, forestry, and agriculture. Research focuses on crop 3D reconstruction, 3D data processing, and digital twin crop models.",
         "int": {
             "t": "Research Interest",
@@ -50,19 +48,17 @@
             }
         }
     },
-
     "inst": {
         "ut": "The University of Tokyo",
         "caf": "Chinese Academy of Forestry",
         "unb": "The University of New Brunswick",
         "nfu": "Nanjing Forestry University"
     },
-
     "pub": {
         "t": "Publications",
-        "subt1":"Featured",
-        "subt2":"All contributions",
-        "note":"Please click the button below to switch",
+        "subt1": "Featured",
+        "subt2": "All contributions",
+        "note": "Please click the button below to switch",
         "tabs": {
             "p": "Papers",
             "c": "Conferences",
@@ -74,12 +70,11 @@
             "bc": "Book chapters"
         },
         "if": {
-            "afm": "SCI, IF=6.424 (2023)",
-            "rs": "SCI, IF=5.349 (2023)",
-            "pp": "SCI, IF=12.0 (2023)"
+            "afm": "SCI, IF=5.7 (2025)",
+            "rs": "SCI, IF=4.1 (2025)",
+            "pp": "SCI, IF=6.4 (2025)"
         }
     },
-
     "proj": {
         "t": "Projects and Software",
         "p1": "Easy Intermediate Data Processor (EasyIDP): A Python Package for intermediate preprocessing data between photogrammetry outputs and plant pheenotyping traits calculation.",
@@ -87,7 +82,6 @@
         "p3": "A Python Program to measure tree attributes (Basal Area, DBH, Height, Gap Fraction) from two Ricoh Theta spherical image  pair taken at different height.",
         "p4": "Unmanned Aerial Vehicles - High Resolution imagery Analysis Platform (UAV-HiRAP), is an open-source, web-based platform which provides service for image classification (maintenance suspended)."
     },
-
     "time": {
         "t": "Experience Timeline",
         "paf": {
@@ -109,13 +103,12 @@
         "caf": {
             "title": "Internship",
             "intro": "Developed software for UAV image analysis in sparse Elm grassland. Registored software copyright for Matlab based UAV-HiRAP and Web-based UAV-HiRAP (www.uav-hirap.org) for semi-automatic classify plants and backgrounds. The achievements were extended to a patent, an oral presentation on The 12th International Congress of Ecological, and pulished on top journal \"Acta Ecologica Sinica\" and \"Agricultural and Forest Meteorology\", respectively."
-        }        ,
+        },
         "bsc": {
             "title": "Bachelor of Science in Ecology",
             "intro": "During the study period, participated all kinds of activaties during study period, envolved in the College Student Innovation Training Projects and applied two software copyrights. The last year as a transfer student in the University of New Brunsiwick. The titile of dissertation is \"Extracting DBH Measurements from RGB Photo Images\"."
         }
     },
-
     "awd": {
         "t": "Awards",
         "cigr24": "The 6th CIGR international conference young researcher travel award",
