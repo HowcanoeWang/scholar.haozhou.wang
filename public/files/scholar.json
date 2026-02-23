@@ -2,8 +2,8 @@
   "table": [
     {
       "citations": {
-        "all": 390,
-        "since_2021": 379
+        "all": 394,
+        "since_2021": 383
       }
     },
     {
@@ -30,23 +30,23 @@
     },
     {
       "year": 2021,
-      "citations": 33
+      "citations": 31
     },
     {
       "year": 2022,
-      "citations": 52
+      "citations": 54
     },
     {
       "year": 2023,
-      "citations": 66
+      "citations": 68
     },
     {
       "year": 2024,
-      "citations": 103
+      "citations": 101
     },
     {
       "year": 2025,
-      "citations": 119
+      "citations": 123
     },
     {
       "year": 2026,
@@ -59,14 +59,14 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 149
+      "cited_by": 155
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
       "authors": "H Wang, D Han, Y Mu, L Jiang, X Yao, Y Bai, Q Lu, F Wang",
       "publication": "Agricultural and Forest Meteorology 278, 107665, 2019",
       "year": "2019",
-      "cited_by": 48
+      "cited_by": 47
     },
     {
       "title": "EasyIDP: A python package for intermediate data processing in UAV-based plant phenotyping",
@@ -92,7 +92,7 @@
     {
       "title": "An efficient method for estimating wheat heading dates using UAV images",
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
-      "publication": "Remote Sensing 13 (16), 3067, 2021",
+      "publication": "Remote sensing 13 (16), 3067, 2021",
       "year": "2021",
       "cited_by": 19
     },
@@ -160,13 +160,6 @@
       "cited_by": 4
     },
     {
-      "title": "Estimating forest attributes from spherical images",
-      "authors": "H Wang",
-      "publication": "University of New Brunswick, 2019",
-      "year": "2019",
-      "cited_by": 4
-    },
-    {
       "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
       "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
       "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
@@ -174,7 +167,7 @@
       "cited_by": 3
     },
     {
-      "title": "Improved Detection and Location of Small Crop Organs by Fusing UAV Orthophoto Maps and Raw Images",
+      "title": "Improved detection and location of small crop organs by fusing UAV orthophoto maps and raw images",
       "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
       "publication": "Remote Sensing 17 (5), 906, 2025",
       "year": "2025",
@@ -192,6 +185,13 @@
       "authors": "X Dai, MJ Ducey, JA Kershaw Jr, H Wang",
       "publication": "Canadian Journal of Forest Research 51 (8), 1131-1139, 2021",
       "year": "2021",
+      "cited_by": 3
+    },
+    {
+      "title": "Estimating forest attributes from spherical images",
+      "authors": "H Wang",
+      "publication": "University of New Brunswick, 2019",
+      "year": "2019",
       "cited_by": 3
     },
     {
