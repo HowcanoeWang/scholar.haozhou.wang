@@ -1,3 +1,5 @@
+import { cdnAsset } from '$lib/constants/cdn';
+
 export interface Award {
     img: string;
     titleKey: string;
@@ -8,7 +10,7 @@ export interface Award {
 
 export const awards: Award[] = [
     {
-        img: "./files/awards/24_cigr.png",
+        img: cdnAsset('/files/awards/24_cigr.png'),
         titleKey: "awd.cigr24",
         date: "2024.05",
         links: [
@@ -17,7 +19,7 @@ export const awards: Award[] = [
         bibKey: 'wang_3dpotatotwin_2024cigr'
     },
     {
-        img: "./files/awards/21_jsai.jpg",
+        img: cdnAsset('/files/awards/21_jsai.jpg'),
         titleKey: "awd.jsai21",
         date: "2021.05",
         links: [
@@ -26,7 +28,7 @@ export const awards: Award[] = [
         bibKey: "wang_easyidp_2021jsai"
     },
     {
-        img: "./files/awards/21_liangxi.jpg",
+        img: cdnAsset('/files/awards/21_liangxi.jpg'),
         titleKey: "awd.lx3",
         date: "2020.11",
         links: [
@@ -34,7 +36,7 @@ export const awards: Award[] = [
         ]
     },
     {
-        img: "./files/awards/18_gsa.jpg",
+        img: cdnAsset('/files/awards/18_gsa.jpg'),
         titleKey: "awd.unb25",
         date: "2018.05",
         links: [
