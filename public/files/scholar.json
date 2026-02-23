@@ -1,9 +1,33 @@
 {
+  "author": {
+    "name": "Haozhou WANG (王浩舟)",
+    "affiliations": "University of Tokyo",
+    "email": "Verified email at g.ecc.utokyo.ac.jp",
+    "website": "http://haozhou.wang/",
+    "interests": [
+      {
+        "title": "Forest Inventory",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:forest_inventory",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Aforest_inventory"
+      },
+      {
+        "title": "Computer vision",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:computer_vision",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Acomputer_vision"
+      },
+      {
+        "title": "3D reconstruction",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:3d_reconstruction",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3A3d_reconstruction"
+      }
+    ],
+    "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=CnTTa3EAAAAJ&citpid=11"
+  },
   "table": [
     {
       "citations": {
-        "all": 394,
-        "since_2021": 383
+        "all": 398,
+        "since_2021": 387
       }
     },
     {
@@ -46,11 +70,11 @@
     },
     {
       "year": 2025,
-      "citations": 123
+      "citations": 124
     },
     {
       "year": 2026,
-      "citations": 4
+      "citations": 6
     }
   ],
   "articles": [
@@ -59,7 +83,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 155
+      "cited_by": 156
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -80,7 +104,7 @@
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 24
+      "cited_by": 25
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -153,18 +177,18 @@
       "cited_by": 5
     },
     {
+      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
+      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
+      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
+      "year": "2025",
+      "cited_by": 4
+    },
+    {
       "title": "Sampling with probability proportional to prediction (3P sampling) using covariates derived from spherical images",
       "authors": "YH Hsu, JA Kershaw Jr, MJ Ducey, TR Yang, H Wang",
       "publication": "Canadian Journal of Forest Research 51 (8), 1140-1147, 2021",
       "year": "2021",
       "cited_by": 4
-    },
-    {
-      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
-      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
-      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
-      "year": "2025",
-      "cited_by": 3
     },
     {
       "title": "Improved detection and location of small crop organs by fusing UAV orthophoto maps and raw images",
@@ -209,18 +233,18 @@
       "cited_by": 3
     },
     {
+      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
+      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
+      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
+      "year": "2025",
+      "cited_by": 2
+    },
+    {
       "title": "EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotyping",
       "authors": "H Wang, W Guo",
       "publication": "Harnessing Data Science for Sustainable Agriculture and Natural Resource …, 2024",
       "year": "2024",
       "cited_by": 2
-    },
-    {
-      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
-      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
-      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
-      "year": "2025",
-      "cited_by": 1
     },
     {
       "title": "Improved Detecting and Locating Organ Level Small Agricultural Objects by Fusion Ortho Maps and UAV Raw Images",
