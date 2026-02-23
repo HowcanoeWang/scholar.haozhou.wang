@@ -4,6 +4,7 @@
     import { fetchScholarData, type ScholarData } from '$lib/services/scholarService';
     import CitationChart from './CitationChart.svelte';
     import Intro from './Intro.svelte';
+    import { cdnAsset } from '$lib/constants/cdn';
 
     let scholarData = $state<ScholarData | null>(null);
 
@@ -24,7 +25,7 @@
                 <div class="relative group">
                     <div class="absolute inset-0 bg-muted rounded-full blur-md opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <img 
-                        src="/files/imgs/header.jpg" 
+                        src={cdnAsset('/files/imgs/header.jpg')} 
                         alt="Haozhou Wang" 
                         class="relative rounded-full w-48 h-48 object-cover mb-8 border-4 border-background shadow-xl z-10"
                     />
@@ -42,7 +43,7 @@
 
                 <div class="w-full max-w-sm flex flex-col items-center gap-6">
                     <a class="inline-flex items-center justify-center px-8 py-3 bg-foreground text-background rounded-full font-bold uppercase tracking-wider hover:scale-105 hover:shadow-lg transition-all duration-300" 
-                       href="https://cdn.jsdelivr.net/gh/HowcanoeWang/scholar.haozhou.wang/public/files/cv.pdf" 
+                       href={cdnAsset('/files/cv.pdf')} 
                        target="_blank">
                         <i class="fas fa-file-pdf mr-2"></i> {$t('prof.cv_down')}
                     </a>

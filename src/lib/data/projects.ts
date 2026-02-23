@@ -1,3 +1,5 @@
+import { cdnAsset } from '$lib/constants/cdn';
+
 export interface Project {
     title: string;
     institution: string; // i18n key or text
@@ -13,7 +15,7 @@ export const projects: Project[] = [
         institution: "inst.ut",
         descriptionKey: "proj.p1",
         date: "2021.06",
-        img: "./files/imgs/Github_Header_v2.0.png",
+        img: cdnAsset('/files/imgs/Github_Header_v2.0.png'),
         links: [
             { label: "Code", url: "https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP" },
             { label: "Manual", url: "https://easyidp.readthedocs.io/en/latest/" }
@@ -24,7 +26,7 @@ export const projects: Project[] = [
         institution: "inst.ut",
         descriptionKey: "proj.p2",
         date: "2021.04",
-        img: "./files/imgs/21_easydcp.png",
+        img: cdnAsset('/files/imgs/21_easydcp.png'),
         links: [
             { label: "Code", url: "https://github.com/UTokyo-FieldPhenomics-Lab/EasyDCP" },
             { label: "Video", url: "https://www.youtube.com/watch?v=CbQEzUEybTo&ab_channel=U.TokyoInternationalFieldPhenomicsResearchLab" },
@@ -46,7 +48,7 @@ export const projects: Project[] = [
         institution: "inst.caf",
         descriptionKey: "proj.p4",
         date: "2018.10",
-        img: "./files/imgs/uav-hirap_web.png",
+        img: cdnAsset('/files/imgs/uav-hirap_web.png'),
         links: [
             { label: "Web", url: "https://www.uav-hirap.org" },
             { label: "Code", url: "https://github.com/UAV-HiRAP/UAV-HiRAP" }
