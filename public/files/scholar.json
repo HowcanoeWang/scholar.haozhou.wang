@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 398,
-        "since_2021": 387
+        "all": 400,
+        "since_2021": 389
       }
     },
     {
@@ -66,7 +66,7 @@
     },
     {
       "year": 2024,
-      "citations": 101
+      "citations": 99
     },
     {
       "year": 2025,
@@ -74,7 +74,7 @@
     },
     {
       "year": 2026,
-      "citations": 6
+      "citations": 10
     }
   ],
   "articles": [
@@ -97,7 +97,7 @@
       "authors": "H Wang, Y Duan, Y Shi, Y Kato, S Ninomiya, W Guo",
       "publication": "Remote Sensing 13 (13), 2622, 2021",
       "year": "2021",
-      "cited_by": 43
+      "cited_by": 44
     },
     {
       "title": "Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income",
@@ -111,7 +111,7 @@
       "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
       "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
       "year": "2021",
-      "cited_by": 20
+      "cited_by": 21
     },
     {
       "title": "An efficient method for estimating wheat heading dates using UAV images",
