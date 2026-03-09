@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 400,
-        "since_2021": 389
+        "all": 404,
+        "since_2021": 393
       }
     },
     {
@@ -74,7 +74,7 @@
     },
     {
       "year": 2026,
-      "citations": 10
+      "citations": 14
     }
   ],
   "articles": [
@@ -83,7 +83,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 156
+      "cited_by": 157
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -118,7 +118,7 @@
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
       "publication": "Remote sensing 13 (16), 3067, 2021",
       "year": "2021",
-      "cited_by": 19
+      "cited_by": 20
     },
     {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
@@ -146,7 +146,7 @@
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 7
+      "cited_by": 8
     },
     {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
@@ -191,6 +191,13 @@
       "cited_by": 4
     },
     {
+      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
+      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
+      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
+      "year": "2025",
+      "cited_by": 3
+    },
+    {
       "title": "Improved detection and location of small crop organs by fusing UAV orthophoto maps and raw images",
       "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
       "publication": "Remote Sensing 17 (5), 906, 2025",
@@ -231,13 +238,6 @@
       "publication": "甘肃科技 22, 018, 2017",
       "year": "2017",
       "cited_by": 3
-    },
-    {
-      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
-      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
-      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
-      "year": "2025",
-      "cited_by": 2
     },
     {
       "title": "EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotyping",
