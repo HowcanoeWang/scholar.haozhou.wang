@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 411,
-        "since_2021": 400
+        "all": 415,
+        "since_2021": 404
       }
     },
     {
@@ -38,8 +38,8 @@
     },
     {
       "i10_index": {
-        "all": 8,
-        "since_2021": 7
+        "all": 9,
+        "since_2021": 8
       }
     }
   ],
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 18
+      "citations": 22
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 158
+      "cited_by": 159
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -100,7 +100,7 @@
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 26
+      "cited_by": 27
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -124,18 +124,18 @@
       "cited_by": 11
     },
     {
+      "title": "High-throughput 3D shape completion of potato tubers on a harvester",
+      "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
+      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
+      "year": "2025",
+      "cited_by": 10
+    },
+    {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
       "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
       "publication": "Drones 7 (2), 65, 2023",
       "year": "2023",
       "cited_by": 10
-    },
-    {
-      "title": "High-throughput 3D shape completion of potato tubers on a harvester",
-      "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
-      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
-      "year": "2025",
-      "cited_by": 9
     },
     {
       "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
@@ -156,7 +156,7 @@
       "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
       "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
       "year": "2025",
-      "cited_by": 5
+      "cited_by": 6
     },
     {
       "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
