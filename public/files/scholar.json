@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 419,
-        "since_2021": 408
+        "all": 420,
+        "since_2021": 409
       }
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 26
+      "citations": 27
     }
   ],
   "articles": [
@@ -100,7 +100,7 @@
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 28
+      "cited_by": 29
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
