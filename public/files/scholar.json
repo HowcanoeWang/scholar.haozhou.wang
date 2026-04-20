@@ -32,14 +32,14 @@
     },
     {
       "h_index": {
-        "all": 9,
+        "all": 10,
         "since_2021": 9
       }
     },
     {
       "i10_index": {
-        "all": 9,
-        "since_2021": 8
+        "all": 10,
+        "since_2021": 9
       }
     }
   ],
@@ -58,7 +58,7 @@
     },
     {
       "year": 2023,
-      "citations": 68
+      "citations": 66
     },
     {
       "year": 2024,
@@ -66,11 +66,11 @@
     },
     {
       "year": 2025,
-      "citations": 127
+      "citations": 126
     },
     {
       "year": 2026,
-      "citations": 27
+      "citations": 30
     }
   ],
   "articles": [
@@ -114,14 +114,14 @@
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
       "publication": "Remote sensing 13 (16), 3067, 2021",
       "year": "2021",
-      "cited_by": 21
+      "cited_by": 20
     },
     {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
       "authors": "韩东， 王浩舟， 郑邦友， 王锋",
       "publication": "生态学报 38 (18), 6655-6663, 2018",
       "year": "2018",
-      "cited_by": 11
+      "cited_by": 12
     },
     {
       "title": "High-throughput 3D shape completion of potato tubers on a harvester",
@@ -131,18 +131,18 @@
       "cited_by": 10
     },
     {
+      "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
+      "authors": "I Drofova, W Guo, H Wang, M Adamek",
+      "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
+      "year": "2023",
+      "cited_by": 10
+    },
+    {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
       "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
       "publication": "Drones 7 (2), 65, 2023",
       "year": "2023",
       "cited_by": 10
-    },
-    {
-      "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
-      "authors": "I Drofova, W Guo, H Wang, M Adamek",
-      "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
-      "year": "2023",
-      "cited_by": 9
     },
     {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
@@ -194,13 +194,6 @@
       "cited_by": 4
     },
     {
-      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
-      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
-      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
-      "year": "2025",
-      "cited_by": 3
-    },
-    {
       "title": "3D reconstruction of a group of plants by the ground multi-image photogrammetry method",
       "authors": "I Drofova, H Wang, W Guo, M Pospisilik, M Adamek, J Valouch",
       "publication": "2023 33rd International Conference Radioelektronika (RADIOELEKTRONIKA), 1-4, 2023",
@@ -234,6 +227,13 @@
       "publication": "甘肃科技 22, 018, 2017",
       "year": "2017",
       "cited_by": 3
+    },
+    {
+      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
+      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
+      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
+      "year": "2025",
+      "cited_by": 2
     },
     {
       "title": "EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotyping",
