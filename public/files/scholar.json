@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 420,
-        "since_2021": 409
+        "all": 430,
+        "since_2021": 419
       }
     },
     {
@@ -66,11 +66,11 @@
     },
     {
       "year": 2025,
-      "citations": 126
+      "citations": 130
     },
     {
       "year": 2026,
-      "citations": 30
+      "citations": 36
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 162
+      "cited_by": 166
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -100,7 +100,7 @@
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 29
+      "cited_by": 30
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -114,7 +114,7 @@
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
       "publication": "Remote sensing 13 (16), 3067, 2021",
       "year": "2021",
-      "cited_by": 20
+      "cited_by": 21
     },
     {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
@@ -128,14 +128,14 @@
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 10
+      "cited_by": 11
     },
     {
       "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
       "authors": "I Drofova, W Guo, H Wang, M Adamek",
       "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
       "year": "2023",
-      "cited_by": 10
+      "cited_by": 11
     },
     {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
@@ -145,18 +145,18 @@
       "cited_by": 10
     },
     {
+      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
+      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
+      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
+      "year": "2025",
+      "cited_by": 7
+    },
+    {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
       "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
       "publication": "Remote Sensing 16 (9), 1570, 2024",
       "year": "2024",
       "cited_by": 7
-    },
-    {
-      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
-      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
-      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
-      "year": "2025",
-      "cited_by": 6
     },
     {
       "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
@@ -194,6 +194,13 @@
       "cited_by": 4
     },
     {
+      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
+      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
+      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
+      "year": "2025",
+      "cited_by": 3
+    },
+    {
       "title": "3D reconstruction of a group of plants by the ground multi-image photogrammetry method",
       "authors": "I Drofova, H Wang, W Guo, M Pospisilik, M Adamek, J Valouch",
       "publication": "2023 33rd International Conference Radioelektronika (RADIOELEKTRONIKA), 1-4, 2023",
@@ -227,13 +234,6 @@
       "publication": "甘肃科技 22, 018, 2017",
       "year": "2017",
       "cited_by": 3
-    },
-    {
-      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
-      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
-      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
-      "year": "2025",
-      "cited_by": 2
     },
     {
       "title": "EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotyping",
