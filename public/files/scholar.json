@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 442,
-        "since_2021": 430
+        "all": 446,
+        "since_2021": 434
       }
     },
     {
@@ -50,11 +50,11 @@
     },
     {
       "year": 2021,
-      "citations": 31
+      "citations": 30
     },
     {
       "year": 2022,
-      "citations": 55
+      "citations": 56
     },
     {
       "year": 2023,
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 46
+      "citations": 50
     }
   ],
   "articles": [
@@ -79,14 +79,14 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 171
+      "cited_by": 173
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
       "authors": "H Wang, D Han, Y Mu, L Jiang, X Yao, Y Bai, Q Lu, F Wang",
       "publication": "Agricultural and Forest Meteorology 278, 107665, 2019",
       "year": "2019",
-      "cited_by": 48
+      "cited_by": 49
     },
     {
       "title": "EasyIDP: A python package for intermediate data processing in UAV-based plant phenotyping",
@@ -145,17 +145,17 @@
       "cited_by": 11
     },
     {
-      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
-      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
-      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
-      "year": "2025",
-      "cited_by": 7
-    },
-    {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
       "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
       "publication": "Remote Sensing 16 (9), 1570, 2024",
       "year": "2024",
+      "cited_by": 8
+    },
+    {
+      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
+      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
+      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
+      "year": "2025",
       "cited_by": 7
     },
     {
