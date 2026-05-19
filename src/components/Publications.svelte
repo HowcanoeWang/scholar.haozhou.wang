@@ -79,13 +79,17 @@
     function getText(field: any): string {
         if (!field) return '';
         if (typeof field === 'string') return field;
+        if (typeof field === 'number') return field.toString();
         if (Array.isArray(field)) {
-            return field.map(getText).join('');
+            const values = field.map(getText).filter(Boolean);
+            if (values.length === 2 && values.every(v => /^\d+$/.test(v))) {
+                return `${values[0]}–${values[1]}`;
+            }
+            return values.join('');
         }
         if (typeof field === 'object' && 'text' in field) {
             return field.text;
         }
-        if (typeof field === 'number') return field.toString();
         return '';
     }
 
