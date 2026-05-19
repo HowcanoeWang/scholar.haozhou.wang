@@ -9,10 +9,16 @@ export interface BibEntry {
         author: any[];
         date?: string;
         journaltitle?: any[];
+        booktitle?: any[];
+        eventtitle?: any[];
+        publisher?: any[];
         volume?: any[];
         pages?: any[];
         location?: any[];
         institution?: any[];
+        shorttitle?: any[];
+        url?: any[];
+        number?: any[];
         doi?: string;
         [key: string]: any;
     };

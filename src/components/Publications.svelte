@@ -23,7 +23,7 @@
     let entries = $derived(Object.values(bibData?.entries || {}));
 
     let papers = $derived(entries.filter((e: BibEntry) => e.bib_type === 'article').sort(sortByDateDesc));
-    let conferences = $derived(entries.filter((e: BibEntry) => e.bib_type === 'report').sort(sortByDateDesc));
+    let conferences = $derived(entries.filter((e: BibEntry) => e.bib_type === 'report' || e.bib_type === 'inproceedings').sort(sortByDateDesc));
     let theses = $derived(entries.filter((e: BibEntry) => e.bib_type === 'thesis').sort(sortByDateDesc));
     let books = $derived(entries.filter((e: BibEntry) => e.bib_type === 'incollection').sort(sortByDateDesc));
     let patents = $derived(entries.filter((e: BibEntry) => e.bib_type === 'patent').sort(sortByDateDesc));
@@ -87,6 +87,14 @@
         }
         if (typeof field === 'number') return field.toString();
         return '';
+    }
+
+    function getConferenceVenue(entry: BibEntry) {
+        return getText(entry.fields.eventtitle) || getText(entry.fields.booktitle) || getText(entry.fields.institution);
+    }
+
+    function getConferencePublisher(entry: BibEntry) {
+        return getText(entry.fields.publisher);
     }
 
     function getFormatAuthors(authors: any[]) {
@@ -208,13 +216,18 @@
                                 <span class="absolute left-0 top-[1.1rem] w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
                                 <div class="text-base text-foreground/90 leading-relaxed">
                                     {@html getFormatAuthors(entry.fields.author)}
-                                    <span class="text-muted-foreground mx-1">{entry.fields.date}</span>.
-                                    <span class="font-bold">{getText(entry.fields.title)}.</span>
-                                    <span class="italic text-muted-foreground">{getText(entry.fields.institution)}</span>
-                                    {getText(entry.fields.location) ? `, ${getText(entry.fields.location)}` : ''}.
+                                    <span class="text-muted-foreground mx-1">{entry.fields.date?.match(/\d{4}/)?.[0]}</span>.
+                                    <span class="font-bold">{getText(entry.fields.title)}</span>{#if getConferenceVenue(entry) || getConferencePublisher(entry) || getText(entry.fields.location) || getText(entry.fields.pages)}, {/if}
+                                    {#if getConferenceVenue(entry)}<span class="italic text-muted-foreground">in: {getConferenceVenue(entry)}</span>{/if}
+                                    {#if getConferencePublisher(entry)}{#if getConferenceVenue(entry)}, {/if}{getConferencePublisher(entry)}{/if}
+                                    {#if getText(entry.fields.location)}, {getText(entry.fields.location)}{/if}
+                                    {#if getText(entry.fields.pages)}, pp. {getText(entry.fields.pages)}{/if}.
                                 </div>
                                 
                                 <div class="mt-3 flex flex-wrap gap-2 opacity-100 sm:opacity-60 sm:group-hover:opacity-100 transition-opacity duration-300">
+                                    {#if entry.fields.doi}
+                                        <a href="https://doi.org/{entry.fields.doi}" target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">DOI</a>
+                                    {/if}
                                     {#if customLinks[entry.entry_key]}
                                         {#each Object.entries(customLinks[entry.entry_key]) as [label, url]}
                                             <a href={url} target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{label}</a>

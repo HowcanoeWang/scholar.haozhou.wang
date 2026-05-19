@@ -111,7 +111,13 @@
   \ifentrytype{incollection}{\stepcounter{bookchapcount}}{}%
   \ifentrytype{article}{\stepcounter{journalcount}}{}%
   \ifentrytype{report}{\stepcounter{confcount}}{}%
+  \ifentrytype{inproceedings}{\stepcounter{confcount}}{}%
   \ifentrytype{patent}{\stepcounter{patentcount}}{}%
+}
+
+% 组合显示 conference 类型（report 或 inproceedings）
+\defbibfilter{conference}{%
+  type=report or type=inproceedings
 }
 
 % Ensure that generate pdf is machine readable/ATS parsable:
@@ -503,7 +509,7 @@
 
         \vspace{0.10 cm}
         \textbf{\textit{Conference proceedings}} (\theconfcount\ entries)
-        \printbibliography[type=report, heading=none] % 重置编号
+        \printbibliography[filter=conference, heading=none] % 重置编号
         
         % \begin{samepage}
         %     \begin{twocolentry}{

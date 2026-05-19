@@ -5,10 +5,19 @@ export const customLinks: Record<string, Record<string, string>> = {
     // papers //
     ////////////
 
+    // 2026
+    'wang_multiscale_2026': {
+        "PDF": cdnAsset('/files/paper/26_pp_huimin.pdf')
+    },
+    'drofova_color_2026': {
+        "PDF": cdnAsset('/files/paper/26_sus_cv4.pdf')
+    },
+
     // 2025
     'zhang_grapecpnet_2025':{
         "PDF": cdnAsset('/files/paper/25_compag3.pdf')
     },
+
     'liu_improved_2025': {
         "PDF": "https://www.mdpi.com/2072-4292/17/5/906/pdf?version=1741184643"
     },
@@ -91,6 +100,11 @@ export const customLinks: Record<string, Record<string, string>> = {
     /////////////////
     // conferences //
     /////////////////
+
+    // 2026
+    "xiang_doda_2026": {
+        "PDF": cdnAsset('/files/conf/26_wacv_doda.pdf'),
+    },
 
     // 2025
     "wang_staggcp_2025jsai": {
