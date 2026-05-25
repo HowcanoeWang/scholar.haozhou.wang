@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 446,
-        "since_2021": 434
+        "all": 449,
+        "since_2021": 437
       }
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "year": 2022,
-      "citations": 56
+      "citations": 55
     },
     {
       "year": 2023,
@@ -66,11 +66,11 @@
     },
     {
       "year": 2025,
-      "citations": 130
+      "citations": 131
     },
     {
       "year": 2026,
-      "citations": 50
+      "citations": 53
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 173
+      "cited_by": 175
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -93,14 +93,14 @@
       "authors": "H Wang, Y Duan, Y Shi, Y Kato, S Ninomiya, W Guo",
       "publication": "Remote Sensing 13 (13), 2622, 2021",
       "year": "2021",
-      "cited_by": 44
+      "cited_by": 45
     },
     {
       "title": "Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income",
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant Phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 31
+      "cited_by": 32
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -114,7 +114,7 @@
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
       "publication": "Remote sensing 13 (16), 3067, 2021",
       "year": "2021",
-      "cited_by": 21
+      "cited_by": 20
     },
     {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
