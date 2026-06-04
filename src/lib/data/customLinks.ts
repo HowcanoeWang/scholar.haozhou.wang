@@ -105,6 +105,10 @@ export const customLinks: Record<string, Record<string, string>> = {
     "xiang_doda_2026": {
         "PDF": cdnAsset('/files/conf/26_wacv_doda.pdf'),
     },
+    "wang_accelerating_2026jsai": {
+        "Abstract": cdnAsset('/files/conf/26_jsai_abstract.pdf'),
+        "Oral": cdnAsset('/files/conf/26_jsai_ppt.pdf')
+    },
 
     // 2025
     "wang_staggcp_2025jsai": {
@@ -129,11 +133,11 @@ export const customLinks: Record<string, Record<string, string>> = {
     // 2023
     "wang_virtual_2023ihrc": {
         "Abstract": cdnAsset('/files/conf/23_ihrc_abstract.pdf'),
-        "Poster": cdnAsset('/files/conf/23_ihrc_ppt.pdf')
+        "Oral": cdnAsset('/files/conf/23_ihrc_ppt.pdf')
     },
     "wang_virtual_2023mlcas": {
         "Abstract": cdnAsset('/files/conf/23_mlcas2023_abstract.pdf'),
-        "Poster": cdnAsset('/files/conf/23_mlcas2023_ppt.pdf')
+        "Oral": cdnAsset('/files/conf/23_mlcas2023_ppt.pdf')
     },
 
     // 2022

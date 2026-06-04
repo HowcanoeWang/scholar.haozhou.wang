@@ -97,6 +97,39 @@
         return getText(entry.fields.eventtitle) || getText(entry.fields.booktitle) || getText(entry.fields.institution);
     }
 
+    function formatConferenceDate(rawDate?: string): string {
+        if (!rawDate) return '';
+
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const parseDate = (value: string) => {
+            const parts = value.split('-').map(part => part.trim());
+            if (parts.length < 3) return null;
+            const [year, month, day] = parts;
+            const monthIndex = Number(month) - 1;
+            if (Number.isNaN(monthIndex) || monthIndex < 0 || monthIndex > 11) return null;
+            return {
+                month: monthNames[monthIndex],
+                day: String(Number(day))
+            };
+        };
+
+        if (rawDate.includes('/')) {
+            const [startRaw, endRaw] = rawDate.split('/').map(part => part.trim());
+            const start = parseDate(startRaw);
+            const end = parseDate(endRaw);
+            if (!start || !end) return '';
+
+            if (start.month === end.month) {
+                return `${start.month} ${start.day}-${end.day}`;
+            }
+            return `${start.month} ${start.day}-${end.month} ${end.day}`;
+        }
+
+        const single = parseDate(rawDate.trim());
+        if (!single) return '';
+        return `${single.month} ${single.day}`;
+    }
+
     function getConferencePublisher(entry: BibEntry) {
         return getText(entry.fields.publisher);
     }
@@ -219,11 +252,13 @@
                             <div class="group relative pl-6 transition-all duration-300">
                                 <span class="absolute left-0 top-[1.1rem] w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
                                 <div class="text-base text-foreground/90 leading-relaxed">
-                                    {@html getFormatAuthors(entry.fields.author)}
-                                    <span class="text-muted-foreground mx-1">{entry.fields.date?.match(/\d{4}/)?.[0]}</span>.
-                                    <span class="font-bold">{getText(entry.fields.title)}</span>{#if getConferenceVenue(entry) || getConferencePublisher(entry) || getText(entry.fields.location) || getText(entry.fields.pages)}, {/if}
+                                    {@html getFormatAuthors(entry.fields.author)},
+                                    <span class="text-muted-foreground">{entry.fields.date?.match(/\d{4}/)?.[0]}</span>. 
+                                    <span class="font-bold">{getText(entry.fields.title)}</span>
+                                    {#if getConferenceVenue(entry) || getConferencePublisher(entry) || getText(entry.fields.location) || getText(entry.fields.pages)}, {/if}
                                     {#if getConferenceVenue(entry)}<span class="italic text-muted-foreground">in: {getConferenceVenue(entry)}</span>{/if}
                                     {#if getConferencePublisher(entry)}{#if getConferenceVenue(entry)}, {/if}{getConferencePublisher(entry)}{/if}
+                                    {#if formatConferenceDate(entry.fields.date)}, <span class="text-muted-foreground">{formatConferenceDate(entry.fields.date)}</span>{/if}
                                     {#if getText(entry.fields.location)}, {getText(entry.fields.location)}{/if}
                                     {#if getText(entry.fields.pages)}, pp. {getText(entry.fields.pages)}{/if}.
                                 </div>
