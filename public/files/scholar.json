@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 456,
-        "since_2021": 444
+        "all": 457,
+        "since_2021": 445
       }
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 59
+      "citations": 60
     }
   ],
   "articles": [
@@ -103,16 +103,16 @@
       "cited_by": 32
     },
     {
-      "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
-      "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
-      "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
-      "year": "2021",
-      "cited_by": 21
-    },
-    {
       "title": "An efficient method for estimating wheat heading dates using UAV images",
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
       "publication": "Remote sensing 13 (16), 3067, 2021",
+      "year": "2021",
+      "cited_by": 22
+    },
+    {
+      "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
+      "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
+      "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
       "year": "2021",
       "cited_by": 21
     },
