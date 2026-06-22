@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 457,
-        "since_2021": 445
+        "all": 459,
+        "since_2021": 447
       }
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 60
+      "citations": 62
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 177
+      "cited_by": 179
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -103,16 +103,16 @@
       "cited_by": 32
     },
     {
-      "title": "An efficient method for estimating wheat heading dates using UAV images",
-      "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
-      "publication": "Remote sensing 13 (16), 3067, 2021",
-      "year": "2021",
-      "cited_by": 22
-    },
-    {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
       "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
       "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
+      "year": "2021",
+      "cited_by": 21
+    },
+    {
+      "title": "An efficient method for estimating wheat heading dates using UAV images",
+      "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
+      "publication": "Remote sensing 13 (16), 3067, 2021",
       "year": "2021",
       "cited_by": 21
     },
@@ -149,7 +149,7 @@
       "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
       "publication": "Remote Sensing 16 (9), 1570, 2024",
       "year": "2024",
-      "cited_by": 8
+      "cited_by": 9
     },
     {
       "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
