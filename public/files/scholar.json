@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 459,
-        "since_2021": 447
+        "all": 460,
+        "since_2021": 448
       }
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "year": 2022,
-      "citations": 55
+      "citations": 56
     },
     {
       "year": 2023,
@@ -66,11 +66,11 @@
     },
     {
       "year": 2025,
-      "citations": 132
+      "citations": 130
     },
     {
       "year": 2026,
-      "citations": 62
+      "citations": 64
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 179
+      "cited_by": 180
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -103,16 +103,16 @@
       "cited_by": 32
     },
     {
-      "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
-      "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
-      "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
-      "year": "2021",
-      "cited_by": 21
-    },
-    {
       "title": "An efficient method for estimating wheat heading dates using UAV images",
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
       "publication": "Remote sensing 13 (16), 3067, 2021",
+      "year": "2021",
+      "cited_by": 22
+    },
+    {
+      "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
+      "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
+      "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
       "year": "2021",
       "cited_by": 21
     },
@@ -121,7 +121,7 @@
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 14
+      "cited_by": 13
     },
     {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
