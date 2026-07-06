@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 460,
-        "since_2021": 448
+        "all": 465,
+        "since_2021": 453
       }
     },
     {
@@ -58,11 +58,11 @@
     },
     {
       "year": 2023,
-      "citations": 66
+      "citations": 65
     },
     {
       "year": 2024,
-      "citations": 99
+      "citations": 100
     },
     {
       "year": 2025,
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 64
+      "citations": 68
     }
   ],
   "articles": [
@@ -107,7 +107,7 @@
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
       "publication": "Remote sensing 13 (16), 3067, 2021",
       "year": "2021",
-      "cited_by": 22
+      "cited_by": 24
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -121,7 +121,7 @@
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 13
+      "cited_by": 14
     },
     {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
@@ -135,7 +135,7 @@
       "authors": "I Drofova, W Guo, H Wang, M Adamek",
       "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
       "year": "2023",
-      "cited_by": 11
+      "cited_by": 12
     },
     {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
@@ -187,6 +187,13 @@
       "cited_by": 5
     },
     {
+      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
+      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
+      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
+      "year": "2025",
+      "cited_by": 4
+    },
+    {
       "title": "Sampling with probability proportional to prediction (3P sampling) using covariates derived from spherical images",
       "authors": "YH Hsu, JA Kershaw Jr, MJ Ducey, TR Yang, H Wang",
       "publication": "Canadian Journal of Forest Research 51 (8), 1140-1147, 2021",
@@ -199,13 +206,6 @@
       "publication": "The 12th International Congress of Ecological (INTECOL),, 2017",
       "year": "2017",
       "cited_by": 4
-    },
-    {
-      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
-      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
-      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
-      "year": "2025",
-      "cited_by": 3
     },
     {
       "title": "EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotyping",
