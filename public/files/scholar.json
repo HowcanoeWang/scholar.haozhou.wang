@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 465,
-        "since_2021": 453
+        "all": 466,
+        "since_2021": 454
       }
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 68
+      "citations": 70
     }
   ],
   "articles": [
@@ -142,7 +142,7 @@
       "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
       "publication": "Drones 7 (2), 65, 2023",
       "year": "2023",
-      "cited_by": 11
+      "cited_by": 12
     },
     {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
