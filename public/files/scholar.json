@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 466,
-        "since_2021": 454
+        "all": 467,
+        "since_2021": 455
       }
     },
     {
@@ -66,7 +66,7 @@
     },
     {
       "year": 2025,
-      "citations": 130
+      "citations": 131
     },
     {
       "year": 2026,
@@ -114,7 +114,7 @@
       "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
       "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
       "year": "2021",
-      "cited_by": 21
+      "cited_by": 22
     },
     {
       "title": "High-throughput 3D shape completion of potato tubers on a harvester",
