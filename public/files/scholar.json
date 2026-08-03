@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 472,
-        "since_2021": 460
+        "all": 473,
+        "since_2021": 461
       }
     },
     {
@@ -50,27 +50,27 @@
     },
     {
       "year": 2021,
-      "citations": 30
+      "citations": 32
     },
     {
       "year": 2022,
-      "citations": 58
+      "citations": 53
     },
     {
       "year": 2023,
-      "citations": 63
+      "citations": 71
     },
     {
       "year": 2024,
-      "citations": 100
+      "citations": 99
     },
     {
       "year": 2025,
-      "citations": 132
+      "citations": 126
     },
     {
       "year": 2026,
-      "citations": 74
+      "citations": 77
     }
   ],
   "articles": [
@@ -79,14 +79,14 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 181
+      "cited_by": 180
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
       "authors": "H Wang, D Han, Y Mu, L Jiang, X Yao, Y Bai, Q Lu, F Wang",
       "publication": "Agricultural and Forest Meteorology 278, 107665, 2019",
       "year": "2019",
-      "cited_by": 49
+      "cited_by": 50
     },
     {
       "title": "EasyIDP: A python package for intermediate data processing in UAV-based plant phenotyping",
@@ -98,9 +98,9 @@
     {
       "title": "Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income",
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
-      "publication": "Plant Phenomics 5, 0086, 2023",
+      "publication": "Plant phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 32
+      "cited_by": 31
     },
     {
       "title": "An efficient method for estimating wheat heading dates using UAV images",
@@ -119,8 +119,8 @@
     {
       "title": "High-throughput 3D shape completion of potato tubers on a harvester",
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
-      "publication": "Available at SSRN 4921324, 2024",
-      "year": "2024",
+      "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
+      "year": "2025",
       "cited_by": 14
     },
     {
@@ -170,7 +170,14 @@
       "authors": "X Dai, MJ Ducey, H Wang, TR Yang, YH Hsu, J Ogilvie, JA Kershaw Jr",
       "publication": "Forestry: An International Journal of Forest Research 94 (4), 565-575, 2021",
       "year": "2021",
-      "cited_by": 5
+      "cited_by": 6
+    },
+    {
+      "title": "An Integrated System for Estimating Forest Basal Area from Spherical Images",
+      "authors": "H Wang, JA Kershaw, T Yang, Y Hsu, X Ma, Y Chen",
+      "publication": "Mathematical & Computational Forestry & Natural Resource Sciences 12 (1), 2020",
+      "year": "2020",
+      "cited_by": 6
     },
     {
       "title": "Estimating Individual Tree Heights and DBHs from Vertically Displaced Spherical Image Pairs",
@@ -180,17 +187,17 @@
       "cited_by": 5
     },
     {
-      "title": "An Integrated System for Estimating Forest Basal Area from Spherical Images",
-      "authors": "H Wang, JA Kershaw, T Yang, Y Hsu, X Ma, Y Chen",
-      "publication": "Mathematical & Computational Forestry & Natural Resource Sciences 12 (1), 2020",
-      "year": "2020",
-      "cited_by": 5
-    },
-    {
       "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
       "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
       "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
       "year": "2025",
+      "cited_by": 4
+    },
+    {
+      "title": "Sector subsampling for basal area ratio estimation: an alternative to big BAF sampling",
+      "authors": "X Dai, MJ Ducey, JA Kershaw Jr, H Wang",
+      "publication": "Canadian Journal of Forest Research 51 (8), 1131-1139, 2021",
+      "year": "2021",
       "cited_by": 4
     },
     {
@@ -222,13 +229,6 @@
       "cited_by": 3
     },
     {
-      "title": "Sector subsampling for basal area ratio estimation: an alternative to big BAF sampling",
-      "authors": "X Dai, MJ Ducey, JA Kershaw Jr, H Wang",
-      "publication": "Canadian Journal of Forest Research 51 (8), 1131-1139, 2021",
-      "year": "2021",
-      "cited_by": 3
-    },
-    {
       "title": "Estimating forest attributes from spherical images",
       "authors": "H Wang",
       "publication": "University of New Brunswick, 2019",
@@ -240,7 +240,7 @@
       "authors": "王浩舟， 常雅荃， 李川， 刘秋蓉， 钟敏， 陈沁璇",
       "publication": "甘肃科技 22, 018, 2017",
       "year": "2017",
-      "cited_by": 3
+      "cited_by": 2
     },
     {
       "title": "Improved Detecting and Locating Organ Level Small Agricultural Objects by Fusion Ortho Maps and UAV Raw Images",
