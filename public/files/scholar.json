@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 473,
-        "since_2021": 461
+        "all": 482,
+        "since_2021": 470
       }
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "year": 2022,
-      "citations": 53
+      "citations": 54
     },
     {
       "year": 2023,
@@ -66,11 +66,11 @@
     },
     {
       "year": 2025,
-      "citations": 126
+      "citations": 129
     },
     {
       "year": 2026,
-      "citations": 77
+      "citations": 82
     }
   ],
   "articles": [
@@ -79,14 +79,14 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 180
+      "cited_by": 183
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
       "authors": "H Wang, D Han, Y Mu, L Jiang, X Yao, Y Bai, Q Lu, F Wang",
       "publication": "Agricultural and Forest Meteorology 278, 107665, 2019",
       "year": "2019",
-      "cited_by": 50
+      "cited_by": 51
     },
     {
       "title": "EasyIDP: A python package for intermediate data processing in UAV-based plant phenotyping",
@@ -100,7 +100,7 @@
       "authors": "H Wang, T Li, E Nishida, Y Kato, Y Fukano, W Guo",
       "publication": "Plant phenomics 5, 0086, 2023",
       "year": "2023",
-      "cited_by": 31
+      "cited_by": 35
     },
     {
       "title": "An efficient method for estimating wheat heading dates using UAV images",
@@ -208,6 +208,13 @@
       "cited_by": 4
     },
     {
+      "title": "Estimating forest attributes from spherical images",
+      "authors": "H Wang",
+      "publication": "University of New Brunswick, 2019",
+      "year": "2019",
+      "cited_by": 4
+    },
+    {
       "title": "UAV-HiRAP: A novel method to improve landscape-level vegetation classification and coverage fraction estimation with unmanned aerial vehicle platform",
       "authors": "H Wang, F Wang, X Yao, Y Mu, Y Bai, Q Lu",
       "publication": "The 12th International Congress of Ecological (INTECOL),, 2017",
@@ -226,13 +233,6 @@
       "authors": "I Drofova, H Wang, W Guo, M Pospisilik, M Adamek, J Valouch",
       "publication": "2023 33rd International Conference Radioelektronika (RADIOELEKTRONIKA), 1-4, 2023",
       "year": "2023",
-      "cited_by": 3
-    },
-    {
-      "title": "Estimating forest attributes from spherical images",
-      "authors": "H Wang",
-      "publication": "University of New Brunswick, 2019",
-      "year": "2019",
       "cited_by": 3
     },
     {
