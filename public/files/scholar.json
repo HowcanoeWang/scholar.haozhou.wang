@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 482,
-        "since_2021": 470
+        "all": 485,
+        "since_2021": 473
       }
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 82
+      "citations": 85
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 183
+      "cited_by": 184
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -124,6 +124,13 @@
       "cited_by": 14
     },
     {
+      "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
+      "authors": "I Drofova, W Guo, H Wang, M Adamek",
+      "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
+      "year": "2023",
+      "cited_by": 13
+    },
+    {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
       "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
       "publication": "Drones 7 (2), 65, 2023",
@@ -136,13 +143,6 @@
       "publication": "生态学报 38 (18), 6655-6663, 2018",
       "year": "2018",
       "cited_by": 13
-    },
-    {
-      "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
-      "authors": "I Drofova, W Guo, H Wang, M Adamek",
-      "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
-      "year": "2023",
-      "cited_by": 12
     },
     {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
@@ -163,7 +163,7 @@
       "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
       "publication": "Remote Sensing 17 (5), 906, 2025",
       "year": "2025",
-      "cited_by": 6
+      "cited_by": 7
     },
     {
       "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
