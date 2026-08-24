@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 485,
-        "since_2021": 473
+        "all": 487,
+        "since_2021": 475
       }
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 85
+      "citations": 87
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 184
+      "cited_by": 185
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -121,7 +121,7 @@
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 14
+      "cited_by": 15
     },
     {
       "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
