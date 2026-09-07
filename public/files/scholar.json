@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 488,
-        "since_2021": 476
+        "all": 490,
+        "since_2021": 478
       }
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 88
+      "citations": 90
     }
   ],
   "articles": [
@@ -124,16 +124,16 @@
       "cited_by": 15
     },
     {
-      "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
-      "authors": "I Drofova, W Guo, H Wang, M Adamek",
-      "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
-      "year": "2023",
-      "cited_by": 13
-    },
-    {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
       "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
       "publication": "Drones 7 (2), 65, 2023",
+      "year": "2023",
+      "cited_by": 14
+    },
+    {
+      "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
+      "authors": "I Drofova, W Guo, H Wang, M Adamek",
+      "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
       "year": "2023",
       "cited_by": 13
     },
@@ -156,7 +156,7 @@
       "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
       "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
       "year": "2025",
-      "cited_by": 8
+      "cited_by": 9
     },
     {
       "title": "Improved detection and location of small crop organs by fusing UAV orthophoto maps and raw images",
