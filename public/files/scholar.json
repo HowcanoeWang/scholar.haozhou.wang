@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 490,
-        "since_2021": 478
+        "all": 491,
+        "since_2021": 479
       }
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 90
+      "citations": 91
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 185
+      "cited_by": 186
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
