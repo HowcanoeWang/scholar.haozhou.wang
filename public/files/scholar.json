@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 491,
-        "since_2021": 479
+        "all": 494,
+        "since_2021": 482
       }
     },
     {
@@ -58,7 +58,7 @@
     },
     {
       "year": 2023,
-      "citations": 71
+      "citations": 73
     },
     {
       "year": 2024,
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 91
+      "citations": 92
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 186
+      "cited_by": 188
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -163,7 +163,7 @@
       "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
       "publication": "Remote Sensing 17 (5), 906, 2025",
       "year": "2025",
-      "cited_by": 7
+      "cited_by": 8
     },
     {
       "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
