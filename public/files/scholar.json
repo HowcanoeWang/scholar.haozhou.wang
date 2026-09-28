@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 494,
-        "since_2021": 482
+        "all": 499,
+        "since_2021": 487
       }
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "year": 2026,
-      "citations": 92
+      "citations": 96
     }
   ],
   "articles": [
@@ -79,7 +79,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 188
+      "cited_by": 189
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -93,7 +93,7 @@
       "authors": "H Wang, Y Duan, Y Shi, Y Kato, S Ninomiya, W Guo",
       "publication": "Remote Sensing 13 (13), 2622, 2021",
       "year": "2021",
-      "cited_by": 47
+      "cited_by": 49
     },
     {
       "title": "Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income",
@@ -128,7 +128,7 @@
       "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
       "publication": "Drones 7 (2), 65, 2023",
       "year": "2023",
-      "cited_by": 14
+      "cited_by": 15
     },
     {
       "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
@@ -180,18 +180,18 @@
       "cited_by": 6
     },
     {
+      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
+      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
+      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
+      "year": "2025",
+      "cited_by": 5
+    },
+    {
       "title": "Estimating Individual Tree Heights and DBHs from Vertically Displaced Spherical Image Pairs",
       "authors": "H Wang, TR Yang, J Waldy, JA Kershaw Jr",
       "publication": "Mathematical and Computational Forestry & Natural-Resource Sciences (MCFNS), 2021",
       "year": "2021",
       "cited_by": 5
-    },
-    {
-      "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
-      "authors": "H Li, H Liu, W Wang, H Wang, Q Yu, J Qian, W Wu, Y Shi, C Geng",
-      "publication": "Computers and Electronics in Agriculture 234, 110289, 2025",
-      "year": "2025",
-      "cited_by": 4
     },
     {
       "title": "Sector subsampling for basal area ratio estimation: an alternative to big BAF sampling",
