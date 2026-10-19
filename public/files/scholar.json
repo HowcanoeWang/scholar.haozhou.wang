@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 506,
-        "since_2021": 493
+        "all": 509,
+        "since_2021": 496
       }
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "year": 2026,
-      "citations": 102
+      "citations": 105
     }
   ],
   "articles": [
@@ -122,14 +122,14 @@
       "authors": "A Feldman, H Wang, Y Fukano, Y Kato, S Ninomiya, W Guo",
       "publication": "Methods in Ecology and Evolution 12 (9), 1679-1686, 2021",
       "year": "2021",
-      "cited_by": 22
+      "cited_by": 23
     },
     {
       "title": "High-throughput 3D shape completion of potato tubers on a harvester",
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 15
+      "cited_by": 16
     },
     {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
@@ -171,7 +171,7 @@
       "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
       "publication": "Remote Sensing 17 (5), 906, 2025",
       "year": "2025",
-      "cited_by": 8
+      "cited_by": 9
     },
     {
       "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
