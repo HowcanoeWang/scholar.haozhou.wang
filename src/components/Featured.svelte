@@ -45,7 +45,7 @@
            ]
        },
        {
-           img: "https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP/raw/v2.0/docs/_static/images/header_v2.0.png",
+           img: "https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP/raw/main/docs/_static/images/header_v2.0.png",
            title: "EasyIDP: a Python package for intermediate data processing in UAV-based plant phenotyping",
            journal: "Remote Sensing",
            badge: "pub.if.rs", 
