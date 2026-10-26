@@ -80,7 +80,10 @@
         "p1": "Easy Intermediate Data Processor (EasyIDP): A Python Package for intermediate preprocessing data between photogrammetry outputs and plant pheenotyping traits calculation.",
         "p2": "Easy Dense Cloud Phenotyping (EasyDCP): A python package for agricultural phenotypic trait extraction from 2D image sets via 3D reconstruction and analysis of 3D point clouds.",
         "p3": "A Python Program to measure tree attributes (Basal Area, DBH, Height, Gap Fraction) from two Ricoh Theta spherical image  pair taken at different height.",
-        "p4": "Unmanned Aerial Vehicles - High Resolution imagery Analysis Platform (UAV-HiRAP), is an open-source, web-based platform which provides service for image classification (maintenance suspended)."
+        "p4": "Unmanned Aerial Vehicles - High Resolution imagery Analysis Platform (UAV-HiRAP), is an open-source, web-based platform which provides service for image classification (maintenance suspended).",
+        "p5": "Easy Agisoft Metashape Streamlining (EasyAMS): a GUI plugin that turns repetitive photogrammetry chores — marker detection, batch import, chunk handling — into menu commands for smart agriculture.",
+        "p6": "Software for yield estimation of potato tubers on a harvester, and the acquisition/preprocessing pipeline behind the 3DPotatoTwin dataset (Metashape scripts and SFM-RGBD registration).",
+        "p7": "A desktop tool pushing aerial field phenotyping into higher dimensions: automated subplot slicing, SAM-based seedling detection, and a 10-layer RGB/multispectral/DSM/temporal tensor for 3D-CNN growth anomaly detection."
     },
     "time": {
         "t": "Experience Timeline",

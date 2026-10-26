@@ -11,6 +11,37 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        title: "AgriTesseract",
+        institution: "inst.ut",
+        descriptionKey: "proj.p7",
+        date: "2025.09",
+        img: cdnAsset('/files/imgs/cover_agritesseract.png'),
+        links: [
+            { label: "Code", url: "https://github.com/UTokyo-FieldPhenomics-Lab/AgriTesseract" }
+        ]
+    },
+    {
+        title: "PotatoScan",
+        institution: "inst.ut",
+        descriptionKey: "proj.p6",
+        date: "2023.09",
+        img: cdnAsset('/files/imgs/cover_potatoscan.png'),
+        links: [
+            { label: "Code", url: "https://github.com/UTokyo-FieldPhenomics-Lab/PotatoScan" },
+            { label: "Dataset", url: "https://doi.org/10.1016/j.plaphe.2025.100123" }
+        ]
+    },
+    {
+        title: "EasyAMS",
+        institution: "inst.ut",
+        descriptionKey: "proj.p5",
+        date: "2022.10",
+        img: cdnAsset('/files/imgs/cover_easyams.jpg'),
+        links: [
+            { label: "Code", url: "https://github.com/UTokyo-FieldPhenomics-Lab/EasyAMS" }
+        ]
+    },
+    {
         title: "EasyIDP",
         institution: "inst.ut",
         descriptionKey: "proj.p1",
