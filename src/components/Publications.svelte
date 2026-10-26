@@ -127,13 +127,19 @@
         return getText(entry.fields.publisher);
     }
 
+    function isSelfAuthor(author: any) {
+        const family = getText(author.family).trim().toLowerCase();
+        const givenFirst = getText(author.given).trim().split(/\s+/)[0]?.toLowerCase() ?? '';
+        return family === 'wang' && givenFirst === 'haozhou';
+    }
+
     function getFormatAuthors(authors: any[]) {
         if (!Array.isArray(authors)) return '';
         return authors.map(a => {
             const family = getText(a.family);
             const given = getText(a.given);
             const name = `${family}, ${given.split(' ').map((n:string) => n[0]).join('.')}.`;
-            return name.includes('Wang, H') ? `<b>${name}</b>` : name;
+            return isSelfAuthor(a) ? `<b>${name}</b>` : name;
         }).join(', ');
     }
 </script>
