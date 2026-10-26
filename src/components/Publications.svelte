@@ -127,6 +127,25 @@
         return getText(entry.fields.publisher);
     }
 
+    /**
+     * Build the conference citation date shown right after the author list.
+     *
+     * Conferences carry a full `date` in the `.bib` (e.g. `2024-11-06/2024-11-08`),
+     * so the year is rendered together with the month and day. Papers keep the
+     * year-only convention.
+     *
+     * @param entry
+     *     BibTeX entry of a report or inproceedings record.
+     * @returns
+     *     `2024, Nov 6-8`, or just the year when no month/day can be parsed.
+     */
+    function getConferenceDateLabel(entry: BibEntry) {
+        const year = entry.fields.date?.match(/\d{4}/)?.[0] || '';
+        const shortDate = formatConferenceDate(entry.fields.date);
+        if (!year) return shortDate;
+        return shortDate ? `${year}, ${shortDate}` : year;
+    }
+
     function isSelfAuthor(author: any) {
         const family = getText(author.family).trim().toLowerCase();
         const givenFirst = getText(author.given).trim().split(/\s+/)[0]?.toLowerCase() ?? '';
@@ -252,12 +271,11 @@
                                 <span class="absolute left-0 top-[1.1rem] w-1.5 h-1.5 rounded-full bg-border group-hover:bg-foreground transition-colors"></span>
                                 <div class="text-base text-foreground/90 leading-relaxed">
                                     {@html getFormatAuthors(entry.fields.author)},
-                                    <span class="text-muted-foreground">{entry.fields.date?.match(/\d{4}/)?.[0]}</span>. 
+                                    <span class="text-muted-foreground">{getConferenceDateLabel(entry)}</span>. 
                                     <span class="font-bold">{getText(entry.fields.title)}</span>
                                     {#if getConferenceVenue(entry) || getConferencePublisher(entry) || getText(entry.fields.location) || getText(entry.fields.pages)}, {/if}
                                     {#if getConferenceVenue(entry)}<span class="italic text-muted-foreground">in: {getConferenceVenue(entry)}</span>{/if}
                                     {#if getConferencePublisher(entry)}{#if getConferenceVenue(entry)}, {/if}{getConferencePublisher(entry)}{/if}
-                                    {#if formatConferenceDate(entry.fields.date)}, <span class="text-muted-foreground">{formatConferenceDate(entry.fields.date)}</span>{/if}
                                     {#if getText(entry.fields.location)}, {getText(entry.fields.location)}{/if}
                                     {#if getText(entry.fields.pages)}, pp. {getText(entry.fields.pages)}{/if}.
                                 </div>
