@@ -26,14 +26,19 @@ jobs:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}  # 传递到环境变量
       run: cd scripts/ && python get_google_scholar.py
 
+    - name: Fetch github repository stats
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: cd scripts/ && python update_github_stats.py
+
     - name: Commit changes if updated
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git add public/files/scholar.json
+        git add public/files/scholar.json public/files/repos.json public/files/hf_likes.json
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "Auto-update google scholar data"
+          git commit -m "Auto-update scholar and repository data"
           git push
         fi

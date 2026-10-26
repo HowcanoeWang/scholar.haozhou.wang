@@ -23,6 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DEST_PATH = ROOT / "public/files/repos.json"
+DATASETS_PATH = ROOT / "public/files/hf_likes.json"
 
 REPOSITORIES: dict[str, str] = {
     "easyidp": "UTokyo-FieldPhenomics-Lab/EasyIDP",
@@ -33,6 +34,10 @@ REPOSITORIES: dict[str, str] = {
     "spherical2tree": "HowcanoeWang/Spherical2TreeAttributes",
     "uavhirap": "DrylandEcology-Lab/UAV-HiRAP",
     "uavbroccoli": "UTokyo-FieldPhenomics-Lab/UAVbroccoli",
+}
+
+DATASETS: dict[str, str] = {
+    "3dpotatotwin": "UTokyo-FieldPhenomics-Lab/3DPotatoTwin",
 }
 
 
@@ -74,6 +79,38 @@ def fetch_stars(repository: str, token: str | None) -> int:
     return int(payload["stargazers_count"])
 
 
+def fetch_likes(dataset: str) -> int:
+    """Read the like count of one HuggingFace dataset.
+
+    Parameters
+    ----------
+    dataset : str
+        Dataset in `owner/name` form.
+
+    Returns
+    -------
+    int
+        Number of likes on the dataset page.
+
+    Raises
+    ------
+    RuntimeError
+        If the API does not answer with a usable payload.
+    """
+    request = urllib.request.Request(
+        f"https://huggingface.co/api/datasets/{dataset}",
+        headers={"User-Agent": "scholar.haozhou.wang"},
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            payload = json.load(response)
+    except urllib.error.HTTPError as error:
+        raise RuntimeError(f"{dataset}: HTTP {error.code}") from error
+    if "likes" not in payload:
+        raise RuntimeError(f"{dataset}: unexpected payload")
+    return int(payload["likes"])
+
+
 def main() -> int:
     """Write `public/files/repos.json`.
 
@@ -88,10 +125,19 @@ def main() -> int:
         stats[slug] = fetch_stars(repository, token)
         print(f"{stats[slug]:>5}  {slug:<14} {repository}")
 
+    likes: dict[str, int] = {}
+    for slug, dataset in DATASETS.items():
+        likes[slug] = fetch_likes(dataset)
+        print(f"{likes[slug]:>5}  ♥ {slug:<12} {dataset}")
+
     DEST_PATH.write_text(
         json.dumps(stats, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
+    DATASETS_PATH.write_text(
+        json.dumps(likes, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     print(f"written: {DEST_PATH.relative_to(ROOT)}")
+    print(f"written: {DATASETS_PATH.relative_to(ROOT)}")
     return 0
 
 
