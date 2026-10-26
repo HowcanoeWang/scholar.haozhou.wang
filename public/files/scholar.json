@@ -26,20 +26,20 @@
   "table": [
     {
       "citations": {
-        "all": 512,
-        "since_2021": 499
+        "all": 558,
+        "since_2021": 545
       }
     },
     {
       "h_index": {
-        "all": 11,
-        "since_2021": 10
+        "all": 12,
+        "since_2021": 12
       }
     },
     {
       "i10_index": {
-        "all": 11,
-        "since_2021": 11
+        "all": 13,
+        "since_2021": 13
       }
     }
   ],
@@ -74,11 +74,11 @@
     },
     {
       "year": 2025,
-      "citations": 128
+      "citations": 136
     },
     {
       "year": 2026,
-      "citations": 109
+      "citations": 147
     }
   ],
   "articles": [
@@ -111,6 +111,13 @@
       "cited_by": 35
     },
     {
+      "title": "The global wheat full semantic organ segmentation (GWFSS) dataset",
+      "authors": "Z Wang, R Zenkl, L Greche, B De Solan, LB Samatan, S Ouahid, A Visioni, ...",
+      "publication": "Plant Phenomics 7 (3), 100084, 2025",
+      "year": "2025",
+      "cited_by": 25
+    },
+    {
       "title": "An efficient method for estimating wheat heading dates using UAV images",
       "authors": "L Zhao, W Guo, J Wang, H Wang, Y Duan, C Wang, W Wu, Y Shi",
       "publication": "Remote sensing 13 (16), 3067, 2021",
@@ -137,6 +144,13 @@
       "publication": "Drones 7 (2), 65, 2023",
       "year": "2023",
       "cited_by": 15
+    },
+    {
+      "title": "Global rice multiclass segmentation dataset (RiceSEG): comprehensive and diverse high-resolution RGB-annotated images for the development and benchmarking of rice segmentation …",
+      "authors": "J Zhou, H Wang, Y Kato, T Nampally, P Rajalakshmi, M Balram, K Katsura, ...",
+      "publication": "Plant Phenomics, 100099, 2025",
+      "year": "2025",
+      "cited_by": 14
     },
     {
       "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
@@ -183,9 +197,16 @@
     {
       "title": "An Integrated System for Estimating Forest Basal Area from Spherical Images",
       "authors": "H Wang, JA Kershaw, T Yang, Y Hsu, X Ma, Y Chen",
-      "publication": "Mathematical & Computational Forestry & Natural Resource Sciences 12 (1), 2020",
+      "publication": "Mathematical &amp; Computational Forestry &amp; Natural Resource Sciences 12 (1), 2020",
       "year": "2020",
       "cited_by": 6
+    },
+    {
+      "title": "3DPotatoTwin: a paired potato tuber dataset for 3D multi-sensory fusion",
+      "authors": "H Wang, PM Blok, J Burridge, T Jiang, M Miyauchi, K Miyamoto, K Tanaka, ...",
+      "publication": "Plant Phenomics, 100123, 2025",
+      "year": "2025",
+      "cited_by": 5
     },
     {
       "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
@@ -197,7 +218,7 @@
     {
       "title": "Estimating Individual Tree Heights and DBHs from Vertically Displaced Spherical Image Pairs",
       "authors": "H Wang, TR Yang, J Waldy, JA Kershaw Jr",
-      "publication": "Mathematical and Computational Forestry & Natural-Resource Sciences (MCFNS), 2021",
+      "publication": "Mathematical and Computational Forestry &amp; Natural-Resource Sciences (MCFNS), 2021",
       "year": "2021",
       "cited_by": 5
     },
@@ -232,7 +253,7 @@
     {
       "title": "EasyIDP V2.0: An Intermediate Data Processing Package for Photogrammetry-Based Plant Phenotyping",
       "authors": "H Wang, W Guo",
-      "publication": "Harnessing Data Science for Sustainable Agriculture and Natural Resource …, 2024",
+      "publication": "Harnessing Data Science for Sustainable Agriculture and Natural Resource …, 2024",
       "year": "2024",
       "cited_by": 3
     },
@@ -244,6 +265,13 @@
       "cited_by": 3
     },
     {
+      "title": "Multi-scale spatial-temporal remote sensing fusion for phenology identification in rice germplasm resources",
+      "authors": "H Wang, W Guo, Y Mu, Y Zhang, H Wang, Y Yang, H Xu, Y Ding, S Zhou, ...",
+      "publication": "Plant Phenomics, 100222, 2026",
+      "year": "2026",
+      "cited_by": 2
+    },
+    {
       "title": "无人机影像处理软件 Pix4Dmapper 与 Photoscan 在资源普查中的成像性能分析",
       "authors": "王浩舟， 常雅荃， 李川， 刘秋蓉， 钟敏， 陈沁璇",
       "publication": "甘肃科技 22, 018, 2017",
@@ -251,39 +279,32 @@
       "cited_by": 2
     },
     {
-      "title": "Improved Detecting and Locating Organ Level Small Agricultural Objects by Fusion Ortho Maps and UAV Raw Images",
-      "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
-      "publication": "Preprints, 2024",
+      "title": "Color Vision in Digital Twin Creation Using Photogrammetry in Sustainable Agriculture 4.0",
+      "authors": "I Drofova, H Wang, W Guo, N Katsuhama, J Burridge, PM Blok, M Adamek",
+      "publication": "Sustainability 18 (5), 2160, 2026",
+      "year": "2026",
+      "cited_by": 0
+    },
+    {
+      "title": "Drone-Based Multi-spectral Pipeline for Detecting Abnormal Potato Strains in the Field",
+      "authors": "H Wang, S Inoshishi, M Shimizu, T Kato, W Guo",
+      "publication": "The 14th Asia-Pacific Federation for Information Technology in Agriculture …, 2024",
       "year": "2024",
-      "cited_by": null
+      "cited_by": 0
     },
     {
       "title": "Studies on 3D-based plant phenotyping by multi-scale data fusion",
       "authors": "H Wang",
       "publication": "The University of Tokyo, 2023",
       "year": "2023",
-      "cited_by": null
+      "cited_by": 0
     },
     {
       "title": "Extracting DBH measurements from RGB photo images",
       "authors": "W Haozhou, JA Kershaw",
       "publication": "",
       "year": "2017",
-      "cited_by": null
-    },
-    {
-      "title": "Studies on 3D-based plant phenotyping by multi-scale data fusion",
-      "authors": "王浩舟",
-      "publication": "(No Title), 0",
-      "year": "",
-      "cited_by": null
-    },
-    {
-      "title": "Drone-Based Multi-spectral Pipeline for Detecting Abnormal Potato Strains in the Field",
-      "authors": "H Wang, S Inoshishi, M Shimizu, T Kato, W Guo",
-      "publication": "",
-      "year": "",
-      "cited_by": null
+      "cited_by": 0
     }
   ]
 }
