@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 509,
-        "since_2021": 496
+        "all": 512,
+        "since_2021": 499
       }
     },
     {
@@ -74,11 +74,11 @@
     },
     {
       "year": 2025,
-      "citations": 129
+      "citations": 128
     },
     {
       "year": 2026,
-      "citations": 105
+      "citations": 109
     }
   ],
   "articles": [
@@ -87,7 +87,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 192
+      "cited_by": 193
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -129,7 +129,7 @@
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 16
+      "cited_by": 17
     },
     {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
@@ -157,7 +157,7 @@
       "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
       "publication": "Remote Sensing 16 (9), 1570, 2024",
       "year": "2024",
-      "cited_by": 11
+      "cited_by": 12
     },
     {
       "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
