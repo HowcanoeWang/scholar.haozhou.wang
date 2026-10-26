@@ -1,7 +1,8 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { t } from 'svelte-i18n';
-    import { fetchBibTeX, type BibJson, type BibEntry, normalizeTitle } from '$lib/services/bibtexService';
+    import { fetchBibTeX, type BibJson, type BibEntry } from '$lib/services/bibtexService';
+    import { findScholarArticle } from '$lib/services/citationService';
     import { fetchScholarData, type ScholarData } from '$lib/services/scholarService';
     import { customLinks } from '$lib/data/customLinks';
     import { awardi18n } from '$lib/data/awards';
@@ -64,15 +65,7 @@
 
     function getCiteCount(title: string) {
         if (!scholarData) return null;
-        const normTitle = normalizeTitle(title);
-        if (!normTitle) return null;
-        
-        // More robust matching: partial match to handle truncations
-        const article = scholarData.articles.find(a => {
-            const normA = normalizeTitle(a.title);
-            if (!normA) return false;
-            return normA.includes(normTitle) || normTitle.includes(normA);
-        });
+        const article = findScholarArticle(scholarData.articles, title);
         return article ? article.cited_by : null;
     }
 

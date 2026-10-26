@@ -1,8 +1,8 @@
 <script lang="ts">
    import { t } from 'svelte-i18n';
    import { fetchScholarData, type ScholarData } from '$lib/services/scholarService';
+   import { findScholarArticle } from '$lib/services/citationService';
    import { onMount } from 'svelte';
-   import { normalizeTitle } from '$lib/services/bibtexService';
    import { cdnAsset } from '$lib/constants/cdn';
 
    let scholarData = $state<ScholarData | null>(null);
@@ -13,10 +13,8 @@
 
    function getCiteCount(title: string) {
        if (!scholarData) return '??';
-       const normTitle = normalizeTitle(title);
-       const article = scholarData.articles.find((a: any) => normalizeTitle(a.title) === normTitle); // Using any for a if types are loose or explicit Author type if available
-       // Better: ScholarArticle type is exported from service
-       return article ? article.cited_by : '0';
+       const article = findScholarArticle(scholarData.articles, title);
+       return article && article.cited_by ? String(article.cited_by) : '0';
    }
    
    // Hardcoded featured list from original index.html
