@@ -2,6 +2,8 @@ import { cdnAsset } from '$lib/constants/cdn';
 
 export interface Project {
     title: string;
+    /** Key in `public/files/repos.json`; drives the GitHub star chip. */
+    slug: string;
     institution: string; // i18n key or text
     descriptionKey: string; // i18n key
     date: string;
@@ -12,6 +14,7 @@ export interface Project {
 export const projects: Project[] = [
     {
         title: "AgriTesseract",
+        slug: 'agritesseract',
         institution: "inst.ut",
         descriptionKey: "proj.p7",
         date: "2025.09",
@@ -22,6 +25,7 @@ export const projects: Project[] = [
     },
     {
         title: "PotatoScan",
+        slug: 'potatoscan',
         institution: "inst.ut",
         descriptionKey: "proj.p6",
         date: "2023.09",
@@ -33,6 +37,7 @@ export const projects: Project[] = [
     },
     {
         title: "EasyAMS",
+        slug: 'easyams',
         institution: "inst.ut",
         descriptionKey: "proj.p5",
         date: "2022.10",
@@ -43,6 +48,7 @@ export const projects: Project[] = [
     },
     {
         title: "EasyIDP",
+        slug: 'easyidp',
         institution: "inst.ut",
         descriptionKey: "proj.p1",
         date: "2021.06",
@@ -54,6 +60,7 @@ export const projects: Project[] = [
     },
     {
         title: "EasyDCP",
+        slug: 'easydcp',
         institution: "inst.ut",
         descriptionKey: "proj.p2",
         date: "2021.04",
@@ -66,6 +73,7 @@ export const projects: Project[] = [
     },
     {
         title: "Spherical2TreeAttributes",
+        slug: 'spherical2tree',
         institution: "inst.unb",
         descriptionKey: "proj.p3",
         date: "2019.06",
@@ -76,6 +84,7 @@ export const projects: Project[] = [
     },
     {
         title: "UAV-HiRAP",
+        slug: 'uavhirap',
         institution: "inst.caf",
         descriptionKey: "proj.p4",
         date: "2018.10",

@@ -2,13 +2,36 @@
    import { t } from 'svelte-i18n';
    import { fetchScholarData, type ScholarData } from '$lib/services/scholarService';
    import { findScholarArticle } from '$lib/services/citationService';
+   import { fetchRepoStats, fetchDatasetLikes } from '$lib/services/repoService';
+   import BrandIcon from '$lib/components/BrandIcon.svelte';
    import { onMount } from 'svelte';
    import { cdnAsset } from '$lib/constants/cdn';
 
+   interface FeaturedItem {
+       img: string;
+       title: string;
+       journal: string;
+       badge: string;
+       links: Array<{ label: string; url: string }>;
+       /** GitHub repository backing the software used in the paper. */
+       stars?: { slug: string; url: string };
+       /** HuggingFace dataset shipped with the paper. */
+       likes?: { dataset: string; url: string };
+   }
+
    let scholarData = $state<ScholarData | null>(null);
+   let repoStats = $state<Record<string, number> | null>(null);
+   let datasetLikes = $state<Record<string, number> | null>(null);
 
    onMount(async () => {
-       scholarData = await fetchScholarData();
+       const [scholar, stars, likes] = await Promise.all([
+           fetchScholarData(),
+           fetchRepoStats(),
+           fetchDatasetLikes()
+       ]);
+       scholarData = scholar;
+       repoStats = stars;
+       datasetLikes = likes;
    });
 
    function getCiteCount(title: string) {
@@ -18,12 +41,14 @@
    }
    
    // Hardcoded featured list from original index.html
-   const featured = [
+   const featured: FeaturedItem[] = [
        {
            img: cdnAsset('/files/imgs/cover_3dpotatotwin.png'),
            title: "3DPotatoTwin: a Paired Potato Tuber Dataset for 3D Multi-Sensory Fusion",
            journal: "Plant Phenomics",
            badge: "pub.if.pp", // i18n key or text
+           stars: { slug: 'potatoscan', url: 'https://github.com/UTokyo-FieldPhenomics-Lab/PotatoScan' },
+           likes: { dataset: '3dpotatotwin', url: 'https://huggingface.co/datasets/UTokyo-FieldPhenomics-Lab/3DPotatoTwin' },
            links: [
                { label: "DOI", url: "https://doi.org/10.1016/j.plaphe.2025.100123" },
                { label: "PDF", url: cdnAsset('/files/paper/25_pp_3dpotatotwin.pdf') },
@@ -36,6 +61,7 @@
            title: "Drone-Based Harvest Data Prediction Can Reduce On-Farm Food Loss and Improve Farmer Income",
            journal: "Plant Phenomics",
            badge: "pub.if.pp",
+           stars: { slug: 'uavbroccoli', url: 'https://github.com/UTokyo-FieldPhenomics-Lab/UAVbroccoli' },
            links: [
                { label: "DOI", url: "https://doi.org/10.34133/plantphenomics.0086" },
                { label: "PDF", url: cdnAsset('/files/paper/23_pp.pdf') },
@@ -49,6 +75,7 @@
            title: "EasyIDP: a Python package for intermediate data processing in UAV-based plant phenotyping",
            journal: "Remote Sensing",
            badge: "pub.if.rs", 
+           stars: { slug: 'easyidp', url: 'https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP' },
            links: [
                { label: "DOI", url: "https://doi.org/10.3390/rs13132622" },
                { label: "PDF", url: cdnAsset('/files/paper/21_easyidp.pdf') }
@@ -59,6 +86,7 @@
            title: "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
            journal: "Agricultural and Forest Meteorology",
            badge: "pub.if.afm",
+           stars: { slug: 'uavhirap', url: 'https://github.com/DrylandEcology-Lab/UAV-HiRAP' },
            links: [
                { label: "DOI", url: "https://doi.org/10.1016/j.agrformet.2019.107665" },
                { label: "PDF", url: cdnAsset('/files/paper/19_afm.pdf') },
@@ -70,7 +98,7 @@
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
     {#each featured as item}
-        <div class="group relative bg-card text-card-foreground rounded-[2rem] border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+        <div class="group relative flex flex-col bg-card text-card-foreground rounded-[2rem] border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
              <figure class="h-56 relative bg-muted/30">
                  <div class="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                  <img 
@@ -78,21 +106,38 @@
                     alt={item.title} 
                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" 
                  />
+                 {#if getCiteCount(item.title) !== '0' && getCiteCount(item.title) !== '??' || (item.stars && repoStats && repoStats[item.stars.slug] !== undefined) || (item.likes && datasetLikes && datasetLikes[item.likes.dataset] !== undefined)}
+                     <div class="absolute bottom-3 right-3 z-20 flex items-center gap-3 rounded-full bg-black/55 px-3 py-1 text-xs font-bold text-white shadow-lg ring-1 ring-white/30 backdrop-blur-md">
+                         {#if getCiteCount(item.title) !== '0' && getCiteCount(item.title) !== '??'}
+                             <a href="https://scholar.google.com/citations?user=CnTTa3EAAAAJ" target="_blank" rel="noopener noreferrer" title={$t('prof.cite')} class="flex items-center gap-1 transition-opacity duration-300 hover:opacity-70">
+                                 <BrandIcon name="googlescholar" class="h-4 w-4 shrink-0" />
+                                 {getCiteCount(item.title)}
+                             </a>
+                         {/if}
+                         {#if item.stars && repoStats && repoStats[item.stars.slug] !== undefined}
+                             <a href={item.stars.url} target="_blank" rel="noopener noreferrer" title="GitHub stars" class="flex items-center gap-1 transition-opacity duration-300 hover:opacity-70">
+                                 <BrandIcon name="github" class="h-4 w-4 shrink-0" />
+                                 {repoStats[item.stars.slug]}
+                             </a>
+                         {/if}
+                         {#if item.likes && datasetLikes && datasetLikes[item.likes.dataset] !== undefined}
+                             <a href={item.likes.url} target="_blank" rel="noopener noreferrer" title="Hugging Face likes" class="flex items-center gap-1 transition-opacity duration-300 hover:opacity-70">
+                                 <BrandIcon name="huggingface" class="h-4 w-4 shrink-0" />
+                                 {datasetLikes[item.likes.dataset]}
+                             </a>
+                         {/if}
+                     </div>
+                 {/if}
              </figure>
-             <div class="p-8">
+             <div class="flex flex-1 flex-col p-8">
                  <h2 class="text-xl font-serif font-bold leading-tight mb-3">
                      {item.title}
-                     {#if getCiteCount(item.title) !== '0' && getCiteCount(item.title) !== '??'}
-                         <div class="inline-flex items-center justify-center px-2 py-0.5 ml-2 text-xs font-bold text-background bg-foreground rounded-full align-middle" title={$t('prof.cite')}>
-                             {getCiteCount(item.title)}
-                         </div>
-                     {/if}
                  </h2>
                  <p class="text-sm text-muted-foreground mb-6">
                      <span class="font-semibold text-foreground">{item.journal}</span> <br>
                      <span class="mt-1 py-0.5 text-[12px] font-bold uppercase tracking-wider text-muted-foreground">{$t(item.badge)}</span>
                  </p>
-                 <div class="flex flex-wrap gap-2 mt-auto">
+                 <div class="mt-auto flex flex-wrap gap-2">
                      {#each item.links as link}
                          <a href={link.url} target="_blank" class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold uppercase tracking-wider border border-border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300">{link.label}</a>
                      {/each}

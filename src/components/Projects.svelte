@@ -1,11 +1,20 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
     import { projects } from '$lib/data/projects';
+    import { fetchRepoStats, type RepoStats } from '$lib/services/repoService';
+    import BrandIcon from '$lib/components/BrandIcon.svelte';
     import { t } from 'svelte-i18n';
+
+    let repoStats = $state<RepoStats | null>(null);
+
+    onMount(async () => {
+        repoStats = await fetchRepoStats();
+    });
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {#each projects as project}
-        <div class="group relative bg-card text-card-foreground rounded-[2rem] border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+        <div class="group relative flex flex-col bg-card text-card-foreground rounded-[2rem] border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
             <!-- Image Container with organic mask possibly, but keeping it simple rounded for now to match card -->
             <figure class="h-56 overflow-hidden bg-muted/50 relative">
                 <div class="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
@@ -14,9 +23,21 @@
                     alt={project.title} 
                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" 
                 />
+                {#if repoStats && repoStats[project.slug] !== undefined}
+                    <a
+                        href={project.links.find((link) => link.label === 'Code')?.url ?? '#'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="GitHub stars"
+                        class="absolute bottom-3 right-3 z-20 flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1 text-xs font-bold text-white shadow-lg ring-1 ring-white/30 backdrop-blur-md transition-opacity duration-300 hover:opacity-80"
+                    >
+                        <BrandIcon name="github" class="h-4 w-4 shrink-0" />
+                        {repoStats[project.slug]}
+                    </a>
+                {/if}
             </figure>
             
-            <div class="p-8">
+            <div class="flex flex-1 flex-col p-8">
                 <div class="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-2">
                     {$t(project.institution)}
                 </div>
