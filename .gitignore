@@ -26,3 +26,11 @@ public/files/cv.bbl
 public/files/cv.synctex.*
 public/files/cv.synctex.gz
 /.openchamber
+public/files/cv.aux
+public/files/cv.bcf
+public/files/cv.blg
+public/files/cv.fdb_latexmk
+public/files/cv.fls
+public/files/cv.log
+public/files/cv.run.xml
+public/files/cv.xdv
