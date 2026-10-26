@@ -68,11 +68,6 @@
             "d": "Datasets",
             "s": "Software Copyrights (CN)",
             "bc": "Book chapters"
-        },
-        "if": {
-            "afm": "SCI, IF=5.7 (2025)",
-            "rs": "SCI, IF=4.1 (2025)",
-            "pp": "SCI, IF=6.4 (2025)"
         }
     },
     "proj": {

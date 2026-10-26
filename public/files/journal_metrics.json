@@ -1,0 +1,32 @@
+{
+  "Plant Phenomics": {
+    "if": 8.2,
+    "if_year": 2026,
+    "indexed": "SCI",
+    "cas": {
+      "cn": "农林科学1区 Top、农艺学1区、植物科学1区、遥感2区",
+      "en": "CAS Tier 1 Top",
+      "jp": "CAS 1区（Top）"
+    }
+  },
+  "Remote Sensing": {
+    "if": 4.3,
+    "if_year": 2026,
+    "indexed": "SCI",
+    "cas": {
+      "cn": "地球科学2区、遥感3区",
+      "en": "CAS Tier 2 (Geosciences)",
+      "jp": "CAS 2区（地球科学）"
+    }
+  },
+  "Agricultural and Forest Meteorology": {
+    "if": 6.6,
+    "if_year": 2026,
+    "indexed": "SCI",
+    "cas": {
+      "cn": "农林科学1区 Top、农艺学1区、林学1区、气象与大气科学1区",
+      "en": "CAS Tier 1 Top",
+      "jp": "CAS 1区（Top）"
+    }
+  }
+}

@@ -1,8 +1,9 @@
 <script lang="ts">
-   import { t } from 'svelte-i18n';
+   import { t, locale } from 'svelte-i18n';
    import { fetchScholarData, type ScholarData } from '$lib/services/scholarService';
    import { findScholarArticle } from '$lib/services/citationService';
    import { fetchRepoStats, fetchDatasetLikes } from '$lib/services/repoService';
+   import { fetchJournalMetrics, formatJournalBadge, type JournalMetrics } from '$lib/services/journalService';
    import BrandIcon from '$lib/components/BrandIcon.svelte';
    import { onMount } from 'svelte';
    import { cdnAsset } from '$lib/constants/cdn';
@@ -11,7 +12,6 @@
        img: string;
        title: string;
        journal: string;
-       badge: string;
        links: Array<{ label: string; url: string }>;
        /** GitHub repository backing the software used in the paper. */
        stars?: { slug: string; url: string };
@@ -22,16 +22,19 @@
    let scholarData = $state<ScholarData | null>(null);
    let repoStats = $state<Record<string, number> | null>(null);
    let datasetLikes = $state<Record<string, number> | null>(null);
+   let journalMetrics = $state<JournalMetrics | null>(null);
 
    onMount(async () => {
-       const [scholar, stars, likes] = await Promise.all([
+       const [scholar, stars, likes, metrics] = await Promise.all([
            fetchScholarData(),
            fetchRepoStats(),
-           fetchDatasetLikes()
+           fetchDatasetLikes(),
+           fetchJournalMetrics()
        ]);
        scholarData = scholar;
        repoStats = stars;
        datasetLikes = likes;
+       journalMetrics = metrics;
    });
 
    function getCiteCount(title: string) {
@@ -46,7 +49,6 @@
            img: cdnAsset('/files/imgs/cover_3dpotatotwin.png'),
            title: "3DPotatoTwin: a Paired Potato Tuber Dataset for 3D Multi-Sensory Fusion",
            journal: "Plant Phenomics",
-           badge: "pub.if.pp", // i18n key or text
            stars: { slug: 'potatoscan', url: 'https://github.com/UTokyo-FieldPhenomics-Lab/PotatoScan' },
            likes: { dataset: '3dpotatotwin', url: 'https://huggingface.co/datasets/UTokyo-FieldPhenomics-Lab/3DPotatoTwin' },
            links: [
@@ -60,7 +62,6 @@
            img: cdnAsset('/files/imgs/cover_broccoli.png'),
            title: "Drone-Based Harvest Data Prediction Can Reduce On-Farm Food Loss and Improve Farmer Income",
            journal: "Plant Phenomics",
-           badge: "pub.if.pp",
            stars: { slug: 'uavbroccoli', url: 'https://github.com/UTokyo-FieldPhenomics-Lab/UAVbroccoli' },
            links: [
                { label: "DOI", url: "https://doi.org/10.34133/plantphenomics.0086" },
@@ -74,7 +75,6 @@
            img: "https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP/raw/main/docs/_static/images/header_v2.0.png",
            title: "EasyIDP: a Python package for intermediate data processing in UAV-based plant phenotyping",
            journal: "Remote Sensing",
-           badge: "pub.if.rs", 
            stars: { slug: 'easyidp', url: 'https://github.com/UTokyo-FieldPhenomics-Lab/EasyIDP' },
            links: [
                { label: "DOI", url: "https://doi.org/10.3390/rs13132622" },
@@ -85,7 +85,6 @@
            img: cdnAsset('/files/imgs/19_afm_graph.svg'),
            title: "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
            journal: "Agricultural and Forest Meteorology",
-           badge: "pub.if.afm",
            stars: { slug: 'uavhirap', url: 'https://github.com/DrylandEcology-Lab/UAV-HiRAP' },
            links: [
                { label: "DOI", url: "https://doi.org/10.1016/j.agrformet.2019.107665" },
@@ -135,7 +134,7 @@
                  </h2>
                  <p class="text-sm text-muted-foreground mb-6">
                      <span class="font-semibold text-foreground">{item.journal}</span> <br>
-                     <span class="mt-1 py-0.5 text-[12px] font-bold uppercase tracking-wider text-muted-foreground">{$t(item.badge)}</span>
+                     <span class="mt-1 py-0.5 text-[12px] font-bold tracking-wider text-muted-foreground">{formatJournalBadge(journalMetrics, item.journal, $locale ?? 'en')}</span>
                  </p>
                  <div class="mt-auto flex flex-wrap gap-2">
                      {#each item.links as link}
