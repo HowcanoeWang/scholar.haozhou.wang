@@ -3,6 +3,7 @@
     import { t } from 'svelte-i18n';
     import { fetchBibTeX, type BibJson, type BibEntry } from '$lib/services/bibtexService';
     import { findScholarArticle } from '$lib/services/citationService';
+    import BrandIcon from '$lib/components/BrandIcon.svelte';
     import { fetchScholarData, type ScholarData } from '$lib/services/scholarService';
     import { customLinks } from '$lib/data/customLinks';
     import { awardi18n } from '$lib/data/awards';
@@ -229,7 +230,8 @@
                                     {getText(entry.fields.volume)}{#if getText(entry.fields.pages)}, {getText(entry.fields.pages)}{/if}.
                                     <!-- Cite Count -->
                                     {#if getCiteCount(getText(entry.fields.title))}
-                                        <span class="inline-flex items-center justify-center px-2 py-0.5 ml-1 text-[10px] font-bold text-background bg-foreground rounded-full align-middle" title={$t('prof.cite')}>
+                                        <span class="inline-flex items-center gap-1 ml-1 align-middle whitespace-nowrap text-xs font-bold text-muted-foreground" title={$t('prof.cite')}>
+                                            <BrandIcon name="googlescholar" class="h-4 w-4 shrink-0" />
                                             {getCiteCount(getText(entry.fields.title))}
                                         </span>
                                     {/if}
