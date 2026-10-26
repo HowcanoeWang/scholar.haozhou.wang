@@ -82,7 +82,7 @@ export const projects: Project[] = [
         img: cdnAsset('/files/imgs/uav-hirap_web.png'),
         links: [
             { label: "Web", url: "https://www.uav-hirap.org" },
-            { label: "Code", url: "https://github.com/UAV-HiRAP/UAV-HiRAP" }
+            { label: "Code", url: "https://github.com/DrylandEcology-Lab/UAV-HiRAP" }
         ]
     }
 ];

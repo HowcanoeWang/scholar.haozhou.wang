@@ -224,15 +224,15 @@ export const customLinks: Record<string, Record<string, string>> = {
         "PDF": cdnAsset('/files/patent/19_CAF.pdf')
     },
     "wang_uavhirapweb_2019": {
-        "Codes": "https://github.com/UAV-HiRAP/UAV-HiRAP"
+        "Codes": "https://github.com/DrylandEcology-Lab/UAV-HiRAP"
     },
     "wang_uavhirapweb_2017": {
         "Manual": cdnAsset('/files/patent/17_uavhirap2.pdf')
     },
     "wang_uavhirapapp_2016": {
-        "Codes": "https://github.com/UAV-HiRAP/UAV-HiRAP-Matlab",
+        "Codes": "https://github.com/DrylandEcology-Lab/UAV-HiRAP-Matlab",
         "Manual": cdnAsset('/files/patent/16_uavhirap.pdf'),
-        "EXE": "https://github.com/UAV-HiRAP/UAV-HiRAP-Matlab/releases/tag/v1.0"
+        "EXE": "https://github.com/DrylandEcology-Lab/UAV-HiRAP-Matlab/releases/tag/v1.0"
     },
     "wang_yaira_2016": {
         "Codes": "https://github.com/HowcanoeWang/Yaira",
