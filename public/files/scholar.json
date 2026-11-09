@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 561,
-        "since_2021": 548
+        "all": 570,
+        "since_2021": 557
       }
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "year": 2026,
-      "citations": 150
+      "citations": 159
     }
   ],
   "articles": [
@@ -87,7 +87,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 194
+      "cited_by": 195
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -101,7 +101,7 @@
       "authors": "H Wang, Y Duan, Y Shi, Y Kato, S Ninomiya, W Guo",
       "publication": "Remote Sensing 13 (13), 2622, 2021",
       "year": "2021",
-      "cited_by": 49
+      "cited_by": 51
     },
     {
       "title": "Drone-based harvest data prediction can reduce on-farm food loss and improve farmer income",
@@ -136,7 +136,7 @@
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 17
+      "cited_by": 18
     },
     {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
@@ -160,6 +160,13 @@
       "cited_by": 13
     },
     {
+      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
+      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
+      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
+      "year": "2025",
+      "cited_by": 12
+    },
+    {
       "title": "A UAV-based single-lens stereoscopic photography method for phenotyping the architecture traits of orchard trees",
       "authors": "W Zhang, X Peng, T Bai, H Wang, D Takata, W Guo",
       "publication": "Remote Sensing 16 (9), 1570, 2024",
@@ -174,18 +181,18 @@
       "cited_by": 12
     },
     {
-      "title": "GrapeCPNet: A self-supervised point cloud completion network for 3D phenotyping of grape bunches",
-      "authors": "W Zhang, C Zheng, C Wang, PM Blok, H Wang, W Guo",
-      "publication": "Computers and Electronics in Agriculture 237, 110595, 2025",
-      "year": "2025",
-      "cited_by": 10
-    },
-    {
       "title": "Improved detection and location of small crop organs by fusing UAV orthophoto maps and raw images",
       "authors": "H Liu, H Li, H Wang, C Liu, J Qian, Z Wang, C Geng",
       "publication": "Remote Sensing 17 (5), 906, 2025",
       "year": "2025",
       "cited_by": 9
+    },
+    {
+      "title": "3DPotatoTwin: a paired potato tuber dataset for 3D multi-sensory fusion",
+      "authors": "H Wang, PM Blok, J Burridge, T Jiang, M Miyauchi, K Miyamoto, K Tanaka, ...",
+      "publication": "Plant Phenomics, 100123, 2025",
+      "year": "2025",
+      "cited_by": 8
     },
     {
       "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
@@ -200,13 +207,6 @@
       "publication": "Mathematical & Computational Forestry & Natural Resource Sciences 12 (1), 2020",
       "year": "2020",
       "cited_by": 6
-    },
-    {
-      "title": "3DPotatoTwin: a paired potato tuber dataset for 3D multi-sensory fusion",
-      "authors": "H Wang, PM Blok, J Burridge, T Jiang, M Miyauchi, K Miyamoto, K Tanaka, ...",
-      "publication": "Plant Phenomics, 100123, 2025",
-      "year": "2025",
-      "cited_by": 5
     },
     {
       "title": "A point-supervised algorithm with multiscale semantic enhancement for counting multiple crop plants from aerial imagery",
