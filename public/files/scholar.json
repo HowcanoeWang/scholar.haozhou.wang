@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 570,
-        "since_2021": 557
+        "all": 573,
+        "since_2021": 560
       }
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "year": 2026,
-      "citations": 159
+      "citations": 162
     }
   ],
   "articles": [
@@ -87,7 +87,7 @@
       "authors": "E David, M Serouart, D Smith, S Madec, K Velumani, S Liu, X Wang, ...",
       "publication": "Plant Phenomics, 2021",
       "year": "2021",
-      "cited_by": 195
+      "cited_by": 196
     },
     {
       "title": "Landscape-level vegetation classification and fractional woody and herbaceous vegetation cover estimation over the dryland ecosystems by unmanned aerial vehicle platform",
@@ -115,7 +115,7 @@
       "authors": "Z Wang, R Zenkl, L Greche, B De Solan, LB Samatan, S Ouahid, A Visioni, ...",
       "publication": "Plant Phenomics 7 (3), 100084, 2025",
       "year": "2025",
-      "cited_by": 26
+      "cited_by": 27
     },
     {
       "title": "EasyDCP: An affordable, high‐throughput tool to measure plant phenotypic traits in 3D",
@@ -139,18 +139,18 @@
       "cited_by": 18
     },
     {
+      "title": "Global rice multiclass segmentation dataset (RiceSEG): comprehensive and diverse high-resolution RGB-annotated images for the development and benchmarking of rice segmentation …",
+      "authors": "J Zhou, H Wang, Y Kato, T Nampally, P Rajalakshmi, M Balram, K Katsura, ...",
+      "publication": "Plant Phenomics, 100099, 2025",
+      "year": "2025",
+      "cited_by": 15
+    },
+    {
       "title": "Tree branch skeleton extraction from drone-based photogrammetric point cloud",
       "authors": "W Zhang, X Peng, G Cui, H Wang, D Takata, W Guo",
       "publication": "Drones 7 (2), 65, 2023",
       "year": "2023",
       "cited_by": 15
-    },
-    {
-      "title": "Global rice multiclass segmentation dataset (RiceSEG): comprehensive and diverse high-resolution RGB-annotated images for the development and benchmarking of rice segmentation …",
-      "authors": "J Zhou, H Wang, Y Kato, T Nampally, P Rajalakshmi, M Balram, K Katsura, ...",
-      "publication": "Plant Phenomics, 100099, 2025",
-      "year": "2025",
-      "cited_by": 14
     },
     {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
