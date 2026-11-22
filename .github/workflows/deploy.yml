@@ -7,6 +7,13 @@ on:
     branches:
       - main
 
+  # 数据工作流用 GITHUB_TOKEN 推送，不会触发上面的 push 事件，
+  # 因此在它成功结束后再显式部署一次
+  workflow_run:
+    workflows: ["Update Google Scholar Data"]
+    types:
+      - completed
+
   # 允许你手动从 Actions 标签页运行此工作流
   workflow_dispatch:
 
@@ -25,6 +32,8 @@ concurrency:
 jobs:
   # 构建任务 (Build job)
   build:
+    # workflow_run 在数据工作流失败时也会触发，这里只部署成功的那次
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
