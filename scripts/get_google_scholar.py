@@ -204,3 +204,5 @@ if __name__ == "__main__":
         main()
     except Exception as exc:
         print(f"请求失败: {exc}; args: {exc.args}")
+        # 非零退出，让 GitHub Actions 标红，而不是静默“成功但没有改动”
+        raise SystemExit(1) from exc
