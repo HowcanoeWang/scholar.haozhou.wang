@@ -26,8 +26,8 @@
   "table": [
     {
       "citations": {
-        "all": 573,
-        "since_2021": 560
+        "all": 578,
+        "since_2021": 564
       }
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "year": 2026,
-      "citations": 162
+      "citations": 165
     }
   ],
   "articles": [
@@ -94,7 +94,7 @@
       "authors": "H Wang, D Han, Y Mu, L Jiang, X Yao, Y Bai, Q Lu, F Wang",
       "publication": "Agricultural and Forest Meteorology 278, 107665, 2019",
       "year": "2019",
-      "cited_by": 53
+      "cited_by": 54
     },
     {
       "title": "EasyIDP: A python package for intermediate data processing in UAV-based plant phenotyping",
@@ -136,7 +136,7 @@
       "authors": "PM Blok, F Magistri, C Stachniss, H Wang, J Burridge, W Guo",
       "publication": "Computers and Electronics in Agriculture 228, 109673, 2025",
       "year": "2025",
-      "cited_by": 18
+      "cited_by": 20
     },
     {
       "title": "Global rice multiclass segmentation dataset (RiceSEG): comprehensive and diverse high-resolution RGB-annotated images for the development and benchmarking of rice segmentation …",
@@ -151,6 +151,13 @@
       "publication": "Drones 7 (2), 65, 2023",
       "year": "2023",
       "cited_by": 15
+    },
+    {
+      "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
+      "authors": "I Drofova, W Guo, H Wang, M Adamek",
+      "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
+      "year": "2023",
+      "cited_by": 13
     },
     {
       "title": "基于无人机和决策树算法的榆树疏林草原植被类型划分和覆盖度生长季动态估计",
@@ -174,11 +181,11 @@
       "cited_by": 12
     },
     {
-      "title": "Use of scanning devices for object 3D reconstruction by photogrammetry and visualization in virtual reality",
-      "authors": "I Drofova, W Guo, H Wang, M Adamek",
-      "publication": "Bulletin of Electrical Engineering and Informatics 12 (2), 868-881, 2023",
-      "year": "2023",
-      "cited_by": 12
+      "title": "3DPotatoTwin: a paired potato tuber dataset for 3D multi-sensory fusion",
+      "authors": "H Wang, PM Blok, J Burridge, T Jiang, M Miyauchi, K Miyamoto, K Tanaka, ...",
+      "publication": "Plant Phenomics, 100123, 2025",
+      "year": "2025",
+      "cited_by": 9
     },
     {
       "title": "Improved detection and location of small crop organs by fusing UAV orthophoto maps and raw images",
@@ -186,13 +193,6 @@
       "publication": "Remote Sensing 17 (5), 906, 2025",
       "year": "2025",
       "cited_by": 9
-    },
-    {
-      "title": "3DPotatoTwin: a paired potato tuber dataset for 3D multi-sensory fusion",
-      "authors": "H Wang, PM Blok, J Burridge, T Jiang, M Miyauchi, K Miyamoto, K Tanaka, ...",
-      "publication": "Plant Phenomics, 100123, 2025",
-      "year": "2025",
-      "cited_by": 8
     },
     {
       "title": "Biomass estimates derived from sector subsampling of 360 spherical images",
